@@ -1,0 +1,55 @@
+<style>
+  .hacker-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #111;
+    color: #0f0;
+    font-family: monospace;
+    padding: 2em 1em;
+    box-shadow: 2px 0 5px rgba(0, 255, 0, 0.2);
+    z-index: 1000;
+  }
+
+  .hacker-sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .hacker-sidebar a {
+    color: #0f0;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.2s;
+    font-size: 1em;
+  }
+
+  .hacker-sidebar a:hover {
+    color: #afffaf;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 0; }
+  }
+
+  /* Push the main page content to the right */
+  main, .container, .wrapper, body {
+    margin-left: 220px;
+  }
+
+  /* Optional: Ensure code blocks and text wrap correctly */
+  body {
+    max-width: none;
+  }
+</style>
+
+<div class="hacker-sidebar">
+  <nav>
+    <a href="/">Home</a>
+  </nav>
+</div>
+
