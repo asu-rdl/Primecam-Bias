@@ -1,0 +1,193 @@
+(footprint "Cap_b_1411"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Tantalum Capacitor SMD AVX-J (1608-08 Metric), IPC_7351 nominal, (Body size from: https://www.vishay.com/docs/48064/_t58_vmn_pt0471_1601.pdf), generated with kicad-footprint-generator")
+	(tags "capacitor tantalum")
+	(property "Reference" "REF**"
+		(at 3.683 0 90)
+		(layer "F.SilkS")
+		(uuid "7ba84a25-5067-474c-8665-7fec82085c4d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Cap_b_1411"
+		(at 0 1.48 0)
+		(layer "F.Fab")
+		(uuid "21d05a9e-aaf2-467d-acdb-85329d856cdb")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "cddc97d1-c7fa-41b4-bef8-5c8db3cdd021")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "48880cb0-0cf2-4220-8ef1-a2d3ee85427a")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -2.794 -1.651)
+		(end -2.794 1.651)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "0a4670fe-f411-47c9-8912-2ac7b841eb8f")
+	)
+	(fp_line
+		(start -2.794 1.651)
+		(end 0 1.651)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "3e9e4ee7-98c0-4519-9607-cdedca5c2e75")
+	)
+	(fp_line
+		(start 0 -1.651)
+		(end -2.794 -1.651)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "3a7b8b07-06de-4fe0-8248-8dda757981ba")
+	)
+	(fp_rect
+		(start -0.508 -1.016)
+		(end 0.508 1.016)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.Adhes")
+		(uuid "b70ad38c-77d2-48e9-b0de-833b96561dfd")
+	)
+	(fp_rect
+		(start -1.7526 -1.397)
+		(end 1.7526 1.397)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "e4d51649-ad03-4e12-bc0e-b292418bdbc9")
+	)
+	(fp_line
+		(start -0.8 -0.125)
+		(end -0.8 0.425)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "8412036a-3ea2-4b74-8181-b678e28b9823")
+	)
+	(fp_line
+		(start -0.8 0.425)
+		(end 0.8 0.425)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "b4dd7bf8-1926-4291-bfbf-4281b11ec529")
+	)
+	(fp_line
+		(start -0.5 -0.425)
+		(end -0.8 -0.125)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "6cda4aa6-292e-4c56-adbd-a8576205eda0")
+	)
+	(fp_line
+		(start 0.8 -0.425)
+		(end -0.5 -0.425)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "20e5b869-8ad3-453a-95ce-baad053c89ba")
+	)
+	(fp_line
+		(start 0.8 0.425)
+		(end 0.8 -0.425)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "26446095-4b36-4b92-b664-1cf24d1f18e5")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "6d29ebd3-5747-48e1-b1af-57facea19225")
+		(effects
+			(font
+				(size 0.4 0.4)
+				(thickness 0.06)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -1.7272 0)
+		(size 1.8034 2.9972)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "a1c8d1de-46e2-44ca-9338-1c1ef0d337be")
+	)
+	(pad "2" smd roundrect
+		(at 1.7272 0)
+		(size 1.8034 2.9972)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.238095)
+		(uuid "4aa14d74-bfc3-4566-989d-72417dbe0c76")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/primecamLNABiasPotVreg.pretty/TR3B106K025C0450.stp"
+		(offset
+			(xyz 2 -3 2)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 90 0 -90)
+		)
+	)
+)
