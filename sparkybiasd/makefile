@@ -8,6 +8,7 @@ all:
 	@echo "dockerimage - build a docker image for cross compilation"
 	@echo "docker      - launch built docker image, make"
 	@echo "              dockerimage should be built first"
+	@echo "stop        - Stop the docker container"
 	@echo "deploy      - starts docker container, builds target, "
 	@echo "              uploads to the raspberry pi and runs it"
 	@echo "app         - builds target normally"
@@ -18,7 +19,7 @@ all:
 
 dockerimage:
 	docker build . -t local/rustypi
-	docker run -v .:/workspace -it --name rustypi local/rustypi:latest
+	docker container create -i -t -v .:/workspace --name rustypi local/rustypi:latest
 
 docker:
 	docker start -i rustypi	
@@ -28,9 +29,17 @@ deploy:
 	docker container start rustypi
 	docker container exec -it rustypi \
 			/bin/bash -c "source ~/.bashrc && cargo build --release --target aarch64-unknown-linux-gnu"
-	@echo "Check if file exists"
+	@echo "Scp and run the binary from the raspberry pi"
 	scp ${PREREQ} asu@primecambias.local:~/
 	ssh asu@primecambias.local '/bin/bash -c /home/asu/sparkybiasd'
+	@echo " "
+	@echo "The container was left running, use make stop to close it"
+	@echo " "
+
+stop:
+	@echo " "
+	@echo "Stopping container, this may take a moment..."
+	@echo " "
 	docker container stop rustypi
 
 app:
