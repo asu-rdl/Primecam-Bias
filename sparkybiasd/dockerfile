@@ -1,0 +1,10 @@
+FROM debian:12 AS setup
+RUN apt update \
+  && apt upgrade -y \
+  && apt install gcc gcc-aarch64-linux-gnu libreadline-dev curl -y
+
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh  -s -- -y
+RUN . "$HOME/.cargo/env" \
+  && rustup target add aarch64-unknown-linux-gnu	
+
+WORKDIR /workspace
