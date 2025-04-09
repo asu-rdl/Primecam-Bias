@@ -30,8 +30,9 @@ deploy:
 	docker container exec -it rustypi \
 			/bin/bash -c "source ~/.bashrc && cargo build --release --target aarch64-unknown-linux-gnu"
 	@echo "Scp and run the binary from the raspberry pi"
+	@echo ""
 	scp ${PREREQ} asu@primecambias.local:~/
-	ssh asu@primecambias.local '/bin/bash -c /home/asu/sparkybiasd'
+	ssh asu@primecambias.local '/bin/bash -c "/home/asu/sparkybiasd --help"'
 	@echo " "
 	@echo "The container was left running, use make stop to close it"
 	@echo " "
