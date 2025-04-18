@@ -1,55 +1,61 @@
+<!-- 🔗 Floating Sidebar -->
+<div id="sidebar"></div>
+
 <style>
-  .hacker-sidebar {
+  #sidebar {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 200px;
-    height: 100%;
-    background-color: #111;
+    top: 200px;
+    left: 20px;
+    width: 290px;
+    background: #111;
+    padding: 10px;
+    border: 1px solid #0f0;
     color: #0f0;
+    z-index: 999;
     font-family: monospace;
-    padding: 2em 1em;
-    box-shadow: 2px 0 5px rgba(0, 255, 0, 0.2);
-    z-index: 1000;
+    font-size: 14px;
+    max-height: 80vh;
+    overflow-y: auto;
   }
-
-  .hacker-sidebar nav {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-  }
-
-  .hacker-sidebar a {
+  #sidebar a {
     color: #0f0;
     text-decoration: none;
-    position: relative;
-    transition: color 0.2s;
-    font-size: 1em;
+    display: block;
+    margin: 5px 0;
   }
-
-  .hacker-sidebar a:hover {
-    color: #afffaf;
-  }
-
-  @keyframes blink {
-    0%, 100% { opacity: 0.7; }
-    50% { opacity: 0; }
-  }
-
-  /* Push the main page content to the right */
-  main, .container, .wrapper, body {
-    margin-left: 220px;
-  }
-
-  /* Optional: Ensure code blocks and text wrap correctly */
-  body {
-    max-width: none;
+  #sidebar a:hover {
+    text-decoration: underline;
   }
 </style>
 
-<div class="hacker-sidebar">
-  <nav>
-    <a href="/">Home</a>
-  </nav>
-</div>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const sidebar = document.getElementById("sidebar");
+    const headers = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
+
+    if (!headers.length) return;
+
+    const nav = document.createElement("nav");
+
+    headers.forEach((header, index) => {
+      // Add ID if missing
+      if (!header.id) {
+        header.id = "heading-" + index;
+      }
+
+      const link = document.createElement("a");
+      link.href = "#" + header.id;
+      link.textContent = header.textContent;
+
+      // Get heading level from tag name (e.g., "H2" → 2)
+      const level = parseInt(header.tagName.substring(1));
+      const indent = (level - 1) * 12; // 12px indent per level
+      link.style.paddingLeft = indent + "px";
+
+      nav.appendChild(link);
+    });
+
+    sidebar.appendChild(nav);
+  });
+</script>
