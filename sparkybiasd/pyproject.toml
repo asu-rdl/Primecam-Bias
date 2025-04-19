@@ -1,0 +1,21 @@
+[project]
+name = "sparkybiasd"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Cody Roberson",email = "carobers@asu.edu"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "click (>=8.1.8,<9.0.0)",
+    "smbus2 (==0.4.2)"
+]
+
+[tool.poetry]
+packages = [{include = "sparkybiasd", from = "src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
