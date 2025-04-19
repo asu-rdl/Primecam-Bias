@@ -1,19 +1,17 @@
 ---
 layout: default
 ---
-<!-- {% include nav.html %} -->
 
 # Intro
-The CCAT observatory's instrument "Prime-Cam" requires a power supply for a large array of low-noise amplifiers.  
+The CCAT observatory's instrument "Prime-Cam" requires a power supply for a large array of low-noise amplifiers. 
+They want to have easy to use, programmable control over the power supply (also referred to as 'bias supply').
+We (ASU) aim to deliver on that need. These docs contain the Hardware and Software design as well as a userguide.
 
-# Prototyping 
-The first prototype was a board designed with a single bias channel; controlled with an Arduino Nano Every. 
-The code for the microcontroller can be found be found in `/primecambias_arduino_testbench`
 
----
+# Table Of Contents
 
-# Hardware
+1. [User Guide](userguide.html)
+1. [Software](software.html)
+1. [Hardware](hardware.html)
+1. [Raspberry Pi Bringup](raspberrypi.html)
 
----
-
-# Software
