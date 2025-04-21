@@ -1,4 +1,8 @@
 import click
+from . import hardware
+
+
+myCard = hardware.biascard(1)
 
 @click.group()
 def cli():
@@ -45,12 +49,10 @@ def setexpander():
     """
     pass
 
-
-
-
 cli.add_command(setrepeater)
 cli.add_command(readina)
 cli.add_command(setexpander)
 
 if __name__ == "__main__":
+
     cli()

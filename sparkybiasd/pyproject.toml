@@ -9,7 +9,8 @@ readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
     "click (>=8.1.8,<9.0.0)",
-    "smbus2 (==0.4.2)"
+    "smbus2 (==0.4.2)",
+    "omegaconf (>=2.3.0,<3.0.0)"
 ]
 
 [tool.poetry]

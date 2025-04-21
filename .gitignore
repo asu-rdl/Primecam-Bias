@@ -31,3 +31,4 @@ fp-info-cache
 *.csv
 sparkybiasd/target
 sparkybiasd/Cargo.lock
+sparkybiasd/src/sparkybiasd/__pycache__
