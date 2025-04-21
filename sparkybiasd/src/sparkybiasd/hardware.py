@@ -6,6 +6,17 @@ import smbus2
 from omegaconf import OmegaConf
 from time import sleep
 
+__INA219ADDRTABLE = {
+    1: 0x40,
+    2: 0x41,
+    3: 0x42,
+    4: 0x43,
+    5: 0x44,
+    6: 0x45,
+    7: 0x46,
+    8: 0x47
+}
+
 __AD5144ADDRTABLE = {
     1: 0x20,
     2: 0x22,
