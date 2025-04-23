@@ -32,3 +32,5 @@ fp-info-cache
 sparkybiasd/target
 sparkybiasd/Cargo.lock
 sparkybiasd/src/sparkybiasd/__pycache__
+sparkybiasd/poetry.lock
+sparkybiasd/dist
