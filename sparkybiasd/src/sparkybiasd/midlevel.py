@@ -12,6 +12,9 @@ import time
 
 #TODO: Deployment script and test suite
 
+# WARNING: NEED TO IMPLEMENT MUTUAL EXCLUSION FOR BIAS CARDS
+
+
 class BiasCrate:
     def __init__(self):
         self.cards: list[BiasCard] = []
@@ -19,13 +22,16 @@ class BiasCrate:
         for i in range(1, 18+1):
             try:
                 bc = BiasCard(i)
-        
                 bc.close()
-                    
                 self.cards.append(bc)
-            except OSError:
+            except OSError: # FIXME: Would catch exception talking to chip rather than card and misidentify the issue
                 print(f"Warning, Address {i} couldn't be reached.")
         
+
+    def _getcard(self, card):
+        board = self.cards[card-1]
+        board.open()
+        return board
 
     def seek_voltage(self, card: int, channel: int, voltage: float, increment = 1):
         """set channel to specified voltage (in TBD Units)"""
@@ -114,27 +120,8 @@ class BiasCrate:
         
 
     def save(self, cfgfile: str):
-        """save state of crate to config"""
-        OmegaConf.save(self.config, cfgfile)
-
+        pass
 
     def load(self, cfgfile: str):
-        """load settings from config file and apply
-
-          card1:
-            chan1:
-              output = false
-              wiper = 0
-            chan8:
-              output = false
-              wiper = 0
-
-        """
-        conf = OmegaConf.load(cfgfile)
-        for card in range(1,18+1):
-            for chan in range(1, 8+1):
-                en    = conf[f"card{card}"][f"chan{chan}"]["output"]
-                wiper = conf[f"card{card}"][f"chan{chan}"]["wiper"]
-                self.cards[card].set_wiper(chan, wiper)
-                self.cards[card].enable_chan(chan, en)
+        pass 
 
