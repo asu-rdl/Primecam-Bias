@@ -3,9 +3,8 @@ Daemon process. Initializes the boards and waits for commands from the end user.
 daemon queries all available channels for their current stats and statusses
 
 Inits a redis connection. Subscribe to sparkommand and match a given value to COMMAND_DICT.
-Executes a paired function and passes in the args and runs it. Bobs your uncle.j
+Executes a paired function and passes in the args and runs it. Bobs your uncle.
 
-    {'type': 'message', 'pattern': None, 'channel': b'SHITE', 'data': b'I EAT BURRITOS'}
 """
 import redis
 from omegaconf import OmegaConf

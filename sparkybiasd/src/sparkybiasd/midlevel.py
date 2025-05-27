@@ -1,6 +1,6 @@
-from .hardware import biascard
+from .hardware import BiasCard
 import numpy as np
-from omegaconf import ListConfig, OmegaConf, DictConfig
+from omegaconf import OmegaConf
 from . import dconf
 import time
 
@@ -14,11 +14,15 @@ import time
 
 class BiasCrate:
     def __init__(self):
-        self.cards: list[biascard] = []
+        self.cards: list[BiasCard] = []
         self.config = dconf.gen()
         for i in range(1, 18+1):
             try:
-                self.cards.append(biascard(i))
+                bc = BiasCard(i)
+        
+                bc.close()
+                    
+                self.cards.append(bc)
             except OSError:
                 print(f"Warning, Address {i} couldn't be reached.")
         
