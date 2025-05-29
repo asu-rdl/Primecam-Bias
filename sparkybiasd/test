@@ -1,0 +1,31 @@
+#! /bin/bash
+# Build python package, deploy it, and test on the PI.
+# Uses pre-configured .ssh/config; script expected to fail outside of dev env
+#
+PROJDIR=$HOME/workspace/Primecam-Bias/sparkybiasd
+rm -rf "$PROJDIR/dist"
+source $HOME/.cache/pypoetry/virtualenvs/sparkybiasd-8MyrPmpD-py3.13/bin/activate
+poetry build
+
+if [ -e "$PROJDIR/dist/sparkybiasd-0.1.0-py3-none-any.whl" ]; then
+  echo "whl exists, its probably fine"
+else
+  echo "build failed"
+  exit 1
+fi
+
+scp "$PROJDIR/dist/sparkybiasd-0.1.0-py3-none-any.whl" pi:~/
+ssh pi "/bin/bash -c 'rm -r /home/asu/tests'"
+scp -r ./tests pi:~/
+
+# Install the package
+ssh pi "/bin/bash -c 'cd /home/asu/ && \
+  source .venv/bin/activate && pip uninstall -y sparkybiasd &&\
+  pip install ./sparkybiasd-0.1.0-py3-none-any.whl &&\
+  rm -f sparkybiasd-0.1.0-py3-none-any.whl'"
+
+# Run pytest
+ssh pi "/bin/bash -c 'cd /home/asu/ && \
+  source .venv/bin/activate &&\
+  pytest -vv tests/'"
+

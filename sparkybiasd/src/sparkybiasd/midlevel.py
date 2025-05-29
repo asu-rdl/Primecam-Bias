@@ -18,20 +18,16 @@ import time
 class BiasCrate:
     def __init__(self):
         self.cards: list[BiasCard] = []
-        self.config = dconf.gen()
+        self.config = {}
         for i in range(1, 18+1):
             try:
                 bc = BiasCard(i)
-                bc.close()
+                bc.set_repeater(0, 0, 0)
                 self.cards.append(bc)
+                print(f"Card {i} found")
             except OSError: # FIXME: Would catch exception talking to chip rather than card and misidentify the issue
                 print(f"Warning, Address {i} couldn't be reached.")
-        
-
-    def _getcard(self, card):
-        board = self.cards[card-1]
-        board.open()
-        return board
+                continue
 
     def seek_voltage(self, card: int, channel: int, voltage: float, increment = 1):
         """set channel to specified voltage (in TBD Units)"""
@@ -103,8 +99,10 @@ class BiasCrate:
     def enable_output(self, card: int, channel: int):
         """Enable output of a card+channel"""
         board = self.cards[card-1]
+        board.open()
         board.enable_chan(channel)
-        
+        board.close()
+
     def disable_all_outputs(self):
         """Disable all outputs in the bias crate"""
         for c in self.cards:
@@ -117,6 +115,7 @@ class BiasCrate:
         
     def list_cards(self):
         """List connected cards"""
+        pass
         
 
     def save(self, cfgfile: str):

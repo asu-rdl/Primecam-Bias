@@ -83,12 +83,14 @@ class BiasCard:
 
         self.channel_enables = 0
         self.test_enables = 0
-        self.read_expander()
+        # self.read_expander()
         self.wiper_states = [0,0,0,0,0,0,0,0]
 
         for i in range(1, 8+1):
             self.init_currsense(i)
-            self.read_ad5144(i)
+            # self.read_ad5144(i)
+
+        self.close()
 
     def read_ad5144(self, chan: int):
         """Gets the wiper state for a provided channel and saves the result to self.wiper_states.
@@ -169,7 +171,7 @@ class BiasCard:
             p = self.test_enables & (~(1 << (channel-1))) 
 
         self.test_enables = p
-        BiasCard.iicBus.write_i2c_block_data(0x27, 0, [~self.channel_enables, ~self.test_enables])
+        BiasCard.iicBus.write_byte_data(0x27, ~self.channel_enables, ~self.test_enables)
 
     def enable_chan(self, channel: int, en: bool = True):
         """
@@ -188,7 +190,7 @@ class BiasCard:
             p = self.channel_enables & (~(1 << (channel-1))) 
 
         self.channel_enables = p
-        BiasCard.iicBus.write_i2c_block_data(0x27, 0, [~self.channel_enables, ~self.test_enables])
+        BiasCard.iicBus.write_byte_data(0x27, ~self.channel_enables, ~self.test_enables)
         
 
     def set_repeater(self, en: int, gpio1:int, gpio2: int) -> None:
