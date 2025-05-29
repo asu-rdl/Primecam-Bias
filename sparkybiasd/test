@@ -14,14 +14,15 @@ else
   exit 1
 fi
 
-scp "$PROJDIR/dist/sparkybiasd-0.1.0-py3-none-any.whl" pi:~/
+ssh pi "/bin/bash -c 'rm -r /home/asu/sparkybiasd'"
+scp -r "$PROJDIR" pi:~/
 ssh pi "/bin/bash -c 'rm -r /home/asu/tests'"
 scp -r ./tests pi:~/
 
 # Install the package
 ssh pi "/bin/bash -c 'cd /home/asu/ && \
-  source .venv/bin/activate && pip uninstall -y sparkybiasd &&\
-  pip install ./sparkybiasd-0.1.0-py3-none-any.whl &&\
+  source .venv/bin/activate &&\
+  pip install -e ./sparkybiasd &&\
   rm -f sparkybiasd-0.1.0-py3-none-any.whl'"
 
 # Run pytest
