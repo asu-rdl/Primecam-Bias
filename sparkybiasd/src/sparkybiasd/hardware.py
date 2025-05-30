@@ -74,13 +74,9 @@ class BiasCard:
     iicBus = smbus2.SMBus("/dev/i2c-1")
     def __init__(self, address) -> None:
 
-        # set_repeater gets address from self.address
-        self.address = 0
-        self.set_repeater(1, 0, 0)
+        self.set_repeater(0, True, False, True)
         self.address = address
-        
-        self.set_repeater(1, 1, 0)
-
+        self.open()
         self.channel_enables = 0
         self.test_enables = 0
         # self.read_expander()
@@ -89,8 +85,8 @@ class BiasCard:
         for i in range(1, 8+1):
             self.init_currsense(i)
             # self.read_ad5144(i)
-
         self.close()
+
 
     def read_ad5144(self, chan: int):
         """Gets the wiper state for a provided channel and saves the result to self.wiper_states.
@@ -125,24 +121,15 @@ class BiasCard:
             # FIXME: handle error case from expander
             # len does not eq 2?
             pass
-
-    def erics_flash(self):
-        """dont ask, he wanted this not me."""
-        for _ in range(4):
-            self.set_repeater(1, 1, 0)
-            time.sleep(0.1)
-            self.set_repeater(1, 0, 0)
-            time.sleep(0.1)
-            self.set_repeater(1, 0, 0)
+    
 
     def close(self):
-        self.set_repeater(0, 0, 0)
+        """Close i2c bus on ltc4302 repeater"""
+        self.set_repeater(self.address, False, True, True)
 
     def open(self):
-        """
-        Connect the internal I2C bus of this bias card to the RPI
-        """
-        self.set_repeater(1, 1, 0)
+        """ Open i2c bus on ltc4302 repeater """
+        self.set_repeater(self.address, True, False, True)
 
     def enable_all_chan(self):
         """Enables the output of all of the card's bias supply lines."""
@@ -170,9 +157,9 @@ class BiasCard:
         else:
             p = self.test_enables & (~(1 << (channel-1))) 
 
-        self.test_enables = p
+        self.test_enables = p&0xFF
         BiasCard.iicBus.write_byte_data(0x27, ~self.channel_enables, ~self.test_enables)
-
+        
     def enable_chan(self, channel: int, en: bool = True):
         """
         We use a Texas Instruments 8575 to control the outputs
@@ -189,32 +176,32 @@ class BiasCard:
         else:
             p = self.channel_enables & (~(1 << (channel-1))) 
 
-        self.channel_enables = p
+        self.channel_enables = p&0xFF
         BiasCard.iicBus.write_byte_data(0x27, ~self.channel_enables, ~self.test_enables)
-        
 
-    def set_repeater(self, en: int, gpio1:int, gpio2: int) -> None:
+    def set_repeater(self, address: int, en_bus: bool, en_gpio1: bool, en_gpio2: bool) -> None:
         """
         Controls the LTC4302 Repeater. Each card has a repeater for both addressing and
         to ensure isolation from the rest of the I2C bus. 
 
         Parameters:
-            en(int): Enable 1 or 0 tf
-            gpio1(int): Enable GPIO 1
-            gpio2(int): Enable GPIO 2
+            en_bus(bool): Sets IIC Repeater bus to 'connected'
+            en_gpio1(bool): Sets the IIC Repeater GPIO1 HIGH
+            en_gpio1(bool): Sets the IIC Repeater GPIO2 HIGH
 
         Returns:
             None
         """
+        IIC_EN_BM = 0b1_00_00000
+        GPIO1_EN_BM = 0b0_01_00000
+        GPIO2_EN_BM = 0b0_10_00000
+
+        cmd = IIC_EN_BM if en_bus else 0
+        cmd = cmd | (GPIO1_EN_BM if en_gpio1 else 0)
+        cmd = cmd | (GPIO2_EN_BM if en_gpio2 else 0)
+
         # Gets address from bias card
-        addr = self.address
-        io1 = ~gpio1 # open drain; have pullup resistor, pull low to make activity LED glow
-        io2 = ~gpio2 # Unused....
-        assert en == 1 or en == 0, "Expected a 0 or 1"
-        assert gpio1 == 1 or gpio1 == 0, "Expected a 0 or 1"
-        assert gpio2 == 1 or gpio2 == 0, "Expected a 0 or 1"
-        cmdByte = (en << 7) | (io2 << 6) |  (io1 << 5)
-        BiasCard.iicBus.write_byte(0x60+addr, cmdByte)
+        BiasCard.iicBus.write_byte(0x60+address, cmd)
 
     def set_wiper(self, channel, value):
         assert value >= 0 and value <= 1023, f"Invalid value of {value}"

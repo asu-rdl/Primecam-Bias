@@ -17,24 +17,25 @@ import time
 
 class BiasCrate:
     def __init__(self):
-        self.cards: list[BiasCard] = []
+        self.cards: dict[int, BiasCard] = {}
         self.config = {}
         for i in range(1, 18+1):
             try:
                 bc = BiasCard(i)
-                bc.set_repeater(0, 0, 0)
-                self.cards.append(bc)
-                print(f"Card {i} found")
-            except OSError: # FIXME: Would catch exception talking to chip rather than card and misidentify the issue
-                print(f"Warning, Address {i} couldn't be reached.")
+                self.cards[i] = bc
+            except OSError: 
                 continue
+        for c in self.cards:
+            print(f"Found card address {c}")
+
+
 
     def seek_voltage(self, card: int, channel: int, voltage: float, increment = 1):
         """set channel to specified voltage (in TBD Units)"""
         assert voltage >= 0, "Can't generate negative voltages"
         assert voltage <= 5, "Voltage spec out of range"
         
-        board = self.cards[card-1]
+        board = self.cards[card]
         wiper = board.wiper_states[channel-1]
         print(board.wiper_states)
         cv = np.round(board.get_bus(channel), 6)
@@ -66,7 +67,7 @@ class BiasCrate:
             assert current >= 0, "Can't generate negative voltages"
             assert current <= 200, "Voltage spec out of range"
             
-            board = self.cards[card-1]
+            board = self.cards[card]
             wiper = board.wiper_states[channel-1]
             print(board.wiper_states)
             ci = np.round(board.get_bus(channel), 6)
@@ -93,29 +94,40 @@ class BiasCrate:
 
     def disable_output(self, card: int, channel: int):
         """Disable output of a card+channel"""
-        board = self.cards[card-1]
+        assert channel > 0 and channel <= 8, "Expected Channel 1 through 8"
+        board = self.cards[card]
+        board.open()
         board.enable_chan(channel, False)
-        
+        board.close()
+
     def enable_output(self, card: int, channel: int):
         """Enable output of a card+channel"""
-        board = self.cards[card-1]
+        assert channel > 0 and channel <= 8, "Expected Channel 1 through 8"
+        board = self.cards[card]
         board.open()
         board.enable_chan(channel)
         board.close()
 
-    def disable_all_outputs(self):
+    def disable_all_outputs(self, zero_digital_pot: bool = False):
         """Disable all outputs in the bias crate"""
         for c in self.cards:
-            c.disable_all_chan()
-            
+            self.cards[c].open()
+            self.cards[c].disable_all_chan()
+            if zero_digital_pot:
+                for i in range(1, 8+1):
+                    self.cards[c].set_wiper_min(i)
+            self.cards[c].close()
+
     def enable_all_outputs(self):
         """enable the outputs in the bias crate"""
         for c in self.cards:
-            c.enable_all_chan()   
-        
-    def list_cards(self):
+            self.cards[c].open()
+            self.cards[c].enable_all_chan()   
+            self.cards[c].close()
+
+    def get_availCards(self):
         """List connected cards"""
-        pass
+        return self.cards.keys()
         
 
     def save(self, cfgfile: str):

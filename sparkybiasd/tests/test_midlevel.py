@@ -1,8 +1,23 @@
 import sparkybiasd
+import time
+import pytest
 
-def test_board_1_channel_1():
-    init = sparkybiasd.BiasCrate()
-    init.enable_output(1, 1)
+@pytest.fixture
+def cfixt():
+    crate = sparkybiasd.BiasCrate()
+    crate.disable_all_outputs(True)
+    return crate
+
+def test_enable_all_outputs(cfixt):
+    crate = cfixt
+    crate.enable_all_outputs()
+    time.sleep(10)
+
+def test_disable_all_outputs(cfixt):
+    crate = cfixt
+    crate.disable_all_outputs()
+
+
+
     
-
 
