@@ -7,28 +7,45 @@ Executes a paired function and passes in the args and runs it. Bobs your uncle.
 
 """
 import redis
-from omegaconf import OmegaConf
+import redis.exceptions
+import os
 from . import midlevel as bias
+from .dconf import conf
+
+APPDATA_PATH = "/home/asu/daemon"
+LOGPATH = "/home/asu/daemon/logs"
+os.makedirs(APPDATA_PATH, exist_ok=True)
+os.makedirs(LOGPATH, exist_ok=True)
+
 import logging 
+from logging.handlers import RotatingFileHandler
+
+logger = logging.getLogger(__name__)
+# Logs written out to 4 Megabytes
+log_handler = RotatingFileHandler(LOGPATH+"applog.txt", 'a', 4_194_304, 5)
+LOGFORMAT=	"%(asctime)s|%(levelname)s|%(funcName)s|%(message)s"
+log_formatter = logging.Formatter(LOGFORMAT)
+log_handler.setFormatter(log_formatter)
+logging.basicConfig(format=LOGFORMAT, level=logging.DEBUG)
+logger.addHandler(log_handler)
 
 def main():
 
     crate = bias.BiasCrate()
     crate.disable_all_outputs() # Safety First!
 
-    conf = OmegaConf.create({'redisip':"192.168.1.1", 'redisport' : 0000, 'statusRefreshRate': 1 })
-    #NOTE: It appears there is a retry method within redis. Where was this last time???? 
+    rinst = redis.Redis(host = conf.redis.ip, port = conf.redis.port)
+    try:
+        rinst.ping()
+    except redis.exceptions.ConnectionError:
+        logger.exception("Failed to connect to the redis server")
+        exit(-1)
 
-    rinst = redis.Redis(host = conf.redisip, port = conf.redisport)
-    #TODO:  Are we connected, if so great; else crash out king
     rpubsub = rinst.pubsub()
-    rpubsub.subscribe("sparkommand") # Is command Kommrade
+    rpubsub.subscribe(conf.redis.commandChannel) # Is command 
     
-    # Suppose we should do a main loop; don't want to block since we'll update statuses
-    rpubsub.get_message() # Yes we subscribed, don't care though 
-
     while True:
-        msg = rpubsub.get_message()
+        msg = rpubsub.get_message(ignore_subscribe_messages=True)
         if msg is not None:
             # suppose we need to parse this?
             dtype = msg['type'].decode()

@@ -14,9 +14,31 @@ import time
 
 # WARNING: NEED TO IMPLEMENT MUTUAL EXCLUSION FOR BIAS CARDS
 
+def grab_board(func):
+    """
+    Wrapper handles opening and closing of an IIC bus at the card level.
+    the card number is converted into a BiasCard instance matching that address.
+    self.cards comes from BiasCrate.__init__
+    
+    Hopefully this isn't a cardinal sin that needs be removed later because of
+    complexity issues. 
+    """
+    def wrapper(self, card:int, *args, **kwargs):
+        board = self.cards[card]
+        board.open()
+        res = func(self, board, *args, **kwargs)
+        board.close()
+        return res
+    return wrapper
+
 
 class BiasCrate:
     def __init__(self):
+        """
+        Repesents the collection of BiasCards within the BiasCrate. Implements the high level 
+        functions the user may want to use. For future me or other users: If you add more functions,
+        simply add the grab_board decorator and supply the parameters self, board, channel.
+        """
         self.cards: dict[int, BiasCard] = {}
         self.config = {}
         for i in range(1, 18+1):
@@ -29,13 +51,12 @@ class BiasCrate:
             print(f"Found card address {c}")
 
 
-
-    def seek_voltage(self, card: int, channel: int, voltage: float, increment = 1):
+    @grab_board
+    def seek_voltage(self, board, channel: int, voltage: float, increment = 1):
         """set channel to specified voltage (in TBD Units)"""
         assert voltage >= 0, "Can't generate negative voltages"
         assert voltage <= 5, "Voltage spec out of range"
         
-        board = self.cards[card]
         wiper = board.wiper_states[channel-1]
         print(board.wiper_states)
         cv = np.round(board.get_bus(channel), 6)
@@ -62,6 +83,7 @@ class BiasCrate:
             
 
         
+    @grab_board
     def seek_current(self, card: int, channel: int, current: float, increment = 1):
             """set channel to specified current (in mA Units)"""
             assert current >= 0, "Can't generate negative voltages"
@@ -92,21 +114,17 @@ class BiasCrate:
                     board.set_wiper(channel, wiper)
                     continue
 
-    def disable_output(self, card: int, channel: int):
+    @grab_board
+    def disable_output(self, board, channel: int):
         """Disable output of a card+channel"""
         assert channel > 0 and channel <= 8, "Expected Channel 1 through 8"
-        board = self.cards[card]
-        board.open()
         board.enable_chan(channel, False)
-        board.close()
 
-    def enable_output(self, card: int, channel: int):
+    @grab_board
+    def enable_output(self, board, channel: int):
         """Enable output of a card+channel"""
         assert channel > 0 and channel <= 8, "Expected Channel 1 through 8"
-        board = self.cards[card]
-        board.open()
         board.enable_chan(channel)
-        board.close()
 
     def disable_all_outputs(self, zero_digital_pot: bool = False):
         """Disable all outputs in the bias crate"""
@@ -128,11 +146,9 @@ class BiasCrate:
     def get_availCards(self):
         """List connected cards"""
         return self.cards.keys()
-        
 
-    def save(self, cfgfile: str):
-        pass
+    def save(self):
+        raise Exception("config save option not implemented")
 
-    def load(self, cfgfile: str):
-        pass 
-
+    def load(self):
+        raise Exception("config save option not implemented")
