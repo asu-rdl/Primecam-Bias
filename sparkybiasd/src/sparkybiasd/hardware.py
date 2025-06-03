@@ -2,11 +2,13 @@
 @authors: Cody Roberson (carobers@asu.edu)
 @Documantation:
     This file is the lowest level interaction with the hardware. The individual chips of the bias board are all
-    programmed here. 
+    programmed here.
 """
+
 import smbus2
 import time
 import numpy as np
+
 # Constants for the INA219
 INA219_CONFIG_BVOLTAGERANGE_32V = 0x2000
 INA219_CONFIG_GAIN_4_160MV = 0x1000
@@ -36,7 +38,7 @@ def MSBF(val: int) -> int:
 # Hard Coded Config based off of Adafruit INA219 32V_2A
 INA219CONFIG = MSBF(
     INA219_CONFIG_BVOLTAGERANGE_32V
-    | INA219_CONFIG_GAIN_4_160MV 
+    | INA219_CONFIG_GAIN_4_160MV
     | INA219_CONFIG_BADCRES_12BIT
     | INA219_CONFIG_SADCRES_12BIT_1S_532US
     | INA219_CONFIG_MODE_SANDBVOLT_CONTINUOUS
@@ -61,17 +63,19 @@ AD5144ADDRTABLE = {
     5: 0x2A,
     6: 0x2E,
     7: 0x23,
-    8: 0x2F
+    8: 0x2F,
 }
 
-class BiasCard:
 
+class BiasCard:
     """
     Represents an individual bias card within a bias supply.
-    On init, attempts to connect LTC4302 (Address 0) I2C bus. This is the gate between the PI at 3v3 and the rest of the 
+    On init, attempts to connect LTC4302 (Address 0) I2C bus. This is the gate between the PI at 3v3 and the rest of the
     system at 5V.
     """
+
     iicBus = smbus2.SMBus("/dev/i2c-1")
+
     def __init__(self, address) -> None:
 
         self.set_repeater(0, True, False, True)
@@ -80,24 +84,23 @@ class BiasCard:
         self.channel_enables = 0
         self.test_enables = 0
         # self.read_expander()
-        self.wiper_states = [0,0,0,0,0,0,0,0]
+        self.wiper_states = [0, 0, 0, 0, 0, 0, 0, 0]
 
-        for i in range(1, 8+1):
+        for i in range(1, 8 + 1):
             self.init_currsense(i)
             # self.read_ad5144(i)
         self.close()
-
 
     def read_ad5144(self, chan: int):
         """Gets the wiper state for a provided channel and saves the result to self.wiper_states.
 
         Parameters:
             chan(int) : Channel to read
-        
+
         Returns:
             Wiper state (int) from 0 to 1023
         """
-        assert chan > 0 and chan < 9,  "Expected channel 1 through 8"
+        assert chan > 0 and chan < 9, "Expected channel 1 through 8"
         BiasCard.iicBus.write_byte_data(AD5144ADDRTABLE[chan], 0b0011_0000, 0b000000_11)
         w1 = BiasCard.iicBus.read_byte(AD5144ADDRTABLE[chan])
         BiasCard.iicBus.write_byte_data(AD5144ADDRTABLE[chan], 0b0011_0001, 0b000000_11)
@@ -107,10 +110,9 @@ class BiasCard:
         BiasCard.iicBus.write_byte_data(AD5144ADDRTABLE[chan], 0b0011_0011, 0b000000_11)
         w4 = BiasCard.iicBus.read_byte(AD5144ADDRTABLE[chan])
 
-        tot = w1+w2+w3+w4
-        self.wiper_states[chan-1] = tot
-        return tot 
-
+        tot = w1 + w2 + w3 + w4
+        self.wiper_states[chan - 1] = tot
+        return tot
 
     def read_expander(self):
         state = BiasCard.iicBus.read_i2c_block_data(0x27, 0, 2)
@@ -121,25 +123,34 @@ class BiasCard:
             # FIXME: handle error case from expander
             # len does not eq 2?
             pass
-    
 
     def close(self):
         """Close i2c bus on ltc4302 repeater"""
         self.set_repeater(self.address, False, True, True)
 
     def open(self):
-        """ Open i2c bus on ltc4302 repeater """
+        """Open i2c bus on ltc4302 repeater"""
         self.set_repeater(self.address, True, False, True)
 
     def enable_all_chan(self):
         """Enables the output of all of the card's bias supply lines."""
-        for i in range(1, 8+1):
-            self.enable_chan(i, True)   
+        for i in range(1, 8 + 1):
+            self.enable_chan(i, True)
+
+    def enable_all_testloads(self):
+        """Enables the output of all of the card's bias supply lines."""
+        for i in range(1, 8 + 1):
+            self.enable_testload(i, True)
 
     def disable_all_chan(self):
         """Creates an OPEN on all of this card's bias supply lines."""
-        for i in range(1, 8+1):
+        for i in range(1, 8 + 1):
             self.enable_chan(i, False)
+
+    def disable_all_testloads(self):
+        """Creates an OPEN on all of this card's bias supply lines."""
+        for i in range(1, 8 + 1):
+            self.enable_testload(i, False)
 
     def enable_testload(self, channel: int, en: bool = True):
         """
@@ -149,17 +160,17 @@ class BiasCard:
 
         Parameters:
             channel(int): Channel of the card to configure (1-8)
-            
+
         """
         p = self.test_enables
         if en:
-            p = self.test_enables | (1 << (channel-1))
+            p = self.test_enables | (1 << (channel - 1))
         else:
-            p = self.test_enables & (~(1 << (channel-1))) 
+            p = self.test_enables & (~(1 << (channel - 1)))
 
-        self.test_enables = p&0xFF
+        self.test_enables = p & 0xFF
         BiasCard.iicBus.write_byte_data(0x27, ~self.channel_enables, ~self.test_enables)
-        
+
     def enable_chan(self, channel: int, en: bool = True):
         """
         We use a Texas Instruments 8575 to control the outputs
@@ -168,21 +179,23 @@ class BiasCard:
 
         Parameters:
             channel(int): Channel of the card to configure (1-8)
-            
+
         """
         p = self.channel_enables
         if en:
-            p = self.channel_enables | (1 << (channel-1))
+            p = self.channel_enables | (1 << (channel - 1))
         else:
-            p = self.channel_enables & (~(1 << (channel-1))) 
+            p = self.channel_enables & (~(1 << (channel - 1)))
 
-        self.channel_enables = p&0xFF
+        self.channel_enables = p & 0xFF
         BiasCard.iicBus.write_byte_data(0x27, ~self.channel_enables, ~self.test_enables)
 
-    def set_repeater(self, address: int, en_bus: bool, en_gpio1: bool, en_gpio2: bool) -> None:
+    def set_repeater(
+        self, address: int, en_bus: bool, en_gpio1: bool, en_gpio2: bool
+    ) -> None:
         """
         Controls the LTC4302 Repeater. Each card has a repeater for both addressing and
-        to ensure isolation from the rest of the I2C bus. 
+        to ensure isolation from the rest of the I2C bus.
 
         Parameters:
             en_bus(bool): Sets IIC Repeater bus to 'connected'
@@ -201,7 +214,7 @@ class BiasCard:
         cmd = cmd | (GPIO2_EN_BM if en_gpio2 else 0)
 
         # Gets address from bias card
-        BiasCard.iicBus.write_byte(0x60+address, cmd)
+        BiasCard.iicBus.write_byte(0x60 + address, cmd)
 
     def set_wiper(self, channel, value):
         assert value >= 0 and value <= 1023, f"Invalid value of {value}"
@@ -210,28 +223,47 @@ class BiasCard:
         x = 0
         for _ in range(div):
             x = (x | 255) << 8
-        x = x+rem
+        x = x + rem
 
         BiasCard.iicBus.write_byte_data(AD5144ADDRTABLE[channel], 0b00010000, x & 0xFF)
-        BiasCard.iicBus.write_byte_data(AD5144ADDRTABLE[channel], 0b00010001, (x >>  8) & 0xFF)
-        BiasCard.iicBus.write_byte_data(AD5144ADDRTABLE[channel], 0b00010010, (x >> 16) & 0xFF)
-        BiasCard.iicBus.write_byte_data(AD5144ADDRTABLE[channel], 0b00010011, (x >> 24) & 0xFF)
-        self.wiper_states[channel-1] = value
-
+        BiasCard.iicBus.write_byte_data(
+            AD5144ADDRTABLE[channel], 0b00010001, (x >> 8) & 0xFF
+        )
+        BiasCard.iicBus.write_byte_data(
+            AD5144ADDRTABLE[channel], 0b00010010, (x >> 16) & 0xFF
+        )
+        BiasCard.iicBus.write_byte_data(
+            AD5144ADDRTABLE[channel], 0b00010011, (x >> 24) & 0xFF
+        )
+        self.wiper_states[channel - 1] = value
 
     def set_wiper_max(self, channel):
         x = 0xFF_FF_FF_FF
         BiasCard.iicBus.write_byte_data(AD5144ADDRTABLE[channel], 0b00010000, x & 0xFF)
-        BiasCard.iicBus.write_byte_data(AD5144ADDRTABLE[channel], 0b00010001, (x >>  8) & 0xFF)
-        BiasCard.iicBus.write_byte_data(AD5144ADDRTABLE[channel], 0b00010010, (x >> 16) & 0xFF)
-        BiasCard.iicBus.write_byte_data(AD5144ADDRTABLE[channel], 0b00010011, (x >> 24) & 0xFF)
+        BiasCard.iicBus.write_byte_data(
+            AD5144ADDRTABLE[channel], 0b00010001, (x >> 8) & 0xFF
+        )
+        BiasCard.iicBus.write_byte_data(
+            AD5144ADDRTABLE[channel], 0b00010010, (x >> 16) & 0xFF
+        )
+        BiasCard.iicBus.write_byte_data(
+            AD5144ADDRTABLE[channel], 0b00010011, (x >> 24) & 0xFF
+        )
+        self.wiper_states[channel - 1] = 1024
 
     def set_wiper_min(self, channel):
         x = 0
         BiasCard.iicBus.write_byte_data(AD5144ADDRTABLE[channel], 0b00010000, x & 0xFF)
-        BiasCard.iicBus.write_byte_data(AD5144ADDRTABLE[channel], 0b00010001, (x >>  8) & 0xFF)
-        BiasCard.iicBus.write_byte_data(AD5144ADDRTABLE[channel], 0b00010010, (x >> 16) & 0xFF)
-        BiasCard.iicBus.write_byte_data(AD5144ADDRTABLE[channel], 0b00010011, (x >> 24) & 0xFF)
+        BiasCard.iicBus.write_byte_data(
+            AD5144ADDRTABLE[channel], 0b00010001, (x >> 8) & 0xFF
+        )
+        BiasCard.iicBus.write_byte_data(
+            AD5144ADDRTABLE[channel], 0b00010010, (x >> 16) & 0xFF
+        )
+        BiasCard.iicBus.write_byte_data(
+            AD5144ADDRTABLE[channel], 0b00010011, (x >> 24) & 0xFF
+        )
+        self.wiper_states[channel - 1] = 0
 
     def init_currsense(self, chan: int, currentDivider: float = 100.0) -> None:
         """Initializes an INA219 current sense chip for a given channel
@@ -248,36 +280,57 @@ class BiasCard:
         self.ina219_powerMultiplier_mW = 2
 
         # Set Calibration register to 'Cal' calculated above
-        BiasCard.iicBus.write_word_data(INA219ADDRTABLE[chan], INA219_REG_CALIBRATION, INACALVALUE)
-        BiasCard.iicBus.write_word_data(INA219ADDRTABLE[chan], INA219_REG_CONFIG, INA219CONFIG)
-        
+        BiasCard.iicBus.write_word_data(
+            INA219ADDRTABLE[chan], INA219_REG_CALIBRATION, INACALVALUE
+        )
+        BiasCard.iicBus.write_word_data(
+            INA219ADDRTABLE[chan], INA219_REG_CONFIG, INA219CONFIG
+        )
+
     def _ina_getCurrent_raw(self, chan):
-        BiasCard.iicBus.write_word_data(INA219ADDRTABLE[chan], INA219_REG_CALIBRATION, INACALVALUE)
-        val = MSBF(BiasCard.iicBus.read_word_data(INA219ADDRTABLE[chan], INA219_REG_CURRENT))
+        BiasCard.iicBus.write_word_data(
+            INA219ADDRTABLE[chan], INA219_REG_CALIBRATION, INACALVALUE
+        )
+        val = MSBF(
+            BiasCard.iicBus.read_word_data(INA219ADDRTABLE[chan], INA219_REG_CURRENT)
+        )
         val = np.array([val]).astype("int16")[0]
         return val
 
     def _ina_getPower_raw(self, chan):
-        BiasCard.iicBus.write_word_data(INA219ADDRTABLE[chan], INA219_REG_CALIBRATION, INACALVALUE)
-        val = MSBF(BiasCard.iicBus.read_word_data(INA219ADDRTABLE[chan], INA219_REG_POWER))
+        BiasCard.iicBus.write_word_data(
+            INA219ADDRTABLE[chan], INA219_REG_CALIBRATION, INACALVALUE
+        )
+        val = MSBF(
+            BiasCard.iicBus.read_word_data(INA219ADDRTABLE[chan], INA219_REG_POWER)
+        )
         val = np.array([val]).astype("int16")[0]
         return val
 
     def _ina_getShuntVoltage_raw(self, chan):
         # BiasCard.iicBus.write_word_data(INA219ADDRTABLE[chan], INA219_REG_CALIBRATION, INACALVALUE)
-        val = MSBF(BiasCard.iicBus.read_word_data(INA219ADDRTABLE[chan], INA219_REG_SHUNTVOLTAGE))
+        val = MSBF(
+            BiasCard.iicBus.read_word_data(
+                INA219ADDRTABLE[chan], INA219_REG_SHUNTVOLTAGE
+            )
+        )
         val = np.array([val]).astype("int16")[0]
         return val
 
     def _ina_getBusVoltage_raw(self, chan):
-        BiasCard.iicBus.write_word_data(INA219ADDRTABLE[chan], INA219_REG_CALIBRATION, INACALVALUE)
-        val = MSBF(BiasCard.iicBus.read_word_data(INA219ADDRTABLE[chan], INA219_REG_BUSVOLTAGE))
+        BiasCard.iicBus.write_word_data(
+            INA219ADDRTABLE[chan], INA219_REG_CALIBRATION, INACALVALUE
+        )
+        val = MSBF(
+            BiasCard.iicBus.read_word_data(INA219ADDRTABLE[chan], INA219_REG_BUSVOLTAGE)
+        )
         val = np.array([val]).astype("int16")[0]
-        return ( val >> 3 ) * 4  # Shift to the right 3 to drop CNVR and OVF and multiply by LSB
+        return (
+            val >> 3
+        ) * 4  # Shift to the right 3 to drop CNVR and OVF and multiply by LSB
 
     def get_shunt(self, chan: int, navg: int = 6) -> float:
-        """Reads a current monitor for it's shunt voltage for a given channel.
-        """
+        """Reads a current monitor for it's shunt voltage for a given channel."""
         val = np.zeros(navg)
         for ind, _ in enumerate(val):
             val[ind] = 0.01 * self._ina_getShuntVoltage_raw(chan)
@@ -288,8 +341,7 @@ class BiasCard:
             return val
 
     def get_bus(self, chan: int, navg: int = 6) -> float:
-        """Reads a current monitor for it's bus voltage for a given channel
-        """
+        """Reads a current monitor for it's bus voltage for a given channel"""
         val = np.zeros(navg)
         for ind, _ in enumerate(val):
             val[ind] = self._ina_getBusVoltage_raw(chan) * 0.001
@@ -297,16 +349,12 @@ class BiasCard:
         return float(avg)
 
     def get_current(self, chan: int, navg: int = 6) -> float:
-        """Reads a current monitor for the bias's current draw for a given channel
-        """
+        """Reads a current monitor for the bias's current draw for a given channel"""
         val = np.zeros(navg)
         for ind, _ in enumerate(val):
-            val[ind] = self._ina_getCurrent_raw(chan) / (
-                self.ina219_currentDivider_mA
-            )
+            val[ind] = self._ina_getCurrent_raw(chan) / (self.ina219_currentDivider_mA)
         m = float(np.average(val))
         if m < 0.1:
             return 0.0
         else:
             return m
-
