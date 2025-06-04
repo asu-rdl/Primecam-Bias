@@ -151,18 +151,21 @@ Disables a card's output
 
 <a name="Configuration"></a>
 ## Configuration
-Configuration can be found in `/home/asu/daemon/config.yml`
+Configuration can be found in `$HOME/daemon/config.yml`
 
 <a name="Logs"></a>
 ## Logs
-The application creates logs in `/home/asu/daemon/logs/applog.txt`. Logs can reach a maximum of 4 Megabytes before being rolled over.
+The application creates logs in `$HOME/daemon/logs/applog.txt`. Logs can reach a maximum of 4 Megabytes before being rolled over.
 The previous logs would be renamed to applog.txt.1, applog.txt.2, etc until 5. This is to keep the logs from being burdensome on the
 system.
 
 For details on implementation, see [Python's RotatingFileHandler](https://docs.python.org/3/library/logging.handlers.html#logging.handlers.RotatingFileHandler)
 
 
-
+# Testing
+First, a redis server is spun up. This project is then transferred to the PI with scp. Following this, the virtual environment
+in `$HOME/.venv/bin/` is activated and we execute pytest on the tests directory.
+A local redis server is spun up. This tooling is uploaded to the raspberry pi. pytest is then ran on the tests dicrectory.
 
 
 

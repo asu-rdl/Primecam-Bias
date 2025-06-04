@@ -46,8 +46,6 @@ class BiasCrate:
                 self.cards[i] = bc
             except OSError:
                 continue
-        for c in self.cards:
-            print(f"Found card address {c}")
 
     @grab_board
     def seek_voltage(self, board, channel: int, voltage: float, increment=1):
@@ -123,6 +121,20 @@ class BiasCrate:
         """Enable output of a card+channel"""
         assert channel > 0 and channel <= 8, "Expected Channel 1 through 8"
         board.enable_chan(channel)
+
+    @grab_board
+    def get_status(self, board:BiasCard, channel: int) -> tuple:
+        """Get the status of a card+channel"""
+        assert channel > 0 and channel <= 8, "Expected Channel 1 through 8"
+        vbus = board.get_bus(channel)
+        time.sleep(0.01)  # Allow bus to settle
+        vshunt = board.get_shunt(channel)
+        time.sleep(0.01)  # Allow bus to settle
+        current = board.get_current(channel)
+        time.sleep(0.01)  # Allow bus to settle
+        OutputEnabled = board.is_chan_enabled(channel)
+        wiper = board.wiper_states[channel - 1]
+        return vbus, vshunt, current, OutputEnabled, wiper
 
     def disable_all_outputs(self, zero_digital_pot: bool = False):
         """Disable all outputs in the bias crate"""

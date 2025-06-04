@@ -10,8 +10,7 @@ We (ASU) aim to deliver on that need. These docs contain the Hardware and Softwa
 
 # Table Of Contents
 
-1. [User Guide](userguide.html)
+1. [Raspberry Pi Bringup](raspberrypi.html)
 1. [Software](software.html)
 1. [Hardware](hardware.html)
-1. [Raspberry Pi Bringup](raspberrypi.html)
 

@@ -22,5 +22,7 @@ scp -r ./tests pi:~/
 # Run pytest
 ssh pi "/bin/bash -c 'cd /home/asu/ && \
   source .venv/bin/activate &&\
-  pytest -vv tests/test_midlevel.py'"
+  python -c \"import sparkybiasd; sparkybiasd.main()\"& \
+  source .venv/bin/activate &&\
+  pytest -vvv tests/'"
 

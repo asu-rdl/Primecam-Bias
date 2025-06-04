@@ -91,6 +91,19 @@ class BiasCard:
             # self.read_ad5144(i)
         self.close()
 
+    def is_chan_enabled(self, channel: int) -> bool:
+        """
+        Checks if a channel is enabled or not.
+
+        Parameters:
+            channel(int): Channel of the card to check (1-8)
+
+        Returns:
+            True if enabled, False if disabled
+        """
+        assert channel > 0 and channel < 9, "Expected channel 1 through 8"
+        return (self.channel_enables & (1 << (channel - 1))) != 0
+
     def read_ad5144(self, chan: int):
         """Gets the wiper state for a provided channel and saves the result to self.wiper_states.
 
