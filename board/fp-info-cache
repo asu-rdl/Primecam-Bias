@@ -1,4 +1,4 @@
-25226275012541460
+25630534950964943
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -6167,6 +6167,13 @@ capacitor tantalum
 2
 2
 Capacitor_Tantalum_SMD
+CP_EIA-1608-08_AVX-J_Pad1.25x1.05mm_HandSolder
+Tantalum Capacitor SMD AVX-J (1608-08 Metric), IPC_7351 nominal, (Body size from: https://www.vishay.com/docs/48064/_t58_vmn_pt0471_1601.pdf), generated with kicad-footprint-generator
+capacitor tantalum
+0
+2
+2
+Capacitor_Tantalum_SMD
 CP_EIA-1608-10_AVX-L
 Tantalum Capacitor SMD AVX-L (1608-10 Metric), IPC-7352 nominal, (Body size from: https://www.vishay.com/docs/48064/_t58_vmn_pt0471_1601.pdf), generated with kicad-footprint-generator
 capacitor tantalum
@@ -6176,6 +6183,13 @@ capacitor tantalum
 Capacitor_Tantalum_SMD
 CP_EIA-1608-10_AVX-L_HandSolder
 Tantalum Capacitor SMD AVX-L (1608-10 Metric), IPC-7352 nominal, (Body size from: https://www.vishay.com/docs/48064/_t58_vmn_pt0471_1601.pdf), generated with kicad-footprint-generator
+capacitor tantalum
+0
+2
+2
+Capacitor_Tantalum_SMD
+CP_EIA-1608-10_AVX-L_Pad1.25x1.05mm_HandSolder
+Tantalum Capacitor SMD AVX-L (1608-10 Metric), IPC_7351 nominal, (Body size from: https://www.vishay.com/docs/48064/_t58_vmn_pt0471_1601.pdf), generated with kicad-footprint-generator
 capacitor tantalum
 0
 2
@@ -6195,6 +6209,13 @@ capacitor tantalum
 2
 2
 Capacitor_Tantalum_SMD
+CP_EIA-2012-12_Kemet-R_Pad1.30x1.05mm_HandSolder
+Tantalum Capacitor SMD Kemet-R (2012-12 Metric), IPC_7351 nominal, (Body size from: https://www.vishay.com/docs/40182/tmch.pdf), generated with kicad-footprint-generator
+capacitor tantalum
+0
+2
+2
+Capacitor_Tantalum_SMD
 CP_EIA-2012-15_AVX-P
 Tantalum Capacitor SMD AVX-P (2012-15 Metric), IPC-7352 nominal, (Body size from: https://www.vishay.com/docs/40182/tmch.pdf), generated with kicad-footprint-generator
 capacitor tantalum
@@ -6204,6 +6225,13 @@ capacitor tantalum
 Capacitor_Tantalum_SMD
 CP_EIA-2012-15_AVX-P_HandSolder
 Tantalum Capacitor SMD AVX-P (2012-15 Metric), IPC-7352 nominal, (Body size from: https://www.vishay.com/docs/40182/tmch.pdf), generated with kicad-footprint-generator
+capacitor tantalum
+0
+2
+2
+Capacitor_Tantalum_SMD
+CP_EIA-2012-15_AVX-P_Pad1.30x1.05mm_HandSolder
+Tantalum Capacitor SMD AVX-P (2012-15 Metric), IPC_7351 nominal, (Body size from: https://www.vishay.com/docs/40182/tmch.pdf), generated with kicad-footprint-generator
 capacitor tantalum
 0
 2
@@ -6223,6 +6251,13 @@ capacitor tantalum
 2
 2
 Capacitor_Tantalum_SMD
+CP_EIA-3216-10_Kemet-I_Pad1.58x1.35mm_HandSolder
+Tantalum Capacitor SMD Kemet-I (3216-10 Metric), IPC_7351 nominal, (Body size from: http://www.kemet.com/Lists/ProductCatalog/Attachments/253/KEM_TC101_STD.pdf), generated with kicad-footprint-generator
+capacitor tantalum
+0
+2
+2
+Capacitor_Tantalum_SMD
 CP_EIA-3216-12_Kemet-S
 Tantalum Capacitor SMD Kemet-S (3216-12 Metric), IPC-7352 nominal, (Body size from: http://www.kemet.com/Lists/ProductCatalog/Attachments/253/KEM_TC101_STD.pdf), generated with kicad-footprint-generator
 capacitor tantalum
@@ -6232,6 +6267,13 @@ capacitor tantalum
 Capacitor_Tantalum_SMD
 CP_EIA-3216-12_Kemet-S_HandSolder
 Tantalum Capacitor SMD Kemet-S (3216-12 Metric), IPC-7352 nominal, (Body size from: http://www.kemet.com/Lists/ProductCatalog/Attachments/253/KEM_TC101_STD.pdf), generated with kicad-footprint-generator
+capacitor tantalum
+0
+2
+2
+Capacitor_Tantalum_SMD
+CP_EIA-3216-12_Kemet-S_Pad1.58x1.35mm_HandSolder
+Tantalum Capacitor SMD Kemet-S (3216-12 Metric), IPC_7351 nominal, (Body size from: http://www.kemet.com/Lists/ProductCatalog/Attachments/253/KEM_TC101_STD.pdf), generated with kicad-footprint-generator
 capacitor tantalum
 0
 2
@@ -6251,6 +6293,13 @@ capacitor tantalum
 2
 2
 Capacitor_Tantalum_SMD
+CP_EIA-3216-18_Kemet-A_Pad1.58x1.35mm_HandSolder
+Tantalum Capacitor SMD Kemet-A (3216-18 Metric), IPC_7351 nominal, (Body size from: http://www.kemet.com/Lists/ProductCatalog/Attachments/253/KEM_TC101_STD.pdf), generated with kicad-footprint-generator
+capacitor tantalum
+0
+2
+2
+Capacitor_Tantalum_SMD
 CP_EIA-3528-12_Kemet-T
 Tantalum Capacitor SMD Kemet-T (3528-12 Metric), IPC-7352 nominal, (Body size from: http://www.kemet.com/Lists/ProductCatalog/Attachments/253/KEM_TC101_STD.pdf), generated with kicad-footprint-generator
 capacitor tantalum
@@ -6260,6 +6309,13 @@ capacitor tantalum
 Capacitor_Tantalum_SMD
 CP_EIA-3528-12_Kemet-T_HandSolder
 Tantalum Capacitor SMD Kemet-T (3528-12 Metric), IPC-7352 nominal, (Body size from: http://www.kemet.com/Lists/ProductCatalog/Attachments/253/KEM_TC101_STD.pdf), generated with kicad-footprint-generator
+capacitor tantalum
+0
+2
+2
+Capacitor_Tantalum_SMD
+CP_EIA-3528-12_Kemet-T_Pad1.50x2.35mm_HandSolder
+Tantalum Capacitor SMD Kemet-T (3528-12 Metric), IPC_7351 nominal, (Body size from: http://www.kemet.com/Lists/ProductCatalog/Attachments/253/KEM_TC101_STD.pdf), generated with kicad-footprint-generator
 capacitor tantalum
 0
 2
@@ -6279,6 +6335,13 @@ capacitor tantalum
 2
 2
 Capacitor_Tantalum_SMD
+CP_EIA-3528-15_AVX-H_Pad1.50x2.35mm_HandSolder
+Tantalum Capacitor SMD AVX-H (3528-15 Metric), IPC_7351 nominal, (Body size from: http://www.kemet.com/Lists/ProductCatalog/Attachments/253/KEM_TC101_STD.pdf), generated with kicad-footprint-generator
+capacitor tantalum
+0
+2
+2
+Capacitor_Tantalum_SMD
 CP_EIA-3528-21_Kemet-B
 Tantalum Capacitor SMD Kemet-B (3528-21 Metric), IPC-7352 nominal, (Body size from: http://www.kemet.com/Lists/ProductCatalog/Attachments/253/KEM_TC101_STD.pdf), generated with kicad-footprint-generator
 capacitor tantalum
@@ -6288,6 +6351,13 @@ capacitor tantalum
 Capacitor_Tantalum_SMD
 CP_EIA-3528-21_Kemet-B_HandSolder
 Tantalum Capacitor SMD Kemet-B (3528-21 Metric), IPC-7352 nominal, (Body size from: http://www.kemet.com/Lists/ProductCatalog/Attachments/253/KEM_TC101_STD.pdf), generated with kicad-footprint-generator
+capacitor tantalum
+0
+2
+2
+Capacitor_Tantalum_SMD
+CP_EIA-3528-21_Kemet-B_Pad1.50x2.35mm_HandSolder
+Tantalum Capacitor SMD Kemet-B (3528-21 Metric), IPC_7351 nominal, (Body size from: http://www.kemet.com/Lists/ProductCatalog/Attachments/253/KEM_TC101_STD.pdf), generated with kicad-footprint-generator
 capacitor tantalum
 0
 2
@@ -6307,6 +6377,13 @@ capacitor tantalum
 2
 2
 Capacitor_Tantalum_SMD
+CP_EIA-6032-15_Kemet-U_Pad2.25x2.35mm_HandSolder
+Tantalum Capacitor SMD Kemet-U (6032-15 Metric), IPC_7351 nominal, (Body size from: http://www.kemet.com/Lists/ProductCatalog/Attachments/253/KEM_TC101_STD.pdf), generated with kicad-footprint-generator
+capacitor tantalum
+0
+2
+2
+Capacitor_Tantalum_SMD
 CP_EIA-6032-20_AVX-F
 Tantalum Capacitor SMD AVX-F (6032-20 Metric), IPC-7352 nominal, (Body size from: http://www.kemet.com/Lists/ProductCatalog/Attachments/253/KEM_TC101_STD.pdf), generated with kicad-footprint-generator
 capacitor tantalum
@@ -6316,6 +6393,13 @@ capacitor tantalum
 Capacitor_Tantalum_SMD
 CP_EIA-6032-20_AVX-F_HandSolder
 Tantalum Capacitor SMD AVX-F (6032-20 Metric), IPC-7352 nominal, (Body size from: http://www.kemet.com/Lists/ProductCatalog/Attachments/253/KEM_TC101_STD.pdf), generated with kicad-footprint-generator
+capacitor tantalum
+0
+2
+2
+Capacitor_Tantalum_SMD
+CP_EIA-6032-20_AVX-F_Pad2.25x2.35mm_HandSolder
+Tantalum Capacitor SMD AVX-F (6032-20 Metric), IPC_7351 nominal, (Body size from: http://www.kemet.com/Lists/ProductCatalog/Attachments/253/KEM_TC101_STD.pdf), generated with kicad-footprint-generator
 capacitor tantalum
 0
 2
@@ -6335,6 +6419,13 @@ capacitor tantalum
 2
 2
 Capacitor_Tantalum_SMD
+CP_EIA-6032-28_Kemet-C_Pad2.25x2.35mm_HandSolder
+Tantalum Capacitor SMD Kemet-C (6032-28 Metric), IPC_7351 nominal, (Body size from: http://www.kemet.com/Lists/ProductCatalog/Attachments/253/KEM_TC101_STD.pdf), generated with kicad-footprint-generator
+capacitor tantalum
+0
+2
+2
+Capacitor_Tantalum_SMD
 CP_EIA-7132-20_AVX-U
 Tantalum Capacitor SMD AVX-U (7132-20 Metric), IPC-7352 nominal, (Body size from: http://datasheets.avx.com/F72-F75.pdf), generated with kicad-footprint-generator
 capacitor tantalum
@@ -6344,6 +6435,13 @@ capacitor tantalum
 Capacitor_Tantalum_SMD
 CP_EIA-7132-20_AVX-U_HandSolder
 Tantalum Capacitor SMD AVX-U (7132-20 Metric), IPC-7352 nominal, (Body size from: http://datasheets.avx.com/F72-F75.pdf), generated with kicad-footprint-generator
+capacitor tantalum
+0
+2
+2
+Capacitor_Tantalum_SMD
+CP_EIA-7132-20_AVX-U_Pad2.72x3.50mm_HandSolder
+Tantalum Capacitor SMD AVX-U (7132-20 Metric), IPC_7351 nominal, (Body size from: http://datasheets.avx.com/F72-F75.pdf), generated with kicad-footprint-generator
 capacitor tantalum
 0
 2
@@ -6363,6 +6461,13 @@ capacitor tantalum
 2
 2
 Capacitor_Tantalum_SMD
+CP_EIA-7132-28_AVX-C_Pad2.72x3.50mm_HandSolder
+Tantalum Capacitor SMD AVX-C (7132-28 Metric), IPC_7351 nominal, (Body size from: http://datasheets.avx.com/F72-F75.pdf), generated with kicad-footprint-generator
+capacitor tantalum
+0
+2
+2
+Capacitor_Tantalum_SMD
 CP_EIA-7260-15_AVX-R
 Tantalum Capacitor SMD AVX-R (7260-15 Metric), IPC-7352 nominal, (Body size from: http://datasheets.avx.com/F72-F75.pdf), generated with kicad-footprint-generator
 capacitor tantalum
@@ -6372,6 +6477,13 @@ capacitor tantalum
 Capacitor_Tantalum_SMD
 CP_EIA-7260-15_AVX-R_HandSolder
 Tantalum Capacitor SMD AVX-R (7260-15 Metric), IPC-7352 nominal, (Body size from: http://datasheets.avx.com/F72-F75.pdf), generated with kicad-footprint-generator
+capacitor tantalum
+0
+2
+2
+Capacitor_Tantalum_SMD
+CP_EIA-7260-15_AVX-R_Pad2.68x6.30mm_HandSolder
+Tantalum Capacitor SMD AVX-R (7260-15 Metric), IPC_7351 nominal, (Body size from: http://datasheets.avx.com/F72-F75.pdf), generated with kicad-footprint-generator
 capacitor tantalum
 0
 2
@@ -6391,6 +6503,13 @@ capacitor tantalum
 2
 2
 Capacitor_Tantalum_SMD
+CP_EIA-7260-20_AVX-M_Pad2.68x6.30mm_HandSolder
+Tantalum Capacitor SMD AVX-M (7260-20 Metric), IPC_7351 nominal, (Body size from: http://datasheets.avx.com/F72-F75.pdf), generated with kicad-footprint-generator
+capacitor tantalum
+0
+2
+2
+Capacitor_Tantalum_SMD
 CP_EIA-7260-28_AVX-M
 Tantalum Capacitor SMD AVX-M (7260-28 Metric), IPC-7352 nominal, (Body size from: http://datasheets.avx.com/F72-F75.pdf), generated with kicad-footprint-generator
 capacitor tantalum
@@ -6400,6 +6519,13 @@ capacitor tantalum
 Capacitor_Tantalum_SMD
 CP_EIA-7260-28_AVX-M_HandSolder
 Tantalum Capacitor SMD AVX-M (7260-28 Metric), IPC-7352 nominal, (Body size from: http://datasheets.avx.com/F72-F75.pdf), generated with kicad-footprint-generator
+capacitor tantalum
+0
+2
+2
+Capacitor_Tantalum_SMD
+CP_EIA-7260-28_AVX-M_Pad2.68x6.30mm_HandSolder
+Tantalum Capacitor SMD AVX-M (7260-28 Metric), IPC_7351 nominal, (Body size from: http://datasheets.avx.com/F72-F75.pdf), generated with kicad-footprint-generator
 capacitor tantalum
 0
 2
@@ -6419,6 +6545,13 @@ capacitor tantalum
 2
 2
 Capacitor_Tantalum_SMD
+CP_EIA-7260-38_AVX-R_Pad2.68x6.30mm_HandSolder
+Tantalum Capacitor SMD AVX-R (7260-38 Metric), IPC_7351 nominal, (Body size from: http://datasheets.avx.com/F72-F75.pdf), generated with kicad-footprint-generator
+capacitor tantalum
+0
+2
+2
+Capacitor_Tantalum_SMD
 CP_EIA-7343-15_Kemet-W
 Tantalum Capacitor SMD Kemet-W (7343-15 Metric), IPC-7352 nominal, (Body size from: http://www.kemet.com/Lists/ProductCatalog/Attachments/253/KEM_TC101_STD.pdf), generated with kicad-footprint-generator
 capacitor tantalum
@@ -6428,6 +6561,13 @@ capacitor tantalum
 Capacitor_Tantalum_SMD
 CP_EIA-7343-15_Kemet-W_HandSolder
 Tantalum Capacitor SMD Kemet-W (7343-15 Metric), IPC-7352 nominal, (Body size from: http://www.kemet.com/Lists/ProductCatalog/Attachments/253/KEM_TC101_STD.pdf), generated with kicad-footprint-generator
+capacitor tantalum
+0
+2
+2
+Capacitor_Tantalum_SMD
+CP_EIA-7343-15_Kemet-W_Pad2.25x2.55mm_HandSolder
+Tantalum Capacitor SMD Kemet-W (7343-15 Metric), IPC_7351 nominal, (Body size from: http://www.kemet.com/Lists/ProductCatalog/Attachments/253/KEM_TC101_STD.pdf), generated with kicad-footprint-generator
 capacitor tantalum
 0
 2
@@ -6447,6 +6587,13 @@ capacitor tantalum
 2
 2
 Capacitor_Tantalum_SMD
+CP_EIA-7343-20_Kemet-V_Pad2.25x2.55mm_HandSolder
+Tantalum Capacitor SMD Kemet-V (7343-20 Metric), IPC_7351 nominal, (Body size from: http://www.kemet.com/Lists/ProductCatalog/Attachments/253/KEM_TC101_STD.pdf), generated with kicad-footprint-generator
+capacitor tantalum
+0
+2
+2
+Capacitor_Tantalum_SMD
 CP_EIA-7343-30_AVX-N
 Tantalum Capacitor SMD AVX-N (7343-30 Metric), IPC-7352 nominal, (Body size from: http://www.kemet.com/Lists/ProductCatalog/Attachments/253/KEM_TC101_STD.pdf), generated with kicad-footprint-generator
 capacitor tantalum
@@ -6456,6 +6603,13 @@ capacitor tantalum
 Capacitor_Tantalum_SMD
 CP_EIA-7343-30_AVX-N_HandSolder
 Tantalum Capacitor SMD AVX-N (7343-30 Metric), IPC-7352 nominal, (Body size from: http://www.kemet.com/Lists/ProductCatalog/Attachments/253/KEM_TC101_STD.pdf), generated with kicad-footprint-generator
+capacitor tantalum
+0
+2
+2
+Capacitor_Tantalum_SMD
+CP_EIA-7343-30_AVX-N_Pad2.25x2.55mm_HandSolder
+Tantalum Capacitor SMD AVX-N (7343-30 Metric), IPC_7351 nominal, (Body size from: http://www.kemet.com/Lists/ProductCatalog/Attachments/253/KEM_TC101_STD.pdf), generated with kicad-footprint-generator
 capacitor tantalum
 0
 2
@@ -6475,6 +6629,13 @@ capacitor tantalum
 2
 2
 Capacitor_Tantalum_SMD
+CP_EIA-7343-31_Kemet-D_Pad2.25x2.55mm_HandSolder
+Tantalum Capacitor SMD Kemet-D (7343-31 Metric), IPC_7351 nominal, (Body size from: http://www.kemet.com/Lists/ProductCatalog/Attachments/253/KEM_TC101_STD.pdf), generated with kicad-footprint-generator
+capacitor tantalum
+0
+2
+2
+Capacitor_Tantalum_SMD
 CP_EIA-7343-40_Kemet-Y
 Tantalum Capacitor SMD Kemet-Y (7343-40 Metric), IPC-7352 nominal, (Body size from: http://www.kemet.com/Lists/ProductCatalog/Attachments/253/KEM_TC101_STD.pdf), generated with kicad-footprint-generator
 capacitor tantalum
@@ -6484,6 +6645,13 @@ capacitor tantalum
 Capacitor_Tantalum_SMD
 CP_EIA-7343-40_Kemet-Y_HandSolder
 Tantalum Capacitor SMD Kemet-Y (7343-40 Metric), IPC-7352 nominal, (Body size from: http://www.kemet.com/Lists/ProductCatalog/Attachments/253/KEM_TC101_STD.pdf), generated with kicad-footprint-generator
+capacitor tantalum
+0
+2
+2
+Capacitor_Tantalum_SMD
+CP_EIA-7343-40_Kemet-Y_Pad2.25x2.55mm_HandSolder
+Tantalum Capacitor SMD Kemet-Y (7343-40 Metric), IPC_7351 nominal, (Body size from: http://www.kemet.com/Lists/ProductCatalog/Attachments/253/KEM_TC101_STD.pdf), generated with kicad-footprint-generator
 capacitor tantalum
 0
 2
@@ -6503,6 +6671,13 @@ capacitor tantalum
 2
 2
 Capacitor_Tantalum_SMD
+CP_EIA-7343-43_Kemet-X_Pad2.25x2.55mm_HandSolder
+Tantalum Capacitor SMD Kemet-X (7343-43 Metric), IPC_7351 nominal, (Body size from: http://www.kemet.com/Lists/ProductCatalog/Attachments/253/KEM_TC101_STD.pdf), generated with kicad-footprint-generator
+capacitor tantalum
+0
+2
+2
+Capacitor_Tantalum_SMD
 CP_EIA-7360-38_Kemet-E
 Tantalum Capacitor SMD Kemet-E (7360-38 Metric), IPC-7352 nominal, (Body size from: http://www.kemet.com/Lists/ProductCatalog/Attachments/253/KEM_TC101_STD.pdf), generated with kicad-footprint-generator
 capacitor tantalum
@@ -6512,6 +6687,13 @@ capacitor tantalum
 Capacitor_Tantalum_SMD
 CP_EIA-7360-38_Kemet-E_HandSolder
 Tantalum Capacitor SMD Kemet-E (7360-38 Metric), IPC-7352 nominal, (Body size from: http://www.kemet.com/Lists/ProductCatalog/Attachments/253/KEM_TC101_STD.pdf), generated with kicad-footprint-generator
+capacitor tantalum
+0
+2
+2
+Capacitor_Tantalum_SMD
+CP_EIA-7360-38_Kemet-E_Pad2.25x4.25mm_HandSolder
+Tantalum Capacitor SMD Kemet-E (7360-38 Metric), IPC_7351 nominal, (Body size from: http://www.kemet.com/Lists/ProductCatalog/Attachments/253/KEM_TC101_STD.pdf), generated with kicad-footprint-generator
 capacitor tantalum
 0
 2
@@ -6531,6 +6713,13 @@ capacitor tantalum
 2
 2
 Capacitor_Tantalum_SMD
+CP_EIA-7361-38_AVX-V_Pad2.18x3.30mm_HandSolder
+Tantalum Capacitor SMD AVX-V (7361-38 Metric), IPC_7351 nominal, (Body size from: http://datasheets.avx.com/NOS.pdf), generated with kicad-footprint-generator
+capacitor tantalum
+0
+2
+2
+Capacitor_Tantalum_SMD
 CP_EIA-7361-438_AVX-U
 Tantalum Capacitor SMD AVX-U (7361-438 Metric), IPC-7352 nominal, (Body size from: http://datasheets.avx.com/NOS.pdf), generated with kicad-footprint-generator
 capacitor tantalum
@@ -6540,6 +6729,13 @@ capacitor tantalum
 Capacitor_Tantalum_SMD
 CP_EIA-7361-438_AVX-U_HandSolder
 Tantalum Capacitor SMD AVX-U (7361-438 Metric), IPC-7352 nominal, (Body size from: http://datasheets.avx.com/NOS.pdf), generated with kicad-footprint-generator
+capacitor tantalum
+0
+2
+2
+Capacitor_Tantalum_SMD
+CP_EIA-7361-438_AVX-U_Pad2.18x3.30mm_HandSolder
+Tantalum Capacitor SMD AVX-U (7361-438 Metric), IPC_7351 nominal, (Body size from: http://datasheets.avx.com/NOS.pdf), generated with kicad-footprint-generator
 capacitor tantalum
 0
 2
@@ -53851,6 +54047,13 @@ ACDC-Converter TRACO TMF30 THT 30W
 4
 4
 Converter_ACDC
+Converter_ACDC_TRACO_TMG-15_THT
+ACDC-Converter, TRACO, TMG Series 15 https://www.tracopower.com/products/tmg.pdf
+ACDC-Converter TRACO TMG Series 15
+0
+4
+4
+Converter_ACDC
 Converter_ACDC_TRACO_TMG_071xx_THT
 ACDC-Converter, TRACO, TMG 071xx, 7W, Rev. March 24. 2025 (Script generated with StandardBox.py) (https://www.tracopower.com/products/tmg07.pdf)
 ACDC-Converter TRACO TMG07 THT 1.08"x1.08" 7W
@@ -53917,6 +54120,13 @@ Converter_ACDC
 Converter_ACDC_Vigortronix_VTX-214-010-2xx_THT
 Vigortronix VTX-214-010-2xx serie of ACDC converter, https://www.vigortronix.com/wp-content/uploads/2024/03/VTX-214-010-2xx-10W-Mini-AC-DC-Converter-Range-D0066.pdf
 Vigortronix VTX-214-010-2xx serie of ACDC converter
+0
+4
+4
+Converter_ACDC
+Converter_ACDC_Vigortronix_VTX-214-010-xxx_THT
+Vigortronix VTX-214-010-xxx serie of ACDC converter, http://www.vigortronix.com/10WattACDCPCBPowerModule.aspx
+Vigortronix VTX-214-010-xxx serie of ACDC converter
 0
 4
 4
@@ -56539,6 +56749,13 @@ diode SOD964 SOD-964
 2
 2
 Diode_SMD
+OnSemi_751EP_SOIC-4_3.9x4.725mm_P2.54mm
+OnSemi 751EP SOIC, 4 Pin (https://www.onsemi.com/pdf/datasheet/mb8s-d.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+OnSemi SOIC Diode_SMD OnSemi_MB8S OnSemi_SOIC4W
+0
+4
+4
+Diode_SMD
 ST_D_SMC
 STMicroelectronics SMC (JEDEC DO-214-D, variant AB), https://www.st.com/resource/en/datasheet/sm15t36a.pdf#page=7
 Diode DO-214AB
@@ -57994,6 +58211,1483 @@ One digit LED 7 segment SA39-11 SC39-11 SA39-12 SC39-12
 0
 10
 10
+EricWeeksFootprints
+1X2-3.5MM
+
+
+0
+2
+2
+EricWeeksFootprints
+1X06_ROUND_70
+
+
+0
+6
+6
+EricWeeksFootprints
+1pin_connector
+module 1 pin (ou trou mecanique de percage)
+DEV
+0
+1
+1
+EricWeeksFootprints
+4-5GHz_BandPassFilter_20mil_Rogers3003
+
+
+0
+12
+2
+EricWeeksFootprints
+4-8GHz_BandPassFilter_20mil_Rogers3003
+
+
+0
+0
+0
+EricWeeksFootprints
+5-6GHz_BandPassFilter_20mil_Rogers3003
+
+
+0
+12
+2
+EricWeeksFootprints
+6-7GHz_BandPassFilter_20mil_Rogers3003
+
+
+0
+12
+2
+EricWeeksFootprints
+7-8GHz_BandPassFilter_20mil_Rogers3003
+
+
+0
+12
+2
+EricWeeksFootprints
+0201_C
+Capacitor SMD 0201, reflow soldering, AVX (see smccp.pdf)
+capacitor 0201
+0
+2
+2
+EricWeeksFootprints
+0201_C (1)
+Capacitor SMD 0201, reflow soldering, AVX (see smccp.pdf)
+capacitor 0201
+0
+2
+2
+EricWeeksFootprints
+0402_C
+Capacitor SMD 0402, reflow soldering, AVX (see smccp.pdf)
+capacitor 0402
+0
+2
+2
+EricWeeksFootprints
+0402_R
+Resistor SMD 0402, reflow soldering, Vishay (see dcrcw.pdf)
+resistor 0402
+0
+2
+2
+EricWeeksFootprints
+0402_R-mod
+Resistor SMD 0402, reflow soldering, Vishay (see dcrcw.pdf)
+resistor 0402
+0
+2
+2
+EricWeeksFootprints
+0402_R_ForAdressing-Switching
+Resistor SMD 0402, reflow soldering, Vishay (see dcrcw.pdf)
+resistor 0402
+0
+3
+3
+EricWeeksFootprints
+0805_L
+Resistor SMD 0805, reflow soldering, Vishay (see dcrcw.pdf)
+resistor 0805
+0
+2
+2
+EricWeeksFootprints
+5002_WHITE
+Keystone Miniature THM Test Point 5000-5004, http://www.keyelco.com/product-pdf.cfm?p=1309
+Through Hole Mount Test Points
+0
+1
+1
+EricWeeksFootprints
+5006
+Keystone Miniature THM Test Point 5005-5009, http://www.keyelco.com/product-pdf.cfm?p=1314
+Through Hole Mount Test Points
+0
+1
+1
+EricWeeksFootprints
+5007
+Keystone Miniature THM Test Point 5005-5009, http://www.keyelco.com/product-pdf.cfm?p=1314
+Through Hole Mount Test Points
+0
+1
+1
+EricWeeksFootprints
+5008
+Keystone Miniature THM Test Point 5005-5009, http://www.keyelco.com/product-pdf.cfm?p=1314
+Through Hole Mount Test Points
+0
+1
+1
+EricWeeksFootprints
+5009
+Keystone Miniature THM Test Point 5005-5009, http://www.keyelco.com/product-pdf.cfm?p=1314
+Through Hole Mount Test Points
+0
+1
+1
+EricWeeksFootprints
+ADAFRUIT_3.5MM
+
+
+0
+0
+0
+EricWeeksFootprints
+ADC-I
+
+
+0
+0
+0
+EricWeeksFootprints
+ADF5355
+
+
+0
+42
+33
+EricWeeksFootprints
+ASU_SESE_LOGO
+
+
+0
+0
+0
+EricWeeksFootprints
+ASU_logo_1
+
+
+0
+0
+0
+EricWeeksFootprints
+Adafruit_HUZZAH_ESP8266_breakout
+32-bit microcontroller module with WiFi, https://www.adafruit.com/product/2471
+ESP8266 WiFi microcontroller
+0
+20
+20
+EricWeeksFootprints
+Adafruit_HUZZAH_ESP8266_breakout_WithMountingHoles
+32-bit microcontroller module with WiFi, https://www.adafruit.com/product/2471
+ESP8266 WiFi microcontroller
+0
+24
+21
+EricWeeksFootprints
+AlphacoreLogo
+
+
+0
+0
+0
+EricWeeksFootprints
+AlphacoreLogo1
+
+
+0
+0
+0
+EricWeeksFootprints
+Arduino_Nano_WithMountingHoles
+Arduino Nano, http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf
+Arduino Nano
+0
+30
+30
+EricWeeksFootprints
+Arduino_UNO_R2
+Arduino UNO R2, http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf
+Arduino UNO R2
+0
+30
+30
+EricWeeksFootprints
+Arduino_UNO_R2_WithMountingHoles
+Arduino UNO R2, http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf
+Arduino UNO R2
+0
+30
+30
+EricWeeksFootprints
+Arduino_UNO_R3
+Arduino UNO R3, http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf
+Arduino UNO R3
+0
+32
+32
+EricWeeksFootprints
+Arduino_UNO_R3_WithMountingHoles
+Arduino UNO R3, http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf
+Arduino UNO R3
+0
+32
+32
+EricWeeksFootprints
+Audio_3.5mm_SMD_AdamTech
+
+
+0
+5
+5
+EricWeeksFootprints
+BFHKI-6251
+
+
+0
+3
+3
+EricWeeksFootprints
+BNC_Amphenol_B6252HB-NPP3G-50_Horizontal
+http://www.farnell.com/datasheets/612848.pdf
+BNC Amphenol Horizontal
+0
+4
+2
+EricWeeksFootprints
+BNC_PanelMountable_Vertical
+Panel-mountable BNC connector mounted through PCB, vertical
+BNC connector
+0
+2
+2
+EricWeeksFootprints
+BNC_TEConnectivity_1478204_Vertical
+BNC female PCB mount 4 pin straight chassis connector http://www.te.com/usa-en/product-1-1478204-0.html
+BNC female PCB mount 4 pin straight chassis connector 
+0
+5
+2
+EricWeeksFootprints
+BandPassFilter_TestFootprint
+
+
+0
+2
+2
+EricWeeksFootprints
+BarrelJack_2.5-5.5mm_PJ-002BH-SMT-TR
+
+
+0
+4
+3
+EricWeeksFootprints
+BarrelJack_CUI_PJ-036AH-SMT_Horizontal
+Surface-mount DC Barrel Jack, http://www.cui.com/product/resource/pj-036ah-smt.pdf
+Power Jack SMT
+0
+3
+3
+EricWeeksFootprints
+Button_SMD
+
+
+0
+2
+2
+EricWeeksFootprints
+CMA-5043+
+
+
+0
+11
+9
+EricWeeksFootprints
+COB_84pin
+QFN, 32 Pin (http://ww1.microchip.com/downloads/en/DeviceDoc/8008S.pdf#page=20), generated with kicad-footprint-generator ipc_noLead_generator.py
+QFN NoLead
+0
+169
+22
+EricWeeksFootprints
+CON-SMA-EDGE
+
+
+0
+5
+5
+EricWeeksFootprints
+CR_0603
+Resistor SMD 0603, reflow soldering, Vishay (see dcrcw.pdf)
+resistor 0603
+0
+2
+2
+EricWeeksFootprints
+CR_0603 (1)
+Resistor SMD 0603, reflow soldering, Vishay (see dcrcw.pdf)
+resistor 0603
+0
+2
+2
+EricWeeksFootprints
+C_0201_0603Metric
+Capacitor SMD 0201 (0603 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: https://www.vishay.com/docs/20052/crcw0201e3.pdf), generated with kicad-footprint-generator
+capacitor
+0
+4
+2
+EricWeeksFootprints
+C_0402_1005Metric
+Capacitor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator
+capacitor
+0
+2
+2
+EricWeeksFootprints
+C_0402_NoSilk
+Capacitor SMD 0402, reflow soldering, AVX (see smccp.pdf)
+capacitor 0402
+0
+2
+2
+EricWeeksFootprints
+C_0805
+Capacitor SMD 0805, reflow soldering, AVX (see smccp.pdf)
+capacitor 0805
+0
+2
+2
+EricWeeksFootprints
+Cap_b_1411
+Tantalum Capacitor SMD AVX-J (1608-08 Metric), IPC_7351 nominal, (Body size from: https://www.vishay.com/docs/48064/_t58_vmn_pt0471_1601.pdf), generated with kicad-footprint-generator
+capacitor tantalum
+0
+2
+2
+EricWeeksFootprints
+Chip3
+
+
+0
+61
+61
+EricWeeksFootprints
+Chip3_3milPad
+
+
+0
+61
+61
+EricWeeksFootprints
+Chip3_5milPad
+
+
+0
+61
+61
+EricWeeksFootprints
+CoilCraft_MSS1583
+Inductor SMD 1210 (3225 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator
+inductor
+0
+2
+2
+EricWeeksFootprints
+Cone Inductor
+
+
+0
+2
+2
+EricWeeksFootprints
+Cone Inductor (1)
+
+
+0
+2
+2
+EricWeeksFootprints
+Cone_Inductor
+
+
+0
+2
+2
+EricWeeksFootprints
+CrystalOscillator_VCC6
+
+
+0
+6
+6
+EricWeeksFootprints
+DC-Plug_3.5mm-1.3mm
+
+
+0
+7
+5
+EricWeeksFootprints
+DG1847_MiniCircuits
+
+
+0
+56
+25
+EricWeeksFootprints
+DSUB_50p_Cutout
+
+
+0
+0
+0
+EricWeeksFootprints
+Demodulator_ADL5380
+LFCSP VQ, 24 pin, exposed pad, 4x4mm body, pitch 0.5mm (http://www.analog.com/media/en/package-pcb-resources/package/56702234806764cp_24_3.pdf, http://www.analog.com/media/en/technical-documentation/data-sheets/ADL5801.pdf)
+LFCSP 0.5
+0
+34
+25
+EricWeeksFootprints
+Diode_HSM-C170
+
+
+0
+2
+2
+EricWeeksFootprints
+Drok_DC-DC_3A
+
+
+0
+4
+4
+EricWeeksFootprints
+E-Switch_Button
+https://www.e-switch.com/system/asset/product_line/data_sheet/213/TL3305.pdf
+TL3305 Series Tact Switch
+0
+4
+2
+EricWeeksFootprints
+EHT-120-01-F-D
+
+
+0
+40
+40
+EricWeeksFootprints
+EMI_Shield+Mount
+Mounting Hole 2.7mm, M2.5, DIN965
+mounting hole 2.7mm m2.5 din965
+0
+4
+0
+EricWeeksFootprints
+EMI_Shield+Mount_1.6x0.8in
+Mounting Hole 2.7mm, M2.5, DIN965
+mounting hole 2.7mm m2.5 din965
+0
+4
+0
+EricWeeksFootprints
+Filter_Board_4Ch_ver-1.0_outline
+
+
+0
+0
+0
+EricWeeksFootprints
+FotonX_Logo
+
+
+0
+0
+0
+EricWeeksFootprints
+GSG-SOT343
+
+
+0
+4
+4
+EricWeeksFootprints
+HMC8193
+
+
+0
+34
+25
+EricWeeksFootprints
+HMC8193 (1)
+
+
+0
+34
+25
+EricWeeksFootprints
+Hamdi_Face
+
+
+0
+0
+0
+EricWeeksFootprints
+INA219_Adafruit
+
+
+0
+12
+6
+EricWeeksFootprints
+Infineon_PG-DSO-8-43
+Infineon_PG-DSO-8-43
+DSO DSO-8 SOIC SOIC-8
+0
+12
+9
+EricWeeksFootprints
+LARGE_HAMDI
+
+
+0
+0
+0
+EricWeeksFootprints
+LCOM_KeyStone_RJ45
+
+
+0
+0
+0
+EricWeeksFootprints
+LCOM_KeyStone_USB_B
+
+
+0
+0
+0
+EricWeeksFootprints
+LFCN-900
+
+
+0
+6
+4
+EricWeeksFootprints
+LFCN-900 (1)
+
+
+0
+6
+4
+EricWeeksFootprints
+LFCSP-8pin_3x3mm
+
+
+0
+9
+9
+EricWeeksFootprints
+LMZM23601_DCDC
+
+
+0
+14
+11
+EricWeeksFootprints
+LOGO
+
+
+0
+0
+0
+EricWeeksFootprints
+L_Coilcraft_1812SMS-56NJKB
+L_Coilcraft_XAL5030
+L Coilcraft XAL5030
+0
+2
+2
+EricWeeksFootprints
+MCL_DQ1225_PMA3_83LN
+
+
+0
+13
+13
+EricWeeksFootprints
+MCL_DQ1225_PMA3_83LN (1)
+
+
+0
+13
+12
+EricWeeksFootprints
+MMCX_Molex_73415-1471_Vertical
+http://www.molex.com/pdm_docs/sd/734151471_sd.pdf
+Molex MMCX Coaxial Connector 50 ohms Female Jack Vertical THT
+0
+5
+2
+EricWeeksFootprints
+MOUNTINGHOLE_2.5_PLATED
+
+
+0
+1
+1
+EricWeeksFootprints
+Mini-Circuits_CD636_LandPatternPL-035
+Footprint for Mini-Circuits case CD636 (https://ww2.minicircuits.com/case_style/CD636.pdf) following land pattern PL-035, including GND-vias (https://ww2.minicircuits.com/pcb/98-pl035.pdf)
+mini-circuits pl-035 CD636
+0
+12
+6
+EricWeeksFootprints
+Miter_20mil_RO4350b
+
+
+0
+2
+1
+EricWeeksFootprints
+MiteredCut_MLIN_20milRO4350b
+
+
+0
+2
+1
+EricWeeksFootprints
+Modulator_TI-TRF370317
+VQFN, 24 Pin (http://www.ti.com/lit/ds/symlink/msp430f1101a.pdf), generated with kicad-footprint-generator ipc_dfn_qfn_generator.py
+VQFN DFN_QFN
+0
+39
+25
+EricWeeksFootprints
+Molex731385033
+http://www.farnell.com/datasheets/612848.pdf
+BNC Amphenol Horizontal
+0
+4
+2
+EricWeeksFootprints
+MountingHole
+Mounting Hole 2.7mm, M2.5, DIN965
+mounting hole 2.7mm m2.5 din965
+0
+1
+0
+EricWeeksFootprints
+MountingHole2
+Mounting Hole 2.2mm, M2
+mounting hole 2.2mm m2
+0
+1
+0
+EricWeeksFootprints
+MountingHole_2.7mm_M2.5_DIN965_Pad
+Mounting Hole 2.7mm, M2.5, DIN965
+mounting hole 2.7mm m2.5 din965
+0
+1
+1
+EricWeeksFootprints
+MountingHole_4.5mm_Pad
+Mounting Hole 4.5mm
+mounting hole 4.5mm
+0
+1
+1
+EricWeeksFootprints
+MountingHole_6.4mm_M6_DIN965_Pad
+Mounting Hole 6.4mm, M6, DIN965
+mounting hole 6.4mm m6 din965
+0
+1
+0
+EricWeeksFootprints
+MountingHole_M2p5
+Mounting Hole 2.7mm, M2.5, DIN965
+mounting hole 2.7mm m2.5 din965
+0
+1
+0
+EricWeeksFootprints
+MountingHole_via
+Mounting Hole 2.5mm
+mounting hole 2.5mm
+0
+1
+1
+EricWeeksFootprints
+Omnetics_MicroD_Vertical_solderCup_9P
+
+
+0
+11
+10
+EricWeeksFootprints
+PE43705
+UH Package; 32-Lead Plastic QFN (5mm x 5mm); (see Linear Technology QFN_32_05-08-1693.pdf)
+QFN 0.5
+0
+42
+33
+EricWeeksFootprints
+PE43705_updated
+UH Package; 32-Lead Plastic QFN (5mm x 5mm); (see Linear Technology QFN_32_05-08-1693.pdf)
+QFN 0.5
+0
+33
+33
+EricWeeksFootprints
+PT02A14
+
+
+0
+0
+0
+EricWeeksFootprints
+PT02A16
+
+
+0
+0
+0
+EricWeeksFootprints
+PhoenixContact_100mil
+Generic Phoenix Contact connector footprint for series: MCV-G; number of pins: 02; pin pitch: 3.50mm; Vertical || order number: 1843606 8A 160V
+phoenix_contact connector MCV_01x02_G_3.5mm
+0
+2
+2
+EricWeeksFootprints
+PhoenixContact_MCV-G_02x3.50mm_Vertical
+Generic Phoenix Contact connector footprint for series: MCV-G; number of pins: 02; pin pitch: 3.50mm; Vertical || order number: 1843606 8A 160V
+phoenix_contact connector MCV_01x02_G_3.5mm
+0
+2
+2
+EricWeeksFootprints
+PhoenixContact_MCV-G_04x3.50mm_Vertical
+Generic Phoenix Contact connector footprint for series: MCV-G; number of pins: 02; pin pitch: 3.50mm; Vertical || order number: 1843606 8A 160V
+phoenix_contact connector MCV_01x02_G_3.5mm
+0
+4
+4
+EricWeeksFootprints
+PhoenixContact_MCV_1,5_2-G-5.08_1x02_P5.08mm_Vertical
+Generic Phoenix Contact connector footprint for: MCV_1,5/2-G-5.08; number of pins: 02; pin pitch: 5.08mm; Vertical || order number: 1836299 8A 320V
+phoenix_contact connector MCV_01x02_G_5.08mm
+0
+2
+2
+EricWeeksFootprints
+PinHeader_1x02_P2.54mm_Horizontal
+Through hole angled pin header, 1x02, 2.54mm pitch, 6mm pin length, single row
+Through hole angled pin header THT 1x02 2.54mm single row
+0
+2
+2
+EricWeeksFootprints
+PinHeader_1x04_P1.00mm_Vertical
+Through hole straight pin header, 1x04, 1.00mm pitch, single row
+Through hole pin header THT 1x04 1.00mm single row
+0
+4
+4
+EricWeeksFootprints
+PinSocket_2x03_P2.54mm_Passthrough
+surface-mounted straight pin header, 2x04, 2.00mm pitch, double rows
+Surface mounted pin header SMD 2x04 2.00mm double row
+0
+12
+6
+EricWeeksFootprints
+Potentiometer_Bourns_3224W_Vertical
+Potentiometer, vertical, Bourns 3224W, https://www.bourns.com/docs/Product-Datasheets/3224.pdf
+Potentiometer vertical Bourns 3224W
+0
+3
+3
+EricWeeksFootprints
+PowerPort
+
+
+0
+0
+0
+EricWeeksFootprints
+PowerToggle
+
+
+0
+0
+0
+EricWeeksFootprints
+QFN-5x5-32
+
+
+0
+33
+33
+EricWeeksFootprints
+QFN-20-1EP_5x5mm_P0.65mm_EP3.35x3.35mm_ThermalVias
+QFN, 20 Pin (http://ww1.microchip.com/downloads/en/PackagingSpec/00000049BQ.pdf (Page 276)), generated with kicad-footprint-generator ipc_dfn_qfn_generator.py
+QFN DFN_QFN
+0
+35
+21
+EricWeeksFootprints
+QFN-24-1EP_4x4mm_P0.5mm_EP2.6x2.6mm
+QFN, 24 Pin (http://ww1.microchip.com/downloads/en/PackagingSpec/00000049BQ.pdf (Page 278)), generated with kicad-footprint-generator ipc_dfn_qfn_generator.py
+QFN DFN_QFN
+0
+29
+25
+EricWeeksFootprints
+QFN-36-1EP_6x6mm_P0.5mm_EP4.1x4.1mm
+36-Lead Plastic Quad Flat, No Lead Package - 6x6 mm Body [QFN]; see figure 36 of http://www.st.com/resource/en/datasheet/stm32f101t6.pdf
+QFN 0.5
+0
+53
+37
+EricWeeksFootprints
+R_0603_use_for_address
+Resistor SMD 0603, reflow soldering, Vishay (see dcrcw.pdf)
+resistor 0603
+0
+3
+3
+EricWeeksFootprints
+R_0603_use_for_address (1)
+Resistor SMD 0603, reflow soldering, Vishay (see dcrcw.pdf)
+resistor 0603
+0
+3
+3
+EricWeeksFootprints
+R_invisable_gnd
+Resistor, Axial_DIN0414 series, Axial, Vertical, pin pitch=5.08mm, 2W, length*diameter=11.9*4.5mm^2, http://www.vishay.com/docs/20128/wkxwrx.pdf
+Resistor Axial_DIN0414 series Axial Vertical pin pitch 5.08mm 2W length 11.9mm diameter 4.5mm
+0
+2
+2
+EricWeeksFootprints
+RadiallR596SPDT
+
+
+0
+7
+7
+EricWeeksFootprints
+SAMTEC_ASP-134486-01
+
+
+0
+400
+400
+EricWeeksFootprints
+SAMTEC_LPAM-40-01.0-X-08-X-K-TR
+
+
+0
+320
+320
+EricWeeksFootprints
+SEAF-40
+0.050 PITCH SOCKETT ARRAY ASSEMBLY.
+
+0
+400
+400
+EricWeeksFootprints
+SM0201_r
+
+
+0
+2
+2
+EricWeeksFootprints
+SM0603
+
+
+0
+2
+2
+EricWeeksFootprints
+SMA_Amphenol_901-144_Vertical
+https://www.amphenolrf.com/downloads/dl/file/id/7023/product/3103/901_144_customer_drawing.pdf
+SMA THT Female Jack Vertical
+0
+5
+2
+EricWeeksFootprints
+SMA_Amphenol_901-10309_EdgeMount
+http://www.amphenolrf.com/132289.html
+SMA
+0
+5
+2
+EricWeeksFootprints
+SMA_Amphenol_132134-10_Vertical
+https://www.amphenolrf.com/downloads/dl/file/id/4007/product/2974/132134_10_customer_drawing.pdf
+SMA SMD Female Jack Vertical
+0
+3
+2
+EricWeeksFootprints
+SMA_Amphenol_132134-11_Vertical
+https://www.amphenolrf.com/downloads/dl/file/id/3406/product/2975/132134_11_customer_drawing.pdf
+SMA THT Female Jack Vertical ExtendedLegs
+0
+5
+2
+EricWeeksFootprints
+SMA_Amphenol_132134-11_Vertical (1)
+https://www.amphenolrf.com/downloads/dl/file/id/3406/product/2975/132134_11_customer_drawing.pdf
+SMA THT Female Jack Vertical ExtendedLegs
+0
+5
+2
+EricWeeksFootprints
+SMA_Amphenol_132134-14_Vertical
+https://www.amphenolrf.com/downloads/dl/file/id/1793/product/2976/132134_14_customer_drawing.pdf
+SMA THT Female Jack Vertical ExtendedLegs
+0
+5
+2
+EricWeeksFootprints
+SMA_Amphenol_132134-16_Vertical
+https://www.amphenolrf.com/downloads/dl/file/id/1141/product/2978/132134_16_customer_drawing.pdf
+SMA THT Female Jack Vertical ExtendedLegs
+0
+5
+2
+EricWeeksFootprints
+SMA_Amphenol_132134_Vertical
+https://www.amphenolrf.com/downloads/dl/file/id/2187/product/2843/132134_customer_drawing.pdf
+SMA THT Female Jack Vertical ExtendedLegs
+0
+5
+2
+EricWeeksFootprints
+SMA_Amphenol_132289_EdgeMount
+http://www.amphenolrf.com/132289.html
+SMA
+0
+5
+2
+EricWeeksFootprints
+SMA_Amphenol_132291-12_Vertical
+https://www.amphenolrf.com/downloads/dl/file/id/1688/product/3020/132291_12_customer_drawing.pdf
+SMA THT Female Jack Vertical Bulkhead
+0
+5
+2
+EricWeeksFootprints
+SMA_Amphenol_132291_Vertical
+https://www.amphenolrf.com/downloads/dl/file/id/3222/product/2918/132291_customer_drawing.pdf
+SMA THT Female Jack Vertical Bulkhead
+0
+5
+2
+EricWeeksFootprints
+SMA_Edge_SinglePad
+
+
+0
+1
+1
+EricWeeksFootprints
+SMA_MMWT_Compress
+https://www.amphenolrf.com/downloads/dl/file/id/7023/product/3103/901_144_customer_drawing.pdf
+SMA THT Female Jack Vertical
+0
+3
+2
+EricWeeksFootprints
+SMA_Molex_73251-1153_EdgeMount_Horizontal
+Molex SMA RF Connectors, Edge Mount, (http://www.molex.com/pdm_docs/sd/732511150_sd.pdf)
+sma edge
+0
+11
+2
+EricWeeksFootprints
+SMA_Mueller_BU-1420701851
+http://www.amphenolrf.com/132289.html
+SMA
+0
+5
+2
+EricWeeksFootprints
+SMA_Panel
+
+
+0
+0
+0
+EricWeeksFootprints
+SMA_Rosenberger_EdgeMount
+http://www.amphenolrf.com/132289.html
+SMA
+0
+7
+2
+EricWeeksFootprints
+SMA_ScrewDown_EdgeMount
+http://www.amphenolrf.com/132289.html
+SMA
+0
+7
+2
+EricWeeksFootprints
+SMA_Small_EdgeMount
+http://www.amphenolrf.com/132289.html
+SMA
+0
+5
+2
+EricWeeksFootprints
+SMA_Vertical_SMD
+https://www.amphenolrf.com/downloads/dl/file/id/3406/product/2975/132134_11_customer_drawing.pdf
+SMA THT Female Jack Vertical ExtendedLegs
+0
+5
+2
+EricWeeksFootprints
+SMB_Jack_Vertical
+SMB pcb mounting jack
+SMB Jack  Striaght
+0
+5
+2
+EricWeeksFootprints
+SMDswitch
+
+
+0
+3
+3
+EricWeeksFootprints
+SMP_Molex-73406-0080
+
+
+0
+5
+2
+EricWeeksFootprints
+SOIC-8
+SOIC, 8 Pin (https://www.analog.com/media/en/technical-documentation/data-sheets/ada4898-1_4898-2.pdf#page=29), generated with kicad-footprint-generator ipc_gullwing_generator.py
+SOIC SO
+0
+20
+9
+EricWeeksFootprints
+SOT-89_BiDirectional
+
+
+0
+5
+3
+EricWeeksFootprints
+SOT-143
+SOT-143
+SOT-143
+0
+4
+4
+EricWeeksFootprints
+SOT-143 (1)
+SOT-143
+SOT-143
+0
+4
+4
+EricWeeksFootprints
+SOT-416
+SOT-416, https://www.nxp.com/docs/en/package-information/SOT416.pdf
+SOT-416
+0
+3
+3
+EricWeeksFootprints
+SOT89-3_Housing
+SOT89-3, Housing,
+SOT89-3, Housing,
+0
+5
+3
+EricWeeksFootprints
+SPI-Isolator_ADuM4154
+20-Lead Plastic Shrink Small Outline (SS)-5.30 mm Body [SSOP] (see Microchip Packaging Specification 00000049BS.pdf)
+SSOP 0.65
+0
+20
+20
+EricWeeksFootprints
+SW_SPST_CK_JS102011SCQN
+https://www.mouser.com/ds/2/60/RS-282G05A-SM_RT-1159762.pdf
+SPST button tactile switch
+0
+3
+3
+EricWeeksFootprints
+ScrewTerminal_PN7795
+
+
+0
+4
+1
+EricWeeksFootprints
+SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm
+SMD Solder Jumper, 1x1.5mm, rounded Pads, 0.3mm gap, bridged with 1 copper strip
+solder jumper open
+0
+2
+2
+EricWeeksFootprints
+SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm
+SMD Solder Jumper, 1x1.5mm, rounded Pads, 0.3mm gap, open
+solder jumper open
+0
+2
+2
+EricWeeksFootprints
+SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm
+SMD Solder 3-pad Jumper, 1x1.5mm rounded Pads, 0.3mm gap, pads 1-2 bridged with 1 copper strip
+solder jumper open
+0
+3
+3
+EricWeeksFootprints
+SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm
+SMD Solder 3-pad Jumper, 1x1.5mm rounded Pads, 0.3mm gap, open, labeled with numbers
+solder jumper open
+0
+3
+3
+EricWeeksFootprints
+SolderWirePad_90deg_40x24mil
+Wire Pad, Square, SMD Pad,  5mm x 10mm,
+MesurementPoint Square SMDPad 5mmx10mm 
+0
+1
+1
+EricWeeksFootprints
+SolderWirePad_90deg_45x10mil
+Wire Pad, Square, SMD Pad,  5mm x 10mm,
+MesurementPoint Square SMDPad 5mmx10mm 
+0
+1
+1
+EricWeeksFootprints
+SolderWirePad_single_SMD_5x10mm
+Wire Pad, Square, SMD Pad,  5mm x 10mm,
+MesurementPoint Square SMDPad 5mmx10mm 
+0
+1
+1
+EricWeeksFootprints
+SpeakerConnector_PanelMount
+
+
+0
+2
+2
+EricWeeksFootprints
+TCM1-63AX
+
+
+0
+6
+6
+EricWeeksFootprints
+TerminalBlock_1x2_100mil-pitch
+Generic Phoenix Contact connector footprint for series: MCV-G; number of pins: 02; pin pitch: 3.50mm; Vertical || order number: 1843606 8A 160V
+phoenix_contact connector MCV_01x02_G_3.5mm
+0
+2
+2
+EricWeeksFootprints
+TerminalBlock_1x4_100mil-pitch
+Through hole straight pin header, 1x04, 1.00mm pitch, single row
+Through hole pin header THT 1x04 1.00mm single row
+0
+4
+4
+EricWeeksFootprints
+TerminalBlock_1x4_100mil-pitch (1)
+Through hole straight pin header, 1x04, 1.00mm pitch, single row
+Through hole pin header THT 1x04 1.00mm single row
+0
+4
+4
+EricWeeksFootprints
+Texas_SIL0010A_MicroSiP-10-1EP_3.8x3mm_P0.6mm_EP0.7x2.9mm_ThermalVias
+Texas SIL0010A MicroSiP, 10 Pin (http://www.ti.com/lit/ml/mpds579b/mpds579b.pdf), generated with kicad-footprint-generator ipc_noLead_generator.py
+Texas MicroSiP NoLead
+0
+18
+11
+EricWeeksFootprints
+TolTEC-Board-outline
+
+
+0
+0
+0
+EricWeeksFootprints
+Transformer_MACOM_SM-22
+https://cdn.macom.com/datasheets/ETC1-1-13.pdf
+RF Transformer
+0
+5
+5
+EricWeeksFootprints
+Transformer_Mini-Circuits_CD542_H2.84mm
+https://ww2.minicircuits.com/case_style/CD542.pdf
+RF Transformer
+0
+6
+6
+EricWeeksFootprints
+TransmissionLineJummper_Open
+SMD Solder Jumper, 1x1.5mm, rounded Pads, 0.3mm gap, open
+solder jumper open
+0
+2
+2
+EricWeeksFootprints
+U.FL_Hirose_U.FL-R-SMT-1_Vertical
+Hirose U.FL Coaxial https://www.hirose.com/product/en/products/U.FL/U.FL-R-SMT-1%2810%29/
+Hirose U.FL Coaxial
+0
+3
+2
+EricWeeksFootprints
+U.FL_Molex_MCRF_73412-0110_Vertical
+Molex Microcoaxial RF Connectors (MCRF), mates Hirose U.FL, (http://www.molex.com/pdm_docs/sd/734120110_sd.pdf)
+mcrf hirose ufl u.fl microcoaxial
+0
+4
+2
+EricWeeksFootprints
+USB-Type-A_SMD_Samtec
+
+
+0
+8
+5
+EricWeeksFootprints
+V-Reg_AMD7150
+Module Narrow CMS SOJ 8 pins large
+CMS SOJ
+0
+9
+9
+EricWeeksFootprints
+V-Reg_IFX1763XEJ
+Module Narrow CMS SOJ 8 pins large
+CMS SOJ
+0
+9
+9
+EricWeeksFootprints
+VQFNp-dr_100pin_9x9mm_Chip3
+
+
+0
+115
+8
+EricWeeksFootprints
+WQFN-32_EP_5.1x5.1_Pitch0.5mm
+
+
+0
+38
+33
+EricWeeksFootprints
+WQFN-40_EP_6.1x6.1_Pitch0.5mm
+
+
+0
+53
+41
+EricWeeksFootprints
+WirePad_single_SMD_50x50mil
+Wire Pad, Square, SMD Pad,  5mm x 10mm,
+MesurementPoint Square SMDPad 5mmx10mm 
+0
+1
+1
+EricWeeksFootprints
+XFMR_TCM2-33WX+
+
+
+0
+6
+6
+EricWeeksFootprints
+YAT-3_2x2mm_MC1630
+SOT-143
+SOT-143
+0
+7
+6
+EricWeeksFootprints
+YAT-3_2x2mm_MC1630 (1)
+SOT-143
+SOT-143
+0
+7
+6
+EricWeeksFootprints
+Z-DOK_6367550-5
+
+
+0
+144
+84
+EricWeeksFootprints
+ZAD2020
+
+
+0
+14
+14
+EricWeeksFootprints
+_SOT-89
+
+
+0
+4
+3
+EricWeeksFootprints
+_SOT-89 (1)
+
+
+0
+4
+3
+EricWeeksFootprints
+arduino_nano
+
+
+0
+34
+30
+EricWeeksFootprints
+arduino_nano_50mil-Drill
+
+
+0
+30
+30
+EricWeeksFootprints
+arduino_nano_NoMountingHoles
+
+
+0
+30
+30
+EricWeeksFootprints
+arduino_nano_expansion
+
+
+0
+30
+30
+EricWeeksFootprints
+heat_sink
+
+
+0
+1
+1
+EricWeeksFootprints
+hole
+
+
+0
+4
+4
+EricWeeksFootprints
+led_green
+LED, diameter 5.0mm, 2 pins, http://cdn-reichelt.de/documents/datenblatt/A500/LL-504BC2E-009.pdf
+LED diameter 5.0mm 2 pins
+0
+2
+2
+EricWeeksFootprints
+led_red
+LED, diameter 5.0mm, 2 pins, http://cdn-reichelt.de/documents/datenblatt/A500/LL-504BC2E-009.pdf
+LED diameter 5.0mm 2 pins
+0
+2
+2
+EricWeeksFootprints
+led_yellow
+LED, diameter 5.0mm, 2 pins, http://cdn-reichelt.de/documents/datenblatt/A500/LL-504BC2E-009.pdf
+LED diameter 5.0mm 2 pins
+0
+2
+2
+EricWeeksFootprints
+max889tesa_T
+
+
+0
+8
+8
+EricWeeksFootprints
+meteredLine
+
+
+0
+2
+2
+EricWeeksFootprints
+miteredLine
+
+
+0
+2
+2
+EricWeeksFootprints
+panel_mount_SMA_drawing
+
+
+0
+0
+0
+EricWeeksFootprints
+sot143B
+SOT143B
+
+0
+4
+4
 Ferrite_THT
 LairdTech_28C0236-0JW-10
 Ferrite, vertical, LairdTech 28C0236-0JW-10, https://assets.lairdtech.com/home/brandworld/files/28C0236-0JW-10.pdf, JW Miller core https://www.bourns.com/products/magnetic-products/j.w.-miller-through-hole-ferrite-beads-emi-filters
@@ -72940,6 +74634,13 @@ CSP 27 0.4
 27
 27
 Package_CSP
+ST_WLCSP-27_2.55x2.34mm_P0.40mm_Stagger
+ST WLCSP-27, ST Die ID 459, 2.55x2.34mm, 27 Ball, X-staggered 9x6 Layout, 0.4mm Pitch, https://www.st.com/resource/en/datasheet/stm32u031g6.pdf
+CSP 27 0.4
+0
+27
+27
+Package_CSP
 ST_WLCSP-36_2.58x3.07mm_Layout6x6_P0.4mm
 ST WLCSP-36, ST die ID 464, 2.58x3.07mm, 36 Ball, 6x6 Layout, 0.4mm Pitch, generated with kicad-footprint-generator ipc_bga_generator.py, https://www.st.com/resource/en/datasheet/stm32l412t8.pdf
 CSP 36 0.4
@@ -72981,6 +74682,13 @@ CSP 41 0.4
 0
 41
 41
+Package_CSP
+ST_WLCSP-42_2.82x2.93mm_P0.40mm_Stagger
+ST WLCSP-42, ST Die ID 489, 2.82x2.93mm, 42 Ball, X-staggered 12x7 Layout, 0.4mm Pitch, https://www.st.com/resource/en/datasheet/stm32u073rc.pdf
+CSP 42 0.4
+0
+42
+42
 Package_CSP
 ST_WLCSP-42_2.93x2.82mm_Layout12x7_P0.4mm_Stagger
 ST WLCSP-42, ST Die ID 489, 2.93x2.82mm, 42 Ball, X-staggered 12x7 Layout, 0.4mm Pitch, generated with kicad-footprint-generator ipc_bga_generator.py, https://www.st.com/resource/en/datasheet/stm32u073rc.pdf
@@ -73806,6 +75514,13 @@ DFN, 8 Pin (https://stcmicro.com/datasheet/STC8G-en.pdf#page=81), generated with
 DFN NoLead STC8G1K08A-36I-DFN8
 0
 10
+9
+Package_DFN_QFN
+DFN-8-1EP_3x3mm_P0.5mm_EP1.7x2.4mm_ThermalVias
+DFN, 8 Pin (https://stcmicro.com/datasheet/STC8G-en.pdf#page=81), generated with kicad-footprint-generator ipc_noLead_generator.py
+DFN NoLead STC8G1K08A-36I-DFN8
+0
+20
 9
 Package_DFN_QFN
 DFN-8-1EP_3x3mm_P0.5mm_EP1.65x2.38mm
@@ -75227,6 +76942,27 @@ QFN, 28 Pin (http://ww1.microchip.com/downloads/en/PackagingSpec/00000049BQ.pdf#
 QFN NoLead
 0
 43
+29
+Package_DFN_QFN
+QFN-28-1EP_4x4mm_P0.4mm_EP2.6x2.6mm
+QFN, 28 Pin (package code T2844-1; https://pdfserv.maximintegrated.com/package_dwgs/21-0139.PDF), generated with kicad-footprint-generator ipc_noLead_generator.py
+QFN NoLead
+0
+33
+29
+Package_DFN_QFN
+QFN-28-1EP_4x4mm_P0.4mm_EP2.6x2.6mm_ThermalVias
+QFN, 28 Pin (package code T2844-1; https://pdfserv.maximintegrated.com/package_dwgs/21-0139.PDF), generated with kicad-footprint-generator ipc_noLead_generator.py
+QFN NoLead
+0
+43
+29
+Package_DFN_QFN
+QFN-28-1EP_4x4mm_P0.4mm_EP2.7x2.7mm
+QFN, 28 Pin (QFN28; https://www.wch-ic.com/downloads/CH32V203DS0_PDF.html), generated with kicad-footprint-generator ipc_noLead_generator.py
+QFN NoLead
+0
+33
 29
 Package_DFN_QFN
 QFN-28-1EP_4x4mm_P0.45mm_EP2.4x2.4mm
@@ -86975,6 +88711,20 @@ transistor TO-92S-Type-B Allegro-3-pin-SIP LPG0003A
 3
 3
 Package_TO_SOT_THT
+TO-92S-2
+TO-92S package, 2-pin, drill 0.75mm (https://www.diodes.com/assets/Package-Files/TO92S%20(Type%20B).pdf)
+to-92S transistor
+0
+2
+2
+Package_TO_SOT_THT
+TO-92S_Wide
+TO-92S_Wide package, drill 0.75mm (https://www.diodes.com/assets/Package-Files/TO92S%20(Type%20B).pdf)
+TO-92S_Wide transistor
+0
+3
+3
+Package_TO_SOT_THT
 TO-92_HandSolder
 TO-92 leads molded, narrow, drill 0.75mm, handsoldering variant with enlarged pads (see NXP sot054_po.pdf)
 to-92 sc-43 sc-43a sot54 PA33 transistor
@@ -88000,6 +89750,13 @@ Potentiometer_SMD
 Potentiometer_Bourns_3314R-1_Vertical_Hole
 Potentiometer, vertical, shaft hole, Bourns 3314R-1, http://www.bourns.com/docs/Product-Datasheets/3314.pdf
 Potentiometer vertical hole Bourns 3314R-1
+0
+3
+3
+Potentiometer_SMD
+Potentiometer_Bourns_3314R-GM5_Vertical
+Potentiometer, vertical, cross-slot, extended leadframe, Bourns 3314R-GM5, http://www.bourns.com/docs/Product-Datasheets/3314.pdf
+Potentiometer vertical Bourns 3314R-GM5
 0
 3
 3
@@ -92617,6 +94374,13 @@ Allegro QSOP 0.635
 24
 24
 Sensor_Current
+Allegro_SIP-3
+Allegro Microsystems SIP-3, 1.27mm Pitch (http://www.allegromicro.com/~/media/Files/Datasheets/A1369-Datasheet.ashx)
+Allegro SIP-3
+0
+3
+3
+Sensor_Current
 Allegro_SIP-4
 Allegro Microsystems SIP-4, 1.27mm Pitch (http://www.allegromicro.com/~/media/Files/Datasheets/A1363-Datasheet.ashx)
 Allegro SIP-4
@@ -95809,9 +97573,23 @@ THT terminal block Metz Connect Type011_RT05502HBLC pitch 5mm size 10x10.5mm dri
 2
 2
 TerminalBlock_MetzConnect
+TerminalBlock_MetzConnect_Type011_RT05502HBWC_1x02_P5.00mm_Horizontal
+terminal block Metz Connect Type011_RT05502HBWC, 2 pins, pitch 5mm, size 10x10.5mm, drill diameter 1.4mm, pad diameter 2.8mm, http://www.metz-connect.com/de/system/files/productfiles/Datenblatt_310111_RT055xxHBLC_OFF-022717S.pdf, script-generated using https://gitlab.com/kicad/libraries/kicad-footprint-generator/-/tree/master/scripts/TerminalBlock_MetzConnect
+THT terminal block Metz Connect Type011_RT05502HBWC pitch 5mm size 10x10.5mm drill 1.4mm pad 2.8mm
+0
+2
+2
+TerminalBlock_MetzConnect
 TerminalBlock_MetzConnect_Type011_RT05503HBLC_1x03_P5.00mm_Horizontal
 terminal block Metz Connect Type011_RT05503HBLC, 3 pins, pitch 5mm, size 15x10.5mm, drill diameter 1.4mm, pad diameter 2.8mm, https://americancableassemblies.com/content/metz/863188.PDF, script-generated using https://gitlab.com/kicad/libraries/kicad-footprint-generator/-/tree/master/scripts/TerminalBlock_MetzConnect
 THT terminal block Metz Connect Type011_RT05503HBLC pitch 5mm size 15x10.5mm drill 1.4mm pad 2.8mm
+0
+3
+3
+TerminalBlock_MetzConnect
+TerminalBlock_MetzConnect_Type011_RT05503HBWC_1x03_P5.00mm_Horizontal
+terminal block Metz Connect Type011_RT05503HBWC, 3 pins, pitch 5mm, size 15x10.5mm, drill diameter 1.4mm, pad diameter 2.8mm, http://www.metz-connect.com/de/system/files/productfiles/Datenblatt_310111_RT055xxHBLC_OFF-022717S.pdf, script-generated using https://gitlab.com/kicad/libraries/kicad-footprint-generator/-/tree/master/scripts/TerminalBlock_MetzConnect
+THT terminal block Metz Connect Type011_RT05503HBWC pitch 5mm size 15x10.5mm drill 1.4mm pad 2.8mm
 0
 3
 3
@@ -95823,6 +97601,13 @@ THT terminal block Metz Connect Type011_RT05504HBLC pitch 5mm size 20x10.5mm dri
 4
 4
 TerminalBlock_MetzConnect
+TerminalBlock_MetzConnect_Type011_RT05504HBWC_1x04_P5.00mm_Horizontal
+terminal block Metz Connect Type011_RT05504HBWC, 4 pins, pitch 5mm, size 20x10.5mm, drill diameter 1.4mm, pad diameter 2.8mm, http://www.metz-connect.com/de/system/files/productfiles/Datenblatt_310111_RT055xxHBLC_OFF-022717S.pdf, script-generated using https://gitlab.com/kicad/libraries/kicad-footprint-generator/-/tree/master/scripts/TerminalBlock_MetzConnect
+THT terminal block Metz Connect Type011_RT05504HBWC pitch 5mm size 20x10.5mm drill 1.4mm pad 2.8mm
+0
+4
+4
+TerminalBlock_MetzConnect
 TerminalBlock_MetzConnect_Type011_RT05505HBLC_1x05_P5.00mm_Horizontal
 terminal block Metz Connect Type011_RT05505HBLC, 5 pins, pitch 5mm, size 25x10.5mm, drill diameter 1.4mm, pad diameter 2.8mm, https://americancableassemblies.com/content/metz/863188.PDF, script-generated using https://gitlab.com/kicad/libraries/kicad-footprint-generator/-/tree/master/scripts/TerminalBlock_MetzConnect
 THT terminal block Metz Connect Type011_RT05505HBLC pitch 5mm size 25x10.5mm drill 1.4mm pad 2.8mm
@@ -95830,9 +97615,23 @@ THT terminal block Metz Connect Type011_RT05505HBLC pitch 5mm size 25x10.5mm dri
 5
 5
 TerminalBlock_MetzConnect
+TerminalBlock_MetzConnect_Type011_RT05505HBWC_1x05_P5.00mm_Horizontal
+terminal block Metz Connect Type011_RT05505HBWC, 5 pins, pitch 5mm, size 25x10.5mm, drill diameter 1.4mm, pad diameter 2.8mm, http://www.metz-connect.com/de/system/files/productfiles/Datenblatt_310111_RT055xxHBLC_OFF-022717S.pdf, script-generated using https://gitlab.com/kicad/libraries/kicad-footprint-generator/-/tree/master/scripts/TerminalBlock_MetzConnect
+THT terminal block Metz Connect Type011_RT05505HBWC pitch 5mm size 25x10.5mm drill 1.4mm pad 2.8mm
+0
+5
+5
+TerminalBlock_MetzConnect
 TerminalBlock_MetzConnect_Type011_RT05506HBLC_1x06_P5.00mm_Horizontal
 terminal block Metz Connect Type011_RT05506HBLC, 6 pins, pitch 5mm, size 30x10.5mm, drill diameter 1.4mm, pad diameter 2.8mm, https://americancableassemblies.com/content/metz/863188.PDF, script-generated using https://gitlab.com/kicad/libraries/kicad-footprint-generator/-/tree/master/scripts/TerminalBlock_MetzConnect
 THT terminal block Metz Connect Type011_RT05506HBLC pitch 5mm size 30x10.5mm drill 1.4mm pad 2.8mm
+0
+6
+6
+TerminalBlock_MetzConnect
+TerminalBlock_MetzConnect_Type011_RT05506HBWC_1x06_P5.00mm_Horizontal
+terminal block Metz Connect Type011_RT05506HBWC, 6 pins, pitch 5mm, size 30x10.5mm, drill diameter 1.4mm, pad diameter 2.8mm, http://www.metz-connect.com/de/system/files/productfiles/Datenblatt_310111_RT055xxHBLC_OFF-022717S.pdf, script-generated using https://gitlab.com/kicad/libraries/kicad-footprint-generator/-/tree/master/scripts/TerminalBlock_MetzConnect
+THT terminal block Metz Connect Type011_RT05506HBWC pitch 5mm size 30x10.5mm drill 1.4mm pad 2.8mm
 0
 6
 6
@@ -101289,3 +103088,17 @@ LSM115JE3/TR13
 0
 2
 2
+primecamLNABiasPotVreg
+H204CGDL
+
+
+0
+16
+16
+primecamLNABiasPotVreg
+TE_5747842-4
+
+
+0
+27
+26

@@ -6,7 +6,7 @@
 	(descr "Tantalum Capacitor SMD AVX-J (1608-08 Metric), IPC_7351 nominal, (Body size from: https://www.vishay.com/docs/48064/_t58_vmn_pt0471_1601.pdf), generated with kicad-footprint-generator")
 	(tags "capacitor tantalum")
 	(property "Reference" "REF**"
-		(at 3.683 0 90)
+		(at -3.683 0 270)
 		(layer "F.SilkS")
 		(uuid "7ba84a25-5067-474c-8665-7fec82085c4d")
 		(effects
@@ -17,7 +17,7 @@
 		)
 	)
 	(property "Value" "Cap_b_1411"
-		(at 0 1.48 0)
+		(at 0 -1.48 180)
 		(layer "F.Fab")
 		(uuid "21d05a9e-aaf2-467d-acdb-85329d856cdb")
 		(effects
@@ -53,18 +53,18 @@
 	)
 	(attr smd)
 	(fp_line
-		(start -2.794 -1.651)
-		(end -2.794 1.651)
+		(start 0 1.651)
+		(end 2.794 1.651)
 		(stroke
 			(width 0.12)
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "0a4670fe-f411-47c9-8912-2ac7b841eb8f")
+		(uuid "3a7b8b07-06de-4fe0-8248-8dda757981ba")
 	)
 	(fp_line
-		(start -2.794 1.651)
-		(end 0 1.651)
+		(start 2.794 -1.651)
+		(end 0 -1.651)
 		(stroke
 			(width 0.12)
 			(type solid)
@@ -73,14 +73,14 @@
 		(uuid "3e9e4ee7-98c0-4519-9607-cdedca5c2e75")
 	)
 	(fp_line
-		(start 0 -1.651)
-		(end -2.794 -1.651)
+		(start 2.794 1.651)
+		(end 2.794 -1.651)
 		(stroke
 			(width 0.12)
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "3a7b8b07-06de-4fe0-8248-8dda757981ba")
+		(uuid "0a4670fe-f411-47c9-8912-2ac7b841eb8f")
 	)
 	(fp_rect
 		(start -0.508 -1.016)
@@ -105,28 +105,28 @@
 		(uuid "e4d51649-ad03-4e12-bc0e-b292418bdbc9")
 	)
 	(fp_line
-		(start -0.8 -0.125)
+		(start -0.8 -0.425)
 		(end -0.8 0.425)
 		(stroke
 			(width 0.1)
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "8412036a-3ea2-4b74-8181-b678e28b9823")
+		(uuid "26446095-4b36-4b92-b664-1cf24d1f18e5")
 	)
 	(fp_line
 		(start -0.8 0.425)
-		(end 0.8 0.425)
+		(end 0.5 0.425)
 		(stroke
 			(width 0.1)
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "b4dd7bf8-1926-4291-bfbf-4281b11ec529")
+		(uuid "20e5b869-8ad3-453a-95ce-baad053c89ba")
 	)
 	(fp_line
-		(start -0.5 -0.425)
-		(end -0.8 -0.125)
+		(start 0.5 0.425)
+		(end 0.8 0.125)
 		(stroke
 			(width 0.1)
 			(type solid)
@@ -136,26 +136,26 @@
 	)
 	(fp_line
 		(start 0.8 -0.425)
-		(end -0.5 -0.425)
+		(end -0.8 -0.425)
 		(stroke
 			(width 0.1)
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "20e5b869-8ad3-453a-95ce-baad053c89ba")
+		(uuid "b4dd7bf8-1926-4291-bfbf-4281b11ec529")
 	)
 	(fp_line
-		(start 0.8 0.425)
+		(start 0.8 0.125)
 		(end 0.8 -0.425)
 		(stroke
 			(width 0.1)
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "26446095-4b36-4b92-b664-1cf24d1f18e5")
+		(uuid "8412036a-3ea2-4b74-8181-b678e28b9823")
 	)
 	(fp_text user "${REFERENCE}"
-		(at 0 0 0)
+		(at 0 0 180)
 		(layer "F.Fab")
 		(uuid "6d29ebd3-5747-48e1-b1af-57facea19225")
 		(effects
@@ -166,13 +166,13 @@
 		)
 	)
 	(pad "1" smd rect
-		(at -1.7272 0)
+		(at 1.7272 0 180)
 		(size 1.8034 2.9972)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "a1c8d1de-46e2-44ca-9338-1c1ef0d337be")
 	)
 	(pad "2" smd roundrect
-		(at 1.7272 0)
+		(at -1.7272 0 180)
 		(size 1.8034 2.9972)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(roundrect_rratio 0.238095)

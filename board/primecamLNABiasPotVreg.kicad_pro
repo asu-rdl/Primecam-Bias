@@ -60,7 +60,7 @@
       ],
       "drc_exclusions": [
         [
-          "solder_mask_bridge|11018845|-25929009|313e94f3-a2b0-4f3a-a2e6-4b0bc63d0374|81acb1f2-86c9-40b9-a8ca-4e1262631054",
+          "solder_mask_bridge|116851791|26913048|313e94f3-a2b0-4f3a-a2e6-4b0bc63d0374|81acb1f2-86c9-40b9-a8ca-4e1262631054",
           ""
         ]
       ],
@@ -103,9 +103,9 @@
         "nonmirrored_text_on_back_layer": "warning",
         "npth_inside_courtyard": "ignore",
         "padstack": "warning",
-        "pth_inside_courtyard": "ignore",
+        "pth_inside_courtyard": "warning",
         "shorting_items": "error",
-        "silk_edge_clearance": "warning",
+        "silk_edge_clearance": "ignore",
         "silk_over_copper": "warning",
         "silk_overlap": "warning",
         "skew_out_of_range": "error",
@@ -194,6 +194,7 @@
       "track_widths": [
         0.0,
         0.1524,
+        0.254,
         0.508,
         1.651
       ],
@@ -243,7 +244,158 @@
       "mpn": ""
     },
     "layer_pairs": [],
-    "layer_presets": [],
+    "layer_presets": [
+      {
+        "activeLayer": -2,
+        "layers": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          34,
+          36,
+          37,
+          38,
+          40,
+          42,
+          44,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98,
+          99,
+          100,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          120,
+          121,
+          122,
+          123,
+          124,
+          125,
+          126,
+          127
+        ],
+        "name": "All",
+        "renderLayers": [
+          "vias",
+          "footprint_text",
+          "footprint_anchors",
+          "ratsnest",
+          "grid",
+          "footprints_front",
+          "footprints_back",
+          "footprint_values",
+          "footprint_references",
+          "tracks",
+          "drc_errors",
+          "drawing_sheet",
+          "bitmaps",
+          "pads",
+          "zones",
+          "drc_warnings",
+          "drc_exclusions",
+          "locked_item_shadows",
+          "conflict_shadows",
+          "shapes"
+        ]
+      }
+    ],
     "viewports": []
   },
   "boards": [],
@@ -512,7 +664,7 @@
       "idf": "",
       "netlist": "",
       "plot": "/home/carobers/Desktop/SHITE.pdf",
-      "pos_files": "",
+      "pos_files": "production/",
       "specctra_dsn": "",
       "step": "",
       "svg": "",
@@ -544,12 +696,6 @@
           "show": true
         },
         {
-          "group_by": false,
-          "label": "Qty",
-          "name": "${QUANTITY}",
-          "show": true
-        },
-        {
           "group_by": true,
           "label": "Value",
           "name": "Value",
@@ -557,26 +703,8 @@
         },
         {
           "group_by": false,
-          "label": "LCSC Part #",
-          "name": "LCSC Part #",
-          "show": true
-        },
-        {
-          "group_by": false,
           "label": "DNP",
           "name": "${DNP}",
-          "show": true
-        },
-        {
-          "group_by": false,
-          "label": "Exclude from BOM",
-          "name": "${EXCLUDE_FROM_BOM}",
-          "show": true
-        },
-        {
-          "group_by": false,
-          "label": "Exclude from Board",
-          "name": "${EXCLUDE_FROM_BOARD}",
           "show": true
         },
         {
@@ -587,9 +715,51 @@
         },
         {
           "group_by": false,
+          "label": "LCSC Part #",
+          "name": "LCSC Part #",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Part",
+          "name": "Part",
+          "show": true
+        },
+        {
+          "group_by": false,
           "label": "Datasheet",
           "name": "Datasheet",
           "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Description",
+          "name": "Description",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Qty",
+          "name": "${QUANTITY}",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "#",
+          "name": "${ITEM_NUMBER}",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Digikey",
+          "name": "Digikey",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Field5",
+          "name": "Field5",
+          "show": false
         },
         {
           "group_by": false,
@@ -607,30 +777,36 @@
           "group_by": false,
           "label": "Mouser",
           "name": "Mouser",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Mouser Part Number",
+          "name": "Mouser Part Number",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Part Number",
+          "name": "Part Number",
           "show": true
         },
         {
           "group_by": false,
-          "label": "Digikey",
-          "name": "Digikey",
+          "label": "Price",
+          "name": "Price",
           "show": false
         },
         {
           "group_by": false,
-          "label": "Description",
-          "name": "Description",
+          "label": "Exclude from BOM",
+          "name": "${EXCLUDE_FROM_BOM}",
           "show": false
         },
         {
           "group_by": false,
-          "label": "#",
-          "name": "${ITEM_NUMBER}",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Field5",
-          "name": "Field5",
+          "label": "Exclude from Board",
+          "name": "${EXCLUDE_FROM_BOARD}",
           "show": false
         }
       ],
@@ -638,8 +814,8 @@
       "group_symbols": true,
       "include_excluded_from_bom": true,
       "name": "",
-      "sort_asc": true,
-      "sort_field": "Value"
+      "sort_asc": false,
+      "sort_field": "${DNP}"
     },
     "connection_grid_size": 50.0,
     "drawing": {
@@ -688,11 +864,35 @@
     ],
     [
       "0f3d2a35-61e5-4457-80b4-6420fdb0d25b",
-      "BiasCircuit"
+      "BiasCircuit1"
     ],
     [
       "f91d9140-be5e-40db-9d84-52e3da401d8d",
-      "BiasCircuit1"
+      "BiasCircuit2"
+    ],
+    [
+      "64c1193f-484d-4b2b-967e-0bece5fec1ac",
+      "BiasCircuit6"
+    ],
+    [
+      "851eaff3-1d9e-4c5f-ba83-6913f66c687a",
+      "BiasCircuit5"
+    ],
+    [
+      "127b4f37-4249-4636-9451-13f97e74a487",
+      "BiasCircuit3"
+    ],
+    [
+      "d2a5aef8-fc6d-4cdd-8944-f2314971ee1a",
+      "BiasCircuit4"
+    ],
+    [
+      "c6f02b79-e1e3-4ccb-b6a6-6317bde05a0e",
+      "BiasCircuit7"
+    ],
+    [
+      "6790a67e-7813-43f2-b494-f39ce93cdf59",
+      "BiasCircuit8"
     ]
   ],
   "text_variables": {}

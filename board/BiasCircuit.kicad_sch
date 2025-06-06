@@ -6,7 +6,7 @@
 	(paper "USLetter")
 	(title_block
 		(title "PrimecamLNABiasPotVreg")
-		(rev "1")
+		(rev "3.0")
 		(company "Arizona State University")
 	)
 	(lib_symbols
@@ -1474,141 +1474,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "ALPACA:10k"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "R62"
-				(at 1.905 0.635 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "10k"
-				(at 0 -2.54 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-				(at -1.778 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RNCF0603TKY10K0/2269698"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Resistor"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Part Number" "RNCF0603TKY10K0"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "R res resistor"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "R_*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "10k_0_1"
-				(rectangle
-					(start -1.016 -2.54)
-					(end 1.016 2.54)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "10k_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "ALPACA:12K"
 			(pin_numbers
 				(hide yes)
@@ -1712,141 +1577,6 @@
 				)
 			)
 			(symbol "12K_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "ALPACA:5.1k"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "R65"
-				(at -3.81 0.635 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "5.1k"
-				(at 0 -1.905 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-				(at -1.778 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "https://www.digikey.com/en/products/detail/panasonic-electronic-components/ERJ-3EKF5101V/1746427"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Resistor"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Part Number" "ERJ-3EKF5101V"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "R res resistor"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "R_*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "5.1k_0_1"
-				(rectangle
-					(start -1.016 -2.54)
-					(end 1.016 2.54)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "5.1k_1_1"
 				(pin passive line
 					(at 0 3.81 270)
 					(length 1.27)
@@ -2066,290 +1796,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "ALPACA:LTC4302-1"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "U29"
-				(at 0 7.459 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "LTC4302-1"
-				(at 0 4.9221 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "ALPACA:MSOP_10"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "https://www.analog.com/media/en/technical-documentation/data-sheets/4302fs.pdf"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Link" "https://www.mouser.com/ProductDetail/Analog-Devices/LTC4302CMS-1PBF?qs=hVkxg5c3xu%252Bw9pR4r9Tpog%3D%3D"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Part Number" "LTC4302CMS-1#PBF"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "LTC4302-1_0_1"
-				(rectangle
-					(start -7.62 3.81)
-					(end 7.62 -8.89)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(rectangle
-					(start 6.35 -10.16)
-					(end 6.35 -10.16)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 6.35 -10.16)
-					(end 6.35 -10.16)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "LTC4302-1_1_1"
-				(pin input line
-					(at -10.16 2.54 0)
-					(length 2.54)
-					(name "SDAIN"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -10.16 0 0)
-					(length 2.54)
-					(name "SCLIN"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -10.16 -2.54 0)
-					(length 2.54)
-					(name "CONN"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -10.16 -5.08 0)
-					(length 2.54)
-					(name "ADD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -10.16 -7.62 0)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 10.16 2.54 180)
-					(length 2.54)
-					(name "SDAOUT"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 10.16 0 180)
-					(length 2.54)
-					(name "SCLOUT"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 10.16 -2.54 180)
-					(length 2.54)
-					(name "Vcc"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 10.16 -5.08 180)
-					(length 2.54)
-					(name "GPIO2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 10.16 -7.62 180)
-					(length 2.54)
-					(name "GPIO1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "ALPACA:POT_100k"
 			(pin_names
 				(offset 1.016)
@@ -2508,154 +1954,6 @@
 					(at 3.81 0 180)
 					(length 1.27)
 					(name "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "ALPACARepeaterLibrary:10nF"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0.254)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "C"
-				(at 0.635 2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "10nF"
-				(at 0.635 -2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-				(at 0.9652 -3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "https://www.digikey.com/en/products/detail/vishay-vitramon/VJ0603Y103KXBCW1BC/8305279"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Unpolarized capacitor"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Part #" "VJ0603Y103KXBCW1BC"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "cap capacitor"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "C_*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "10nF_0_1"
-				(polyline
-					(pts
-						(xy -2.032 0.762) (xy 2.032 0.762)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.032 -0.762) (xy 2.032 -0.762)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "10nF_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 2.794)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 2.794)
-					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3294,156 +2592,6 @@
 					(at 0 -3.81 90)
 					(length 2.794)
 					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Device:D_Schottky"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "D"
-				(at 0 2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "D_Schottky"
-				(at 0 -2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Schottky diode"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "diode Schottky"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "D_Schottky_0_1"
-				(polyline
-					(pts
-						(xy -1.905 0.635) (xy -1.905 1.27) (xy -1.27 1.27) (xy -1.27 -1.27) (xy -0.635 -1.27) (xy -0.635 -0.635)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 0) (xy -1.27 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "D_Schottky_1_1"
-				(pin passive line
-					(at -3.81 0 0)
-					(length 2.54)
-					(name "K"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 3.81 0 180)
-					(length 2.54)
-					(name "A"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4522,6 +3670,401 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "LNA_Bias:CPC1002NTR"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U5"
+				(at 0 8.255 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "CPC1002NTR"
+				(at 0 5.9436 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Package_SO:SOP-4_3.8x4.1mm_P2.54mm"
+				(at -50.292 25.4 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8558970500208238592"
+				(at -64.262 24.638 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Description" "Solid State Relays - PCB Mount 1-Form-A 60V 700mA Solid State Relay"
+				(at -41.91 25.654 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Link" "https://www.mouser.com/ProductDetail/IXYS-Integrated-Circuits/CPC1002NTR?qs=h2iAtNzNjMR5L7Rp412KMg%3D%3D"
+				(at -22.098 25.4 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Part Number" "CPC1002NTR"
+				(at -49.784 23.876 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Mouser Part Number" "849-CPC1002NTR "
+				(at -52.324 24.13 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "LCSC Part #" "C5359028"
+				(at -42.164 25.146 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "MOSFET Output Photorelay 1-Form-A"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "SOP*3.8x4.1mm*P2.54mm*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "CPC1002NTR_0_1"
+				(rectangle
+					(start -5.08 3.81)
+					(end 5.08 -3.81)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -5.08 2.54) (xy -3.175 2.54) (xy -3.175 -2.54) (xy -5.08 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.81 -0.635) (xy -2.54 -0.635)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.175 -0.635) (xy -3.81 0.635) (xy -2.54 0.635) (xy -3.175 -0.635)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.905 0.508) (xy -0.635 0.508) (xy -1.016 0.381) (xy -1.016 0.635) (xy -0.635 0.508)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.905 -0.508) (xy -0.635 -0.508) (xy -1.016 -0.635) (xy -1.016 -0.381) (xy -0.635 -0.508)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 2.54) (xy 1.016 -2.54)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.524 2.54) (xy 1.524 1.524) (xy 1.524 2.032)
+					)
+					(stroke
+						(width 0.3556)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.524 0.762) (xy 1.524 -0.508) (xy 1.524 0)
+					)
+					(stroke
+						(width 0.3556)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.524 -1.524) (xy 1.524 -2.54) (xy 1.524 -2.286)
+					)
+					(stroke
+						(width 0.3556)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.651 0.127) (xy 2.794 0.127) (xy 2.794 -0.635)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.778 0.127) (xy 2.286 0.254) (xy 2.286 0) (xy 1.778 0.127)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.794 0.127)
+					(radius 0.127)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.794 -0.508) (xy 2.794 -0.762) (xy 2.794 -1.016)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.794 -0.762) (xy 2.794 -2.032)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.794 -2.032)
+					(radius 0.127)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 2.54) (xy 3.81 2.54) (xy 2.794 2.54) (xy 2.794 2.032) (xy 1.524 2.032)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 -2.54) (xy 3.81 -2.54) (xy 2.794 -2.54) (xy 2.794 -2.032) (xy 1.524 -2.032)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "CPC1002NTR_1_1"
+				(pin passive line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 2.54 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -2.54 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Regulator_Linear:LT3080xDD"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -4871,95 +4414,19 @@
 			(embedded_fonts no)
 		)
 	)
-	(text_box "Rev 1\nRotate in layout. Was wrong orientation, read negative currents."
+	(text "Channel: ${ChanNum}"
 		(exclude_from_sim no)
-		(at 194.945 132.08 0)
-		(size 24.765 9.525)
-		(margins 0.9525 0.9525 0.9525 0.9525)
-		(stroke
-			(width 0)
-			(type solid)
-			(color 0 72 0 1)
-		)
-		(fill
-			(type none)
-		)
+		(at 235.204 19.304 0)
 		(effects
 			(font
-				(size 1.27 1.27)
-				(color 0 72 0 1)
+				(size 2.54 2.54)
+				(thickness 0.508)
+				(bold yes)
 			)
-			(justify left top)
 		)
-		(uuid "01e1b168-3688-4fd2-8e51-47e9ad6a3fd7")
+		(uuid "9ad75f92-91a2-40fb-b857-dcb81ab76890")
 	)
-	(text_box "Rev 1\n\nFixed wiper config\n\ndigital value of \n255,255,255,255 Would be the highest voltage\n0,0,0,0 is the lowest\n\nPrevious setup made the resistance non-linear"
-		(exclude_from_sim no)
-		(at 22.86 154.94 0)
-		(size 34.29 24.765)
-		(margins 0.9525 0.9525 0.9525 0.9525)
-		(stroke
-			(width 0)
-			(type solid)
-			(color 0 72 0 1)
-		)
-		(fill
-			(type none)
-		)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(color 0 72 0 1)
-			)
-			(justify left top)
-		)
-		(uuid "9cb559a3-1fef-413e-8a89-a72b8485b4e7")
-	)
-	(text_box "Rev1\nAdd resistor\nPossibly DNI\n\n"
-		(exclude_from_sim no)
-		(at 102.87 128.27 0)
-		(size 13.97 8.89)
-		(margins 0.9525 0.9525 0.9525 0.9525)
-		(stroke
-			(width 0)
-			(type solid)
-			(color 0 72 0 1)
-		)
-		(fill
-			(type none)
-		)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(color 0 72 0 1)
-			)
-			(justify left top)
-		)
-		(uuid "dc343362-7657-42c7-8386-53e11eecd385")
-	)
-	(text_box "Rev1\nChange 100k to 40k\nNeed to pick low prof pot\n"
-		(exclude_from_sim no)
-		(at 30.48 121.285 0)
-		(size 27.94 8.89)
-		(margins 0.9525 0.9525 0.9525 0.9525)
-		(stroke
-			(width 0)
-			(type solid)
-			(color 0 72 0 1)
-		)
-		(fill
-			(type none)
-		)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(color 0 72 0 1)
-			)
-			(justify left top)
-		)
-		(uuid "f411d781-6edf-4d98-b15a-b3c7e98cd581")
-	)
-	(text_box "3.3V Series resistor\n\nIf the lt4302 is powered by 3.3 we want this pulled up to the same voltage\n\nI = 1mA\nR = (3.3-1.32)/0.001 = 1980 Ohms\n\nR = (5.0-1.32)/0.001 = 3680 Ohms\n(will pick 3650)\n"
+	(text_box "Modified\nAdd ind. LED\n\nSource - Relay LED - Ind. LED\n5.0V - 1.32 - 2.1 = 1.58\nTarget 2mA, picked R=1k, 1.58mA current\n"
 		(exclude_from_sim no)
 		(at 125.73 144.78 0)
 		(size 26.035 15.875)
@@ -4986,18 +4453,6 @@
 		(uuid "04ba79f9-cdbc-4f63-a025-efa9954c443f")
 	)
 	(junction
-		(at 76.2 34.29)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "1514d591-aa6e-48df-a536-21e39502a6e5")
-	)
-	(junction
-		(at 27.94 34.29)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "16dde8d5-76ed-4b18-a8f2-56a7543e3100")
-	)
-	(junction
 		(at 60.96 156.21)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5010,34 +4465,10 @@
 		(uuid "1c623e86-8d44-4b6f-bfac-e636d3fbfbf2")
 	)
 	(junction
-		(at 31.75 34.29)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "1d70c249-f7ab-416c-9e2b-d4b6c3e58edd")
-	)
-	(junction
-		(at 73.66 62.23)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "1e170217-446d-486b-94c5-c73cb8d949ca")
-	)
-	(junction
-		(at 73.66 34.29)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "25529cd5-bfeb-40cd-a864-7532ba235f69")
-	)
-	(junction
 		(at 55.88 104.14)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "266f1ae9-f272-426b-be30-1ed68de0962e")
-	)
-	(junction
-		(at 44.45 59.69)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "2882b9d6-88fe-4dfe-930c-962f2584f7fb")
 	)
 	(junction
 		(at 55.88 91.44)
@@ -5064,28 +4495,16 @@
 		(uuid "47291767-ff4e-4a19-a20c-e86b737323e9")
 	)
 	(junction
+		(at 67.31 128.27)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4c4c90fc-0be5-4d57-bfa3-fc9c79009bb2")
+	)
+	(junction
 		(at 179.07 101.6)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5a69bb7d-827e-43cb-9823-2ce359551582")
-	)
-	(junction
-		(at 76.2 64.77)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "60c5b800-ae48-4aad-9903-f34a9a6c7f65")
-	)
-	(junction
-		(at 116.84 175.26)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "6afa7644-5171-4a54-966f-e141a6beac59")
-	)
-	(junction
-		(at 68.58 34.29)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "6e244325-b097-42f6-bf53-d31449ad081e")
 	)
 	(junction
 		(at 121.92 101.6)
@@ -5112,24 +4531,6 @@
 		(uuid "893ba015-15dd-4931-b495-9efa90c7e5da")
 	)
 	(junction
-		(at 35.56 62.23)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "8ce3becb-ae73-423d-9ee4-7b6161598221")
-	)
-	(junction
-		(at 24.13 34.29)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "9465eb2b-6693-4db5-8447-109eee2de0c9")
-	)
-	(junction
-		(at 24.13 67.31)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "948f23ec-5596-4d4f-a1dd-79290ed244cf")
-	)
-	(junction
 		(at 193.04 101.6)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5142,10 +4543,10 @@
 		(uuid "a9decea8-a99f-47e6-9821-0cc8e9d99640")
 	)
 	(junction
-		(at 24.13 74.93)
+		(at 76.2 118.11)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "aa3a3dcf-5299-4c62-916c-6942d7c64a81")
+		(uuid "aed69a0d-7b37-449d-bbf1-442c9631e3ae")
 	)
 	(junction
 		(at 72.39 128.27)
@@ -5172,22 +4573,10 @@
 		(uuid "b70fa6cb-e947-44c4-b201-0fccef4ccf47")
 	)
 	(junction
-		(at 185.42 153.67)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "cfe85ec8-e9ad-4438-bc95-ee808185f8ce")
-	)
-	(junction
 		(at 60.96 173.99)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d1de04a0-97c2-4ed8-b099-918bc3015a79")
-	)
-	(junction
-		(at 39.37 34.29)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "d68793f3-a008-44ab-bb3b-fa624b1f918c")
 	)
 	(junction
 		(at 163.83 101.6)
@@ -5202,12 +4591,6 @@
 		(uuid "d8851f22-4020-4170-8bc3-adf1285d4078")
 	)
 	(junction
-		(at 68.58 59.69)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "deb7d236-ec54-46f3-b393-4d9fc9247f7d")
-	)
-	(junction
 		(at 90.17 161.29)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5220,10 +4603,10 @@
 		(uuid "e797cbd7-eadf-4c78-a6fa-a8e889f1cd49")
 	)
 	(junction
-		(at 78.74 34.29)
+		(at 209.55 101.6)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "eb256eed-7c76-4296-8885-1b2188aa6d6b")
+		(uuid "ee3a3ea9-be48-4d12-aa3c-b765495aeb45")
 	)
 	(junction
 		(at 97.79 144.78)
@@ -5262,16 +4645,6 @@
 			(type default)
 		)
 		(uuid "05dfc739-a092-4624-a942-948793932b8c")
-	)
-	(wire
-		(pts
-			(xy 66.04 59.69) (xy 68.58 59.69)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "09251391-eb1e-4874-80b3-c6ab42686022")
 	)
 	(wire
 		(pts
@@ -5325,7 +4698,7 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 101.6) (xy 154.94 101.6)
+			(xy 149.86 101.6) (xy 163.83 101.6)
 		)
 		(stroke
 			(width 0)
@@ -5335,13 +4708,13 @@
 	)
 	(wire
 		(pts
-			(xy 44.45 30.48) (xy 44.45 59.69)
+			(xy 149.86 124.46) (xy 149.86 116.84)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "1bb447dd-bb39-440e-9e15-bb1ede9ee130")
+		(uuid "1b207e51-4a99-4228-b140-2b28de085a4a")
 	)
 	(wire
 		(pts
@@ -5352,26 +4725,6 @@
 			(type default)
 		)
 		(uuid "234f844e-6283-4ab7-b56b-b555fc330747")
-	)
-	(wire
-		(pts
-			(xy 76.2 34.29) (xy 76.2 64.77)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "255fe199-aa45-4f3d-a843-e5cdda3e0403")
-	)
-	(wire
-		(pts
-			(xy 68.58 59.69) (xy 107.95 59.69)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "262e2ea0-3dd1-481b-a556-034b825861de")
 	)
 	(wire
 		(pts
@@ -5425,16 +4778,6 @@
 	)
 	(wire
 		(pts
-			(xy 24.13 67.31) (xy 45.72 67.31)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "331502bf-b6d4-4bd6-b7f6-49e3fbeb583e")
-	)
-	(wire
-		(pts
 			(xy 186.69 101.6) (xy 193.04 101.6)
 		)
 		(stroke
@@ -5442,16 +4785,6 @@
 			(type default)
 		)
 		(uuid "33c9e11e-6740-4f67-9cec-cfe8f50ca8f4")
-	)
-	(wire
-		(pts
-			(xy 76.2 64.77) (xy 66.04 64.77)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3ad01884-698f-4880-bcfb-6a5a9595632c")
 	)
 	(wire
 		(pts
@@ -5465,23 +4798,13 @@
 	)
 	(wire
 		(pts
-			(xy 24.13 34.29) (xy 27.94 34.29)
+			(xy 209.55 101.6) (xy 247.65 101.6)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "3c818be6-5ca6-422f-9eff-a09de04b7110")
-	)
-	(wire
-		(pts
-			(xy 24.13 74.93) (xy 24.13 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3d6e75e3-279d-4001-a297-7f95785a94b9")
+		(uuid "40e7faf5-bfc2-41eb-8178-15960697fc11")
 	)
 	(wire
 		(pts
@@ -5495,27 +4818,7 @@
 	)
 	(wire
 		(pts
-			(xy 186.69 153.67) (xy 185.42 153.67)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "41b6be16-da86-4705-bf6d-f55f6ec802d1")
-	)
-	(wire
-		(pts
-			(xy 20.32 34.29) (xy 24.13 34.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "44b60b30-0563-4a94-9713-1f4c417749e6")
-	)
-	(wire
-		(pts
-			(xy 193.04 101.6) (xy 201.93 101.6)
+			(xy 193.04 101.6) (xy 209.55 101.6)
 		)
 		(stroke
 			(width 0)
@@ -5545,7 +4848,7 @@
 	)
 	(wire
 		(pts
-			(xy 60.96 128.27) (xy 72.39 128.27)
+			(xy 60.96 128.27) (xy 67.31 128.27)
 		)
 		(stroke
 			(width 0)
@@ -5562,6 +4865,16 @@
 			(type default)
 		)
 		(uuid "4ace4e1e-bd2e-483f-b2ca-5d3f78afdc6c")
+	)
+	(wire
+		(pts
+			(xy 67.31 128.27) (xy 72.39 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4adacfe4-6e3b-4623-a2e3-9a868d5e51de")
 	)
 	(wire
 		(pts
@@ -5582,26 +4895,6 @@
 			(type default)
 		)
 		(uuid "4cd46231-54f0-453a-8fb1-502b65a3090b")
-	)
-	(wire
-		(pts
-			(xy 66.04 67.31) (xy 78.74 67.31)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5507374c-adf2-4d07-96b3-3f88dfd08ae3")
-	)
-	(wire
-		(pts
-			(xy 184.15 149.86) (xy 184.15 153.67)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "59528ca1-a56e-4999-b47c-253a4f0b1420")
 	)
 	(wire
 		(pts
@@ -5645,53 +4938,13 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 104.14) (xy 55.88 104.14)
+			(xy 41.91 104.14) (xy 55.88 104.14)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "61ec6511-7bc7-4f12-8c8b-46735d7c9309")
-	)
-	(wire
-		(pts
-			(xy 78.74 53.34) (xy 78.74 67.31)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6409a5ee-af2b-4482-aed6-5763820d122a")
-	)
-	(wire
-		(pts
-			(xy 186.69 149.86) (xy 186.69 153.67)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "64b7e57e-a067-4713-abc0-a1cbba5f0033")
-	)
-	(wire
-		(pts
-			(xy 31.75 34.29) (xy 31.75 45.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "66c01729-23dc-4989-aea8-a3f65413f4ef")
-	)
-	(wire
-		(pts
-			(xy 85.09 69.85) (xy 85.09 53.34)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "674055aa-dfad-40a1-8cb6-ca0464d367d8")
 	)
 	(wire
 		(pts
@@ -5715,46 +4968,6 @@
 	)
 	(wire
 		(pts
-			(xy 43.18 69.85) (xy 45.72 69.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7041a7d6-ef0a-4da9-ae84-0fd986abe05c")
-	)
-	(wire
-		(pts
-			(xy 27.94 64.77) (xy 45.72 64.77)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "70c2c3d8-86e2-4944-954a-814c0c60af32")
-	)
-	(wire
-		(pts
-			(xy 31.75 53.34) (xy 31.75 62.23)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "725483e6-0f7a-4a87-b9b7-f3bd9c1d07b4")
-	)
-	(wire
-		(pts
-			(xy 76.2 34.29) (xy 78.74 34.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "74f1238d-e3c9-4dda-bbdc-5ad40e339a82")
-	)
-	(wire
-		(pts
 			(xy 90.17 163.83) (xy 90.17 170.18)
 		)
 		(stroke
@@ -5765,13 +4978,13 @@
 	)
 	(wire
 		(pts
-			(xy 68.58 34.29) (xy 73.66 34.29)
+			(xy 76.2 118.11) (xy 76.2 124.46)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "7968194e-d1d4-4c37-b050-3634887411c1")
+		(uuid "7a53ef3a-30e6-480f-86f6-ba7afe096467")
 	)
 	(wire
 		(pts
@@ -5785,26 +4998,6 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 59.69) (xy 44.45 59.69)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7cc9dc6f-c83c-4f89-b31d-92a55de8c716")
-	)
-	(wire
-		(pts
-			(xy 31.75 34.29) (xy 39.37 34.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7e781fc4-856d-4b98-a9d1-11b882c4a8ed")
-	)
-	(wire
-		(pts
 			(xy 72.39 132.08) (xy 72.39 128.27)
 		)
 		(stroke
@@ -5812,16 +5005,6 @@
 			(type default)
 		)
 		(uuid "7f835206-a240-4e88-8b9e-d3e48bebd95e")
-	)
-	(wire
-		(pts
-			(xy 73.66 62.23) (xy 107.95 62.23)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8087bbed-54f9-4112-8abc-d7d5b179b99b")
 	)
 	(wire
 		(pts
@@ -5855,16 +5038,6 @@
 	)
 	(wire
 		(pts
-			(xy 44.45 59.69) (xy 39.37 59.69)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "88e219af-98ae-4bef-80f1-e2fb950a0e08")
-	)
-	(wire
-		(pts
 			(xy 107.95 144.78) (xy 97.79 144.78)
 		)
 		(stroke
@@ -5885,26 +5058,6 @@
 	)
 	(wire
 		(pts
-			(xy 43.18 69.85) (xy 43.18 74.93)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8b40c88d-034f-4e16-9c49-5b7a79a318f3")
-	)
-	(wire
-		(pts
-			(xy 144.78 127) (xy 144.78 135.89)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8bc8df27-06a7-4ee6-916c-ff90c7c4cdc5")
-	)
-	(wire
-		(pts
 			(xy 60.96 179.07) (xy 60.96 182.88)
 		)
 		(stroke
@@ -5912,16 +5065,6 @@
 			(type default)
 		)
 		(uuid "8c7b2a95-be29-4d6b-abaf-41ac13cb1cf3")
-	)
-	(wire
-		(pts
-			(xy 86.36 175.26) (xy 116.84 175.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8cecf0bd-97ca-4868-8228-e17f1d272cdd")
 	)
 	(wire
 		(pts
@@ -5935,6 +5078,16 @@
 	)
 	(wire
 		(pts
+			(xy 209.55 139.7) (xy 209.55 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "932ec822-04c6-41b6-9b03-d0e775df1e04")
+	)
+	(wire
+		(pts
 			(xy 60.96 182.88) (xy 60.96 185.42)
 		)
 		(stroke
@@ -5942,26 +5095,6 @@
 			(type default)
 		)
 		(uuid "94aeb294-c4e6-4f9d-99fa-a59bdd100b6a")
-	)
-	(wire
-		(pts
-			(xy 68.58 34.29) (xy 68.58 45.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "96ae429f-210a-4c4d-80ad-ceb4a5e10878")
-	)
-	(wire
-		(pts
-			(xy 68.58 53.34) (xy 68.58 59.69)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9787e29e-aca0-4b89-a024-d00ae2c06fdf")
 	)
 	(wire
 		(pts
@@ -5975,43 +5108,13 @@
 	)
 	(wire
 		(pts
-			(xy 76.2 115.57) (xy 76.2 124.46)
+			(xy 76.2 115.57) (xy 76.2 118.11)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "9943cb7a-edf8-41ac-a91d-e1ea1cb5a988")
-	)
-	(wire
-		(pts
-			(xy 66.04 69.85) (xy 85.09 69.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "996dda3b-74d3-4d75-b032-8b8493bd9880")
-	)
-	(wire
-		(pts
-			(xy 73.66 62.23) (xy 73.66 53.34)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9bc95f67-15f0-42b5-b782-8f370d5f7c81")
-	)
-	(wire
-		(pts
-			(xy 66.04 62.23) (xy 73.66 62.23)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9c521d99-2fe9-4004-90e0-f7ed269091c2")
 	)
 	(wire
 		(pts
@@ -6055,16 +5158,6 @@
 	)
 	(wire
 		(pts
-			(xy 35.56 30.48) (xy 35.56 62.23)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a6ceeec3-fac8-4293-aa71-920d0c598344")
-	)
-	(wire
-		(pts
 			(xy 86.36 177.8) (xy 90.17 177.8)
 		)
 		(stroke
@@ -6082,6 +5175,16 @@
 			(type default)
 		)
 		(uuid "a838d94f-383b-47d4-b35e-77cc388c7208")
+	)
+	(wire
+		(pts
+			(xy 184.15 160.02) (xy 184.15 149.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a8812a13-c5fe-403e-a8ff-485e10881946")
 	)
 	(wire
 		(pts
@@ -6105,23 +5208,13 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 172.72) (xy 116.84 172.72)
+			(xy 67.31 118.11) (xy 76.2 118.11)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "ae354d1c-800c-458f-9a51-c17d7dfae502")
-	)
-	(wire
-		(pts
-			(xy 73.66 45.72) (xy 73.66 34.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b31d0601-1095-4267-b62f-c048f8b09b78")
+		(uuid "b36471c9-98d6-4ad9-ba33-b8f3a9f03138")
 	)
 	(wire
 		(pts
@@ -6135,53 +5228,23 @@
 	)
 	(wire
 		(pts
-			(xy 35.56 62.23) (xy 45.72 62.23)
+			(xy 100.33 175.26) (xy 86.36 175.26)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b85a20a1-7297-41fd-89cf-81293c3fed68")
+		(uuid "c373c99c-c25a-47bf-9602-e037b548a6ec")
 	)
 	(wire
 		(pts
-			(xy 31.75 62.23) (xy 35.56 62.23)
+			(xy 186.69 160.02) (xy 186.69 149.86)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b8f8eaf7-1264-4b6a-b2d9-7d3bed4d1a90")
-	)
-	(wire
-		(pts
-			(xy 78.74 34.29) (xy 85.09 34.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "be1d0b7e-f9f5-4637-b20c-ae45be84e36c")
-	)
-	(wire
-		(pts
-			(xy 27.94 34.29) (xy 27.94 64.77)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "be1d5b48-56a9-4690-8340-48d5f465b5a1")
-	)
-	(wire
-		(pts
-			(xy 73.66 34.29) (xy 76.2 34.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bfc50324-0984-4021-903b-950b52bf0e87")
+		(uuid "c43ecae3-4e00-417b-94e3-58cf74ea3e18")
 	)
 	(wire
 		(pts
@@ -6192,16 +5255,6 @@
 			(type default)
 		)
 		(uuid "c5583e97-8ef1-41d4-8982-47ea49fc8dda")
-	)
-	(wire
-		(pts
-			(xy 39.37 34.29) (xy 68.58 34.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c679b98d-0d88-4157-a043-09aaefaac4e9")
 	)
 	(wire
 		(pts
@@ -6233,16 +5286,6 @@
 		)
 		(uuid "c8cbe4b0-69d3-4d03-a6d1-650116952133")
 	)
-	(wire
-		(pts
-			(xy 78.74 34.29) (xy 78.74 45.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c904a9f1-18bf-488f-b5f8-a734830ca6e7")
-	)
 	(polyline
 		(pts
 			(xy 129.54 121.92) (xy 138.43 121.92)
@@ -6252,26 +5295,6 @@
 			(type solid)
 		)
 		(uuid "c91d085c-7303-44a6-b65c-2b86b374bfde")
-	)
-	(wire
-		(pts
-			(xy 24.13 34.29) (xy 24.13 54.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c9d166a8-44e9-4931-8371-2ef6301593d8")
-	)
-	(wire
-		(pts
-			(xy 39.37 53.34) (xy 39.37 59.69)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c9e41bc9-b854-47ee-ab4b-446edab4577e")
 	)
 	(wire
 		(pts
@@ -6285,23 +5308,13 @@
 	)
 	(wire
 		(pts
-			(xy 76.2 83.82) (xy 76.2 81.28)
+			(xy 209.55 118.11) (xy 209.55 127)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "cc6760b2-557b-4fea-a4a7-c2d908e6f271")
-	)
-	(wire
-		(pts
-			(xy 24.13 62.23) (xy 24.13 67.31)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cd78da3a-a34b-4841-af5e-5d55ebf2e305")
+		(uuid "cc178909-aef8-4064-8c45-7d8061845456")
 	)
 	(wire
 		(pts
@@ -6325,6 +5338,16 @@
 	)
 	(wire
 		(pts
+			(xy 209.55 101.6) (xy 209.55 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cfdd9a13-2f57-4f0d-9357-3492d92e15fe")
+	)
+	(wire
+		(pts
 			(xy 60.96 156.21) (xy 60.96 158.75)
 		)
 		(stroke
@@ -6335,16 +5358,6 @@
 	)
 	(wire
 		(pts
-			(xy 24.13 74.93) (xy 43.18 74.93)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d1b9fd06-1884-45aa-8596-153b7ab7b0f9")
-	)
-	(wire
-		(pts
 			(xy 100.33 129.54) (xy 100.33 138.43)
 		)
 		(stroke
@@ -6352,16 +5365,6 @@
 			(type default)
 		)
 		(uuid "d2f77f00-94c5-4d75-8fe0-66e196e488d7")
-	)
-	(wire
-		(pts
-			(xy 39.37 45.72) (xy 39.37 34.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d3c11590-f4eb-4cb0-a93b-58e04183ac11")
 	)
 	(wire
 		(pts
@@ -6405,26 +5408,6 @@
 	)
 	(wire
 		(pts
-			(xy 27.94 34.29) (xy 31.75 34.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dc9529f9-ac28-4afe-9a63-56abc7436ad1")
-	)
-	(wire
-		(pts
-			(xy 76.2 73.66) (xy 76.2 64.77)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "de4bcf0d-91e0-4b24-98ab-6ac9aeb0776d")
-	)
-	(wire
-		(pts
 			(xy 59.69 187.96) (xy 60.96 187.96)
 		)
 		(stroke
@@ -6432,46 +5415,6 @@
 			(type default)
 		)
 		(uuid "df5ea893-cfde-4837-b65f-1843f86add55")
-	)
-	(wire
-		(pts
-			(xy 116.84 175.26) (xy 116.84 172.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e39f1578-176a-4c09-b95b-4ef5b22d50ff")
-	)
-	(wire
-		(pts
-			(xy 185.42 153.67) (xy 184.15 153.67)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e8cad135-aa89-400f-abb4-5ca1ad31d2f5")
-	)
-	(wire
-		(pts
-			(xy 162.56 101.6) (xy 163.83 101.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "eb2c7536-684f-462d-bf97-18d6079a1527")
-	)
-	(wire
-		(pts
-			(xy 85.09 34.29) (xy 85.09 45.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ed741f07-ee69-4235-afc1-d337b8575da9")
 	)
 	(wire
 		(pts
@@ -6505,6 +5448,16 @@
 	)
 	(wire
 		(pts
+			(xy 100.33 172.72) (xy 86.36 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f9131147-ade6-4990-a6d7-9d8d4dbd2519")
+	)
+	(wire
+		(pts
 			(xy 60.96 170.18) (xy 60.96 173.99)
 		)
 		(stroke
@@ -6525,6 +5478,16 @@
 	)
 	(wire
 		(pts
+			(xy 67.31 125.73) (xy 67.31 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fd73c829-5428-45b6-9343-530d5ee62165")
+	)
+	(wire
+		(pts
 			(xy 100.33 101.6) (xy 110.49 101.6)
 		)
 		(stroke
@@ -6533,85 +5496,49 @@
 		)
 		(uuid "ff456c27-42aa-4191-91c3-372ef91f8301")
 	)
-	(label "GPIO1"
-		(at 85.09 69.85 0)
+	(global_label "SDA"
+		(shape input)
+		(at 161.29 160.02 180)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right)
 		)
-		(uuid "0b5bebc4-0a58-42f5-bc69-40c885d69e9d")
+		(uuid "027faeec-7edb-4884-adad-605d8e5ff9f4")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 154.7367 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
 	)
-	(label "SCL${ChanNum}"
-		(at 111.76 186.69 0)
+	(global_label "SDA"
+		(shape input)
+		(at 102.87 189.23 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify left)
 		)
-		(uuid "0c602394-11dd-4cfb-9a42-c97e516041b6")
-	)
-	(label "SCL${ChanNum}"
-		(at 107.95 62.23 0)
-		(effects
-			(font
-				(size 1.27 1.27)
+		(uuid "0b11aa3b-5f5f-44a1-8e7d-fc33b35fe009")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 109.4233 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
 			)
-			(justify left bottom)
 		)
-		(uuid "5602fc69-5807-44c6-bbb7-aa77bba4c16b")
-	)
-	(label "SDA${ChanNum}"
-		(at 161.29 160.02 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "5cae599a-93e1-4aba-9e3a-274e83eea4d6")
-	)
-	(label "SDA${ChanNum}"
-		(at 101.6 189.23 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "92264dab-0df4-49b3-bf1e-fad0966d2511")
-	)
-	(label "SCL${ChanNum}"
-		(at 161.29 162.56 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "b0b2a4e2-25a4-4aea-a07c-05e4dad2f91c")
-	)
-	(label "GPIO1"
-		(at 149.86 116.84 270)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "eae87f2d-9c78-4956-af61-43e97168a0f2")
-	)
-	(label "SDA${ChanNum}"
-		(at 107.95 59.69 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "fa253549-5ecd-43d3-90a6-0a4916056580")
 	)
 	(global_label "5V"
 		(shape input)
@@ -6631,6 +5558,72 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "Ch${ChanNum}_En"
+		(shape input)
+		(at 149.86 124.46 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "1c9e0a4e-bab4-4be8-ac0b-a34844a773b3")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 159.7393 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "SCL"
+		(shape input)
+		(at 111.76 186.69 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "32d2141b-4662-4120-8a18-5667cec7bc67")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 118.2528 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "${INA-A1}"
+		(shape input)
+		(at 184.15 160.02 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "3e4ffe5f-41b7-4a70-ad35-c85de3ca6c44")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 184.15 169.5367 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -6657,9 +5650,31 @@
 			)
 		)
 	)
+	(global_label "5V"
+		(shape input)
+		(at 232.41 113.03 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "5593629e-f7d5-49b3-b64e-1f28c61ea72f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 237.6933 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "12V"
 		(shape input)
-		(at 50.8 104.14 180)
+		(at 41.91 104.14 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6669,7 +5684,7 @@
 		)
 		(uuid "90eefae5-d47c-42f1-ae12-a7f3d0c39593")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 44.3072 104.14 0)
+			(at 35.4172 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6679,9 +5694,9 @@
 			)
 		)
 	)
-	(global_label "5V"
+	(global_label "${INA-A0}"
 		(shape input)
-		(at 144.78 135.89 270)
+		(at 186.69 160.02 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6689,9 +5704,9 @@
 			)
 			(justify right)
 		)
-		(uuid "a33c6266-52e3-4355-9415-ffa1f5811324")
+		(uuid "96ab73ed-7dc4-409b-82ed-529f3643427f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 144.78 141.1733 90)
+			(at 186.69 168.1457 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6701,9 +5716,9 @@
 			)
 		)
 	)
-	(global_label "5V"
+	(global_label "SCL"
 		(shape input)
-		(at 20.32 34.29 180)
+		(at 161.29 162.56 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6711,14 +5726,36 @@
 			)
 			(justify right)
 		)
-		(uuid "d5b7ac7d-11fa-49ff-9c30-56da89179069")
+		(uuid "c8214de0-3124-4197-a4cc-32c570276411")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 15.0367 34.29 0)
+			(at 154.7972 162.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "${POT-A0}"
+		(shape input)
+		(at 100.33 175.26 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "e4f1d19f-8e82-40f5-93e9-2e55de671a1a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 110.27 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -6745,31 +5782,53 @@
 			)
 		)
 	)
-	(hierarchical_label "SDA_BiasCircuit"
+	(global_label "Ch${ChanNum}_TestLoad_En"
 		(shape input)
-		(at 44.45 30.48 90)
+		(at 224.79 118.11 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left)
 		)
-		(uuid "3d407781-f225-46ae-90a3-1b3b7730d071")
+		(uuid "f970669e-141b-473b-af8a-89e462793d80")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 243.922 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
 	)
-	(hierarchical_label "SCL_BiasCircuit"
+	(global_label "${POT-A1}"
 		(shape input)
-		(at 35.56 30.48 90)
+		(at 100.33 172.72 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left)
 		)
-		(uuid "5ccab086-90c8-4578-8eab-93d7d357d011")
+		(uuid "fb0ea567-15f6-472b-8b13-10dee8a65a83")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 117.7084 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
 	)
 	(hierarchical_label "BIAS_OUT_CH${ChanNum}"
 		(shape output)
-		(at 201.93 101.6 0)
+		(at 247.65 101.6 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6777,6 +5836,17 @@
 			(justify left)
 		)
 		(uuid "60d645f3-b541-4903-a3d9-1b7443fc7391")
+	)
+	(hierarchical_label "LED${ChanNum}"
+		(shape input)
+		(at 144.78 127 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "83661194-3b32-41de-84f1-3b4452a84302")
 	)
 	(symbol
 		(lib_id "Device:C")
@@ -6840,7 +5910,25 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "EMF105B7104KVHF"
+		(property "LCSC Part #" "C1525"
+			(at 182.88 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LTC_ADDR" ""
+			(at 182.88 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "CL05B104KO5NNNC"
 			(at 182.88 124.46 0)
 			(effects
 				(font
@@ -6850,15 +5938,39 @@
 			)
 		)
 		(pin "1"
-			(uuid "3a5a418f-3b5b-4d3a-a505-f03b390167c0")
+			(uuid "a9606952-e975-4835-84d5-d40bc395315a")
 		)
 		(pin "2"
-			(uuid "bc6eebc8-14d0-4484-8512-e22e36ecaf72")
+			(uuid "cb4f76eb-4952-4894-aea4-7791dddfb1a6")
 		)
 		(instances
 			(project "primecamLNABiasPotVreg"
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/0f3d2a35-61e5-4457-80b4-6420fdb0d25b"
 					(reference "C14")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/127b4f37-4249-4636-9451-13f97e74a487"
+					(reference "C66")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/64c1193f-484d-4b2b-967e-0bece5fec1ac"
+					(reference "C89")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/6790a67e-7813-43f2-b494-f39ce93cdf59"
+					(reference "C111")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/851eaff3-1d9e-4c5f-ba83-6913f66c687a"
+					(reference "C88")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/c6f02b79-e1e3-4ccb-b6a6-6317bde05a0e"
+					(reference "C110")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/d2a5aef8-fc6d-4cdd-8944-f2314971ee1a"
+					(reference "C67")
 					(unit 1)
 				)
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
@@ -6939,7 +6051,25 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" " LT3080EDD-1#TRPBF"
+		(property "LCSC Part #" "C462675"
+			(at 87.63 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LTC_ADDR" ""
+			(at 87.63 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "LT3080EDD#TRPBF"
 			(at 87.63 104.14 0)
 			(effects
 				(font
@@ -6949,36 +6079,60 @@
 			)
 		)
 		(pin "7"
-			(uuid "169dd59d-2fca-43db-b804-33bf59ceda77")
+			(uuid "c1d6a44d-216d-4d4e-bbb6-01f9bb9adf05")
 		)
 		(pin "8"
-			(uuid "57134234-76ab-4912-8971-00e3f39fc1d2")
+			(uuid "daa8e228-e61e-4933-aba5-35729c0afd9a")
 		)
 		(pin "5"
-			(uuid "df6b2b42-cd52-4291-8d4b-bcf331867a41")
+			(uuid "835ffa3f-55c0-4c0c-b7e8-8b059ceb037b")
 		)
 		(pin "4"
-			(uuid "58e47bdd-6958-45af-93bb-483ddb6b3c2f")
+			(uuid "780ce02f-ccff-450a-a671-214d03d4227d")
 		)
 		(pin "2"
-			(uuid "abe7260d-4e16-4f02-9f4a-9ce2012d57bf")
+			(uuid "46b5db20-dda4-41f0-b925-82d9943f2a70")
 		)
 		(pin "1"
-			(uuid "6496f371-da1d-4ac1-bd0a-7f16508d36f9")
+			(uuid "065a3399-49c2-4521-99f0-ac77e28f81c4")
 		)
 		(pin "6"
-			(uuid "7176090d-a72b-47c4-8a68-549c75d011d6")
+			(uuid "79b46bff-dbcc-472f-85b8-6ed8f3f4a6cd")
 		)
 		(pin "3"
-			(uuid "378134ed-dd0c-4db4-826f-2af6fcb36462")
+			(uuid "dbc30a12-53d5-4902-ad17-7aaccc75e543")
 		)
 		(pin "9"
-			(uuid "391fcaee-8d1f-4d53-b099-ef8be529161e")
+			(uuid "b0f12c42-68da-4d1f-91d5-eac7c05d6aa5")
 		)
 		(instances
 			(project "primecamLNABiasPotVreg"
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/0f3d2a35-61e5-4457-80b4-6420fdb0d25b"
 					(reference "U4")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/127b4f37-4249-4636-9451-13f97e74a487"
+					(reference "U26")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/64c1193f-484d-4b2b-967e-0bece5fec1ac"
+					(reference "U37")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/6790a67e-7813-43f2-b494-f39ce93cdf59"
+					(reference "U47")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/851eaff3-1d9e-4c5f-ba83-6913f66c687a"
+					(reference "U36")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/c6f02b79-e1e3-4ccb-b6a6-6317bde05a0e"
+					(reference "U46")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/d2a5aef8-fc6d-4cdd-8944-f2314971ee1a"
+					(reference "U27")
 					(unit 1)
 				)
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
@@ -7043,12 +6197,36 @@
 			)
 		)
 		(pin "1"
-			(uuid "d669f08c-9fd4-4244-a943-aa7fdb097c13")
+			(uuid "ee27564e-566c-488a-baa2-598fa2f9ffd3")
 		)
 		(instances
 			(project "primecamLNABiasPotVreg"
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/0f3d2a35-61e5-4457-80b4-6420fdb0d25b"
 					(reference "#PWR09")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/127b4f37-4249-4636-9451-13f97e74a487"
+					(reference "#PWR098")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/64c1193f-484d-4b2b-967e-0bece5fec1ac"
+					(reference "#PWR0135")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/6790a67e-7813-43f2-b494-f39ce93cdf59"
+					(reference "#PWR0173")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/851eaff3-1d9e-4c5f-ba83-6913f66c687a"
+					(reference "#PWR0136")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/c6f02b79-e1e3-4ccb-b6a6-6317bde05a0e"
+					(reference "#PWR0174")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/d2a5aef8-fc6d-4cdd-8944-f2314971ee1a"
+					(reference "#PWR097")
 					(unit 1)
 				)
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
@@ -7121,7 +6299,25 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "TR3B106K025C0450"
+		(property "LCSC Part #" "C1952910"
+			(at 121.92 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LTC_ADDR" ""
+			(at 121.92 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "T494B106M016AT"
 			(at 121.92 105.41 0)
 			(effects
 				(font
@@ -7131,15 +6327,39 @@
 			)
 		)
 		(pin "1"
-			(uuid "5ea11bad-c713-43d4-ae60-0781015b359c")
+			(uuid "56f7e625-14a7-4fe7-a9f3-3adf62247221")
 		)
 		(pin "2"
-			(uuid "f23ed619-429d-41be-b898-40c5533c3b4a")
+			(uuid "5e0d3a4f-fac3-4952-ba3f-89ab2cfd8699")
 		)
 		(instances
 			(project "primecamLNABiasPotVreg"
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/0f3d2a35-61e5-4457-80b4-6420fdb0d25b"
 					(reference "C12")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/127b4f37-4249-4636-9451-13f97e74a487"
+					(reference "C62")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/64c1193f-484d-4b2b-967e-0bece5fec1ac"
+					(reference "C85")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/6790a67e-7813-43f2-b494-f39ce93cdf59"
+					(reference "C107")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/851eaff3-1d9e-4c5f-ba83-6913f66c687a"
+					(reference "C84")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/c6f02b79-e1e3-4ccb-b6a6-6317bde05a0e"
+					(reference "C106")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/d2a5aef8-fc6d-4cdd-8944-f2314971ee1a"
+					(reference "C63")
 					(unit 1)
 				)
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
@@ -7222,7 +6442,25 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" " 0603YD106MAT2A"
+		(property "LCSC Part #" "C19702"
+			(at 55.88 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LTC_ADDR" ""
+			(at 55.88 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "CL10A106KP8NNNC"
 			(at 55.88 95.25 0)
 			(effects
 				(font
@@ -7232,15 +6470,39 @@
 			)
 		)
 		(pin "1"
-			(uuid "dcd64ca5-0e91-4530-8bc5-4883930bac0a")
+			(uuid "89028bef-ff45-4167-a3a1-46985c588cdf")
 		)
 		(pin "2"
-			(uuid "6c546f8d-277f-42cf-95fa-d3c7550c24a7")
+			(uuid "e704924a-d74a-46f7-85dc-05f4dbc67cf8")
 		)
 		(instances
 			(project "primecamLNABiasPotVreg"
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/0f3d2a35-61e5-4457-80b4-6420fdb0d25b"
 					(reference "C3")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/127b4f37-4249-4636-9451-13f97e74a487"
+					(reference "C46")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/64c1193f-484d-4b2b-967e-0bece5fec1ac"
+					(reference "C69")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/6790a67e-7813-43f2-b494-f39ce93cdf59"
+					(reference "C91")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/851eaff3-1d9e-4c5f-ba83-6913f66c687a"
+					(reference "C68")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/c6f02b79-e1e3-4ccb-b6a6-6317bde05a0e"
+					(reference "C90")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/d2a5aef8-fc6d-4cdd-8944-f2314971ee1a"
+					(reference "C47")
 					(unit 1)
 				)
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
@@ -7305,7 +6567,7 @@
 				(hide yes)
 			)
 		)
-		(property "Mouser" "534-5006 "
+		(property "Mouser" "534-5005"
 			(at 193.04 95.25 0)
 			(effects
 				(font
@@ -7314,7 +6576,25 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "5006"
+		(property "LCSC Part #" "C2906763"
+			(at 193.04 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LTC_ADDR" ""
+			(at 193.04 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "5005"
 			(at 193.04 95.25 0)
 			(effects
 				(font
@@ -7324,12 +6604,36 @@
 			)
 		)
 		(pin "1"
-			(uuid "f05bfb1f-023c-4d45-8f67-1fceac523f0b")
+			(uuid "d06e23e5-1ace-4468-876a-5de8f66881a2")
 		)
 		(instances
 			(project "primecamLNABiasPotVreg"
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/0f3d2a35-61e5-4457-80b4-6420fdb0d25b"
 					(reference "TP2")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/127b4f37-4249-4636-9451-13f97e74a487"
+					(reference "TP15")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/64c1193f-484d-4b2b-967e-0bece5fec1ac"
+					(reference "TP18")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/6790a67e-7813-43f2-b494-f39ce93cdf59"
+					(reference "TP22")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/851eaff3-1d9e-4c5f-ba83-6913f66c687a"
+					(reference "TP19")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/c6f02b79-e1e3-4ccb-b6a6-6317bde05a0e"
+					(reference "TP23")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/d2a5aef8-fc6d-4cdd-8944-f2314971ee1a"
+					(reference "TP14")
 					(unit 1)
 				)
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
@@ -7396,12 +6700,36 @@
 			)
 		)
 		(pin "1"
-			(uuid "13a49a31-33e6-455d-9d8f-ca6a520ed11a")
+			(uuid "0a02c921-de97-4bff-a98b-58761bfe964a")
 		)
 		(instances
 			(project "primecamLNABiasPotVreg"
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/0f3d2a35-61e5-4457-80b4-6420fdb0d25b"
 					(reference "#PWR019")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/127b4f37-4249-4636-9451-13f97e74a487"
+					(reference "#PWR0115")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/64c1193f-484d-4b2b-967e-0bece5fec1ac"
+					(reference "#PWR0154")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/6790a67e-7813-43f2-b494-f39ce93cdf59"
+					(reference "#PWR0192")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/851eaff3-1d9e-4c5f-ba83-6913f66c687a"
+					(reference "#PWR0153")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/c6f02b79-e1e3-4ccb-b6a6-6317bde05a0e"
+					(reference "#PWR0191")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/d2a5aef8-fc6d-4cdd-8944-f2314971ee1a"
+					(reference "#PWR0116")
 					(unit 1)
 				)
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
@@ -7474,7 +6802,25 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "EMF105B7104KVHF"
+		(property "LCSC Part #" "C1525"
+			(at 97.79 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LTC_ADDR" ""
+			(at 97.79 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "CL05B104KO5NNNC"
 			(at 97.79 148.59 0)
 			(effects
 				(font
@@ -7484,10 +6830,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "33428917-cc2d-4d79-81b5-04401f689d04")
+			(uuid "ad55029e-363c-4dd0-9597-bb3144dfa3ec")
 		)
 		(pin "2"
-			(uuid "6a98854e-f7c9-4be0-ab9d-95973739ca6a")
+			(uuid "8222e453-fc1c-4318-9661-af79293c2b4e")
 		)
 		(instances
 			(project "primecamLNABiasPotVreg"
@@ -7495,79 +6841,32 @@
 					(reference "C6")
 					(unit 1)
 				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/127b4f37-4249-4636-9451-13f97e74a487"
+					(reference "C54")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/64c1193f-484d-4b2b-967e-0bece5fec1ac"
+					(reference "C77")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/6790a67e-7813-43f2-b494-f39ce93cdf59"
+					(reference "C99")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/851eaff3-1d9e-4c5f-ba83-6913f66c687a"
+					(reference "C76")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/c6f02b79-e1e3-4ccb-b6a6-6317bde05a0e"
+					(reference "C98")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/d2a5aef8-fc6d-4cdd-8944-f2314971ee1a"
+					(reference "C55")
+					(unit 1)
+				)
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
 					(reference "C17")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 116.84 175.26 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "1fab9918-4613-496f-a6ce-1761ab0d2371")
-		(property "Reference" "#PWR017"
-			(at 116.84 181.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 116.713 179.6542 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 116.84 175.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 116.84 175.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 116.84 175.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "1bd4ca88-75c8-4733-929d-db80680e05c8")
-		)
-		(instances
-			(project "primecamLNABiasPotVreg"
-				(path "/a3adb93a-354c-4909-a884-71d847640b50/0f3d2a35-61e5-4457-80b4-6420fdb0d25b"
-					(reference "#PWR017")
-					(unit 1)
-				)
-				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
-					(reference "#PWR036")
 					(unit 1)
 				)
 			)
@@ -7580,7 +6879,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "213459ed-cb35-45ea-8ead-36b0c600ef0e")
 		(property "Reference" "R21"
@@ -7592,7 +6891,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10"
+		(property "Value" "DNI"
 			(at 102.87 126.9999 0)
 			(effects
 				(font
@@ -7628,16 +6927,67 @@
 				(hide yes)
 			)
 		)
+		(property "LTC_ADDR" ""
+			(at 100.33 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" ""
+			(at 100.33 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" ""
+			(at 100.33 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
-			(uuid "26c1b854-68df-4c38-a9ad-63b4ff1a8140")
+			(uuid "35496562-6b17-48cf-992e-f9c6cd9fe79d")
 		)
 		(pin "2"
-			(uuid "bea35d58-1c58-4396-beef-2d744bd9dc79")
+			(uuid "3c3902f4-803e-4bc2-b66a-96e283a562e4")
 		)
 		(instances
 			(project "primecamLNABiasPotVreg"
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/0f3d2a35-61e5-4457-80b4-6420fdb0d25b"
 					(reference "R21")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/127b4f37-4249-4636-9451-13f97e74a487"
+					(reference "R91")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/64c1193f-484d-4b2b-967e-0bece5fec1ac"
+					(reference "R121")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/6790a67e-7813-43f2-b494-f39ce93cdf59"
+					(reference "R152")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/851eaff3-1d9e-4c5f-ba83-6913f66c687a"
+					(reference "R122")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/c6f02b79-e1e3-4ccb-b6a6-6317bde05a0e"
+					(reference "R153")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/d2a5aef8-fc6d-4cdd-8944-f2314971ee1a"
+					(reference "R90")
 					(unit 1)
 				)
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
@@ -7703,7 +7053,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "21b74f5b-3a1e-4539-b9b5-eade495a26be")
+			(uuid "08b08f5d-5b09-4b6b-81d0-13b1bbcf8c85")
 		)
 		(instances
 			(project "primecamLNABiasPotVreg"
@@ -7711,99 +7061,32 @@
 					(reference "#PWR06")
 					(unit 1)
 				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/127b4f37-4249-4636-9451-13f97e74a487"
+					(reference "#PWR089")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/64c1193f-484d-4b2b-967e-0bece5fec1ac"
+					(reference "#PWR0127")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/6790a67e-7813-43f2-b494-f39ce93cdf59"
+					(reference "#PWR0166")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/851eaff3-1d9e-4c5f-ba83-6913f66c687a"
+					(reference "#PWR0128")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/c6f02b79-e1e3-4ccb-b6a6-6317bde05a0e"
+					(reference "#PWR0165")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/d2a5aef8-fc6d-4cdd-8944-f2314971ee1a"
+					(reference "#PWR090")
+					(unit 1)
+				)
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
 					(reference "#PWR026")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "ALPACARepeaterLibrary:10nF")
-		(at 76.2 77.47 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "30fb6d16-8d52-43c7-badc-c152c9a2ecfd")
-		(property "Reference" "C2"
-			(at 78.74 76.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "10nF"
-			(at 78.74 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 75.2348 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.com/ProductDetail/KYOCERA-AVX/04025Z103KAT2A?qs=sGAEpiMZZMukHu%252BjC5l7YfEq5W2hefEsZEIE60dvsfE%3D"
-			(at 76.2 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 76.2 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Mouser" "581-04025Z103KAT2A "
-			(at 76.2 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC Part #" "04025Z103KAT2A"
-			(at 76.2 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "8561f051-9f0c-4f09-ae94-b84844f9b87b")
-		)
-		(pin "2"
-			(uuid "95f3c7b1-f6dd-4f26-9392-638e50e961e0")
-		)
-		(instances
-			(project "primecamLNABiasPotVreg"
-				(path "/a3adb93a-354c-4909-a884-71d847640b50/0f3d2a35-61e5-4457-80b4-6420fdb0d25b"
-					(reference "C2")
-					(unit 1)
-				)
-				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
-					(reference "C15")
 					(unit 1)
 				)
 			)
@@ -7872,7 +7155,25 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "AD5144BCPZ100-RL7"
+		(property "LCSC Part #" "C577979"
+			(at 73.66 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LTC_ADDR" ""
+			(at 73.66 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "AD5144BCPZ100-RL7"
 			(at 73.66 163.83 0)
 			(effects
 				(font
@@ -7882,79 +7183,79 @@
 			)
 		)
 		(pin "1"
-			(uuid "994512f0-67d1-41f4-b84a-a9fc9051f56b")
+			(uuid "fb6bbf12-cab1-4fa3-82cf-44d3305f1f5d")
 		)
 		(pin "10"
-			(uuid "afacf9e6-0577-4add-97d7-287dbdb89218")
+			(uuid "6655d210-868e-40ea-a503-f0df853769b4")
 		)
 		(pin "11"
-			(uuid "2d174c4e-aff3-4b82-8b8d-c0df832f0979")
+			(uuid "a76c4133-ab06-43ad-b74b-4b783e68bba5")
 		)
 		(pin "12"
-			(uuid "ae209bd9-6a08-454c-9738-0f719e150615")
+			(uuid "31a23ea0-cd19-45a4-a11e-a8ae64384870")
 		)
 		(pin "13"
-			(uuid "9c2e2f73-667f-4729-8bfa-7a074e195a87")
+			(uuid "ec83e9f0-dfd5-44f2-88a1-b2bb6bdcca5f")
 		)
 		(pin "14"
-			(uuid "1898eba3-a4dc-4b04-84c4-02c0239ab283")
+			(uuid "ef8ee409-4bcb-42c0-ab5a-da5a12cc4a90")
 		)
 		(pin "15"
-			(uuid "cad469c7-94fb-49e0-a21f-9af7aeee0ec9")
+			(uuid "97843dd5-599a-4803-94af-625592035e58")
 		)
 		(pin "16"
-			(uuid "0801e6fd-5755-4040-9c07-0fb3620bc1c2")
+			(uuid "c89184da-ec8e-4f48-a7d5-8a239057b6fa")
 		)
 		(pin "17"
-			(uuid "d6543666-e412-42fd-8d5b-ac1fa5e411a0")
+			(uuid "54f6b045-c0dc-4f4b-a774-09b5b4d2b30a")
 		)
 		(pin "18"
-			(uuid "e4e81580-8c14-4351-b6f2-bb0b5dcb0950")
+			(uuid "c6ae1e79-013f-4b39-96e6-69da9e18fb85")
 		)
 		(pin "19"
-			(uuid "fd3a3f79-7af6-42e5-acb7-3931dd614475")
+			(uuid "6504355f-301c-434b-8510-0d8309461822")
 		)
 		(pin "2"
-			(uuid "2a0d1d40-5865-4274-9e5a-83602f038e15")
+			(uuid "58184735-10fc-4542-9395-539b12a201cd")
 		)
 		(pin "20"
-			(uuid "5201836e-adaf-40de-a7dd-04f67154a944")
+			(uuid "fbe10b6f-53c1-4ecc-804e-bf94bd7f238e")
 		)
 		(pin "21"
-			(uuid "f92c77a0-7652-428f-b99a-551f700e77c4")
+			(uuid "ca0be322-4c94-457e-ada9-10d73d0c75ae")
 		)
 		(pin "22"
-			(uuid "dd1c4077-7d71-4c28-8d93-407f9b55837d")
+			(uuid "0d59043b-699f-4be9-aeac-981040bde864")
 		)
 		(pin "23"
-			(uuid "6b3f7f0d-38f1-458d-859a-325c27c38f7f")
+			(uuid "0d060baf-fecf-4385-9c36-a618454d2000")
 		)
 		(pin "24"
-			(uuid "f2506d32-320e-4634-933e-bb8c603df0d2")
+			(uuid "4fc8d22f-1dc8-47f9-8406-0e8ae5ee2d8f")
 		)
 		(pin "25"
-			(uuid "6d701157-df0d-46d2-a8f4-e91c62eaf009")
+			(uuid "747d21a9-f6a4-41e6-b133-73762426f37f")
 		)
 		(pin "3"
-			(uuid "a87c5f78-162b-4d67-9545-7d5cbc7b5269")
+			(uuid "5af97f59-22d2-47bc-a202-da8db8f227da")
 		)
 		(pin "4"
-			(uuid "ebcd7b94-7347-4b05-8e0e-c9e86d018cdc")
+			(uuid "c692e56d-bb44-4fb3-96b1-6fb25deec137")
 		)
 		(pin "5"
-			(uuid "24bd31f6-9a39-4e83-ba92-04e8e3690140")
+			(uuid "0d1f7456-12c4-45f1-997f-87cd610b5f1f")
 		)
 		(pin "6"
-			(uuid "ff3db150-8b44-4191-9f40-f8a6c7b54517")
+			(uuid "eacb4474-5b46-4a2d-a8d6-abcb49fd35f6")
 		)
 		(pin "7"
-			(uuid "8f40f1a0-0635-45d7-b1ef-79409d4a089b")
+			(uuid "05a4ad0f-ff38-47fc-a822-8f6c7ea7b6ed")
 		)
 		(pin "8"
-			(uuid "6eb60661-c7b6-4742-acca-37d20b387850")
+			(uuid "f3a5cd68-9d8b-4d98-a31b-8efec8b26da3")
 		)
 		(pin "9"
-			(uuid "2313a4e3-b2b5-4025-abad-0ad35d987df6")
+			(uuid "0758a0c9-a38d-48ef-8195-d9da01251607")
 		)
 		(instances
 			(project "primecamLNABiasPotVreg"
@@ -7962,78 +7263,32 @@
 					(reference "U3")
 					(unit 1)
 				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/127b4f37-4249-4636-9451-13f97e74a487"
+					(reference "U24")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/64c1193f-484d-4b2b-967e-0bece5fec1ac"
+					(reference "U35")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/6790a67e-7813-43f2-b494-f39ce93cdf59"
+					(reference "U45")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/851eaff3-1d9e-4c5f-ba83-6913f66c687a"
+					(reference "U34")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/c6f02b79-e1e3-4ccb-b6a6-6317bde05a0e"
+					(reference "U44")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/d2a5aef8-fc6d-4cdd-8944-f2314971ee1a"
+					(reference "U25")
+					(unit 1)
+				)
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
 					(reference "U8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 24.13 76.2 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "3c9dc577-6c20-4b75-8f3e-d24a9eb38f71")
-		(property "Reference" "#PWR03"
-			(at 24.13 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 24.13 80.6434 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 24.13 76.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 24.13 76.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 24.13 76.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "97a684d0-2912-4faa-88e7-35909df311c6")
-		)
-		(instances
-			(project "primecamLNABiasPotVreg"
-				(path "/a3adb93a-354c-4909-a884-71d847640b50/0f3d2a35-61e5-4457-80b4-6420fdb0d25b"
-					(reference "#PWR03")
-					(unit 1)
-				)
-				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
-					(reference "#PWR011")
 					(unit 1)
 				)
 			)
@@ -8047,7 +7302,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "3d2d0184-9304-44d3-b307-b9b8494cf301")
 		(property "Reference" "RV1"
 			(at 71.12 125.73 0)
@@ -8112,14 +7367,23 @@
 				(hide yes)
 			)
 		)
+		(property "LTC_ADDR" ""
+			(at 76.2 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
-			(uuid "addd38cb-5b03-4d7b-9011-f27eb381431f")
+			(uuid "cfe8bf21-2671-47ae-a877-aab73b78f23e")
 		)
 		(pin "2"
-			(uuid "65df69cf-78fd-4e2d-b3a7-39c0e80c873a")
+			(uuid "538d776f-239c-4db7-9f91-101f534d73a9")
 		)
 		(pin "3"
-			(uuid "d57cbf7c-a771-44b6-a12f-4725e3c5df4d")
+			(uuid "f61542a9-7cd0-45c9-9dbd-c754d9060b30")
 		)
 		(instances
 			(project "primecamLNABiasPotVreg"
@@ -8127,90 +7391,32 @@
 					(reference "RV1")
 					(unit 1)
 				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/127b4f37-4249-4636-9451-13f97e74a487"
+					(reference "RV5")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/64c1193f-484d-4b2b-967e-0bece5fec1ac"
+					(reference "RV8")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/6790a67e-7813-43f2-b494-f39ce93cdf59"
+					(reference "RV10")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/851eaff3-1d9e-4c5f-ba83-6913f66c687a"
+					(reference "RV7")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/c6f02b79-e1e3-4ccb-b6a6-6317bde05a0e"
+					(reference "RV9")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/d2a5aef8-fc6d-4cdd-8944-f2314971ee1a"
+					(reference "RV6")
+					(unit 1)
+				)
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
 					(reference "RV2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "ALPACA:5.1k")
-		(at 68.58 49.53 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "42146ca5-dfe6-45d9-ade0-9fddabb2ad4a")
-		(property "Reference" "R13"
-			(at 66.675 51.435 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "5.1K"
-			(at 68.58 51.435 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 66.802 49.53 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.digikey.com/en/products/detail/panasonic-electronic-components/ERJ-3EKF5101V/1746427"
-			(at 68.58 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 68.58 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC Part #" "ERJ-3EKF5101V"
-			(at 68.58 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "d4ff72b0-a1b4-43a1-baec-fee10a5ee795")
-		)
-		(pin "2"
-			(uuid "8ccd2464-8400-406a-a7bd-a226c00ca103")
-		)
-		(instances
-			(project "primecamLNABiasPotVreg"
-				(path "/a3adb93a-354c-4909-a884-71d847640b50/0f3d2a35-61e5-4457-80b4-6420fdb0d25b"
-					(reference "R13")
-					(unit 1)
-				)
-				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
-					(reference "R28")
 					(unit 1)
 				)
 			)
@@ -8272,12 +7478,36 @@
 			)
 		)
 		(pin "1"
-			(uuid "ce011e84-cf0e-4cc8-9c9c-1ae0e3898898")
+			(uuid "23117319-74cd-4f4a-9382-f0c951b565eb")
 		)
 		(instances
 			(project "primecamLNABiasPotVreg"
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/0f3d2a35-61e5-4457-80b4-6420fdb0d25b"
 					(reference "#PWR022")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/127b4f37-4249-4636-9451-13f97e74a487"
+					(reference "#PWR0121")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/64c1193f-484d-4b2b-967e-0bece5fec1ac"
+					(reference "#PWR0160")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/6790a67e-7813-43f2-b494-f39ce93cdf59"
+					(reference "#PWR0198")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/851eaff3-1d9e-4c5f-ba83-6913f66c687a"
+					(reference "#PWR0159")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/c6f02b79-e1e3-4ccb-b6a6-6317bde05a0e"
+					(reference "#PWR0197")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/d2a5aef8-fc6d-4cdd-8944-f2314971ee1a"
+					(reference "#PWR0122")
 					(unit 1)
 				)
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
@@ -8305,7 +7535,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "AQY212G3HS"
+		(property "Value" "CPC1002NTR"
 			(at 131.318 113.538 90)
 			(effects
 				(font
@@ -8325,7 +7555,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.com/catalog/specsheets/Panasonic_8-10-2023_Relay%20PhotoMOS%20(AQY21%20Series)%20060123.pdf"
+		(property "Datasheet" "https://www.littelfuse.com/assetdocs/littelfuse-integrated-circuits-cpc1002n-datasheet?assetguid=e3f473b5-dc7a-4246-906b-83ecf53ecf01"
 			(at 147.32 109.22 0)
 			(effects
 				(font
@@ -8335,7 +7565,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Solid State Relays - PCB Mount 60VDC 1.8A 1Form A High Capacity (SOP4-Pin) Tube"
+		(property "Description" "SSR RELAY SPST-NO 700MA 0-60V"
 			(at 147.32 109.22 0)
 			(effects
 				(font
@@ -8344,7 +7574,7 @@
 				(hide yes)
 			)
 		)
-		(property "Link" "https://www.mouser.com/ProductDetail/Panasonic-Industrial-Devices/AQY212G3HS?qs=Imq1NPwxi748sLZr22jhng%3D%3D"
+		(property "Link" "https://www.digikey.com/en/products/detail/littelfuse-inc/CPC1002NTR/1023460?s=N4IgTCBcDaIMIAU4EYAMqwDkAqAlEAugL5A"
 			(at 147.32 109.22 0)
 			(effects
 				(font
@@ -8353,7 +7583,7 @@
 				(hide yes)
 			)
 		)
-		(property "Mouser" "769-AQY212G3HS "
+		(property "Mouser" "849-CPC1002NTR "
 			(at 141.478 110.998 0)
 			(effects
 				(font
@@ -8362,7 +7592,25 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "AQY212G3HS "
+		(property "LCSC Part #" "C5359028"
+			(at 147.32 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LTC_ADDR" ""
+			(at 147.32 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "CPC1002NTR"
 			(at 147.32 109.22 0)
 			(effects
 				(font
@@ -8372,16 +7620,16 @@
 			)
 		)
 		(pin "4"
-			(uuid "16dcd35c-2afc-4d03-8e74-0e57e6c38461")
+			(uuid "6dd9bf51-416a-478a-93e4-1690bbb2dee2")
 		)
 		(pin "2"
-			(uuid "d183f331-b530-4e58-954d-a95d484b5664")
+			(uuid "12610d1a-4826-4963-b597-76fedb149f68")
 		)
 		(pin "1"
-			(uuid "e037880c-c0ee-40a1-95f7-f3e5ab44335b")
+			(uuid "5015472e-92cf-490f-9028-6673b199e5a3")
 		)
 		(pin "3"
-			(uuid "f9a6548e-bcac-4545-bce2-38df09f4cb44")
+			(uuid "235d311d-1dcf-4c8a-8f37-9a1274df5fb8")
 		)
 		(instances
 			(project "primecamLNABiasPotVreg"
@@ -8389,109 +7637,32 @@
 					(reference "U5")
 					(unit 1)
 				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/127b4f37-4249-4636-9451-13f97e74a487"
+					(reference "U28")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/64c1193f-484d-4b2b-967e-0bece5fec1ac"
+					(reference "U39")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/6790a67e-7813-43f2-b494-f39ce93cdf59"
+					(reference "U49")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/851eaff3-1d9e-4c5f-ba83-6913f66c687a"
+					(reference "U38")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/c6f02b79-e1e3-4ccb-b6a6-6317bde05a0e"
+					(reference "U48")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/d2a5aef8-fc6d-4cdd-8944-f2314971ee1a"
+					(reference "U29")
+					(unit 1)
+				)
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
 					(reference "U10")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D_Schottky")
-		(at 158.75 101.6 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "598f1532-596c-4c3d-8415-a193d80ab751")
-		(property "Reference" "D1"
-			(at 160.02 104.648 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "D_Schottky"
-			(at 157.2009 103.632 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "primecamLNABiasPotVreg:DO-214BA_MCH"
-			(at 158.75 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 158.75 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Schottky Diodes & Rectifiers Small-Signal Schottky"
-			(at 158.75 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Mouser" ""
-			(at 158.75 101.6 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Link" ""
-			(at 158.75 101.6 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC Part #" ""
-			(at 158.75 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "5c0424b0-d465-423b-a29f-8fe2e2814677")
-		)
-		(pin "2"
-			(uuid "861195eb-4378-4aa0-823a-57a49b7d0c5f")
-		)
-		(instances
-			(project "primecamLNABiasPotVreg"
-				(path "/a3adb93a-354c-4909-a884-71d847640b50/0f3d2a35-61e5-4457-80b4-6420fdb0d25b"
-					(reference "D1")
-					(unit 1)
-				)
-				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
-					(reference "D2")
 					(unit 1)
 				)
 			)
@@ -8570,7 +7741,25 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" " KAM05ACG1H100JH"
+		(property "LCSC Part #" "C32949"
+			(at 111.76 194.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LTC_ADDR" ""
+			(at 111.76 194.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "CL05C100JB5NNNC"
 			(at 111.76 194.31 0)
 			(effects
 				(font
@@ -8580,15 +7769,39 @@
 			)
 		)
 		(pin "1"
-			(uuid "04655110-db8a-4c9b-99e3-d06efe6cd67f")
+			(uuid "1073d55a-520f-47ed-915d-a35e6ef41867")
 		)
 		(pin "2"
-			(uuid "d85b6722-03df-4ace-b301-d315ed2c60c2")
+			(uuid "aa0d7c07-a2de-466c-9309-5d825ac7d801")
 		)
 		(instances
 			(project "primecamLNABiasPotVreg"
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/0f3d2a35-61e5-4457-80b4-6420fdb0d25b"
 					(reference "C11")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/127b4f37-4249-4636-9451-13f97e74a487"
+					(reference "C60")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/64c1193f-484d-4b2b-967e-0bece5fec1ac"
+					(reference "C83")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/6790a67e-7813-43f2-b494-f39ce93cdf59"
+					(reference "C105")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/851eaff3-1d9e-4c5f-ba83-6913f66c687a"
+					(reference "C82")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/c6f02b79-e1e3-4ccb-b6a6-6317bde05a0e"
+					(reference "C104")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/d2a5aef8-fc6d-4cdd-8944-f2314971ee1a"
+					(reference "C61")
 					(unit 1)
 				)
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
@@ -8661,7 +7874,25 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "TNPW060310R0BETA "
+		(property "LCSC Part #" "C22859"
+			(at 179.07 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LTC_ADDR" ""
+			(at 179.07 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "0603WAF100JT5E"
 			(at 179.07 116.84 0)
 			(effects
 				(font
@@ -8671,15 +7902,39 @@
 			)
 		)
 		(pin "2"
-			(uuid "c0529851-9927-4831-ac8b-931d59cb33d6")
+			(uuid "9793ec78-85f7-43bc-ab62-c9e84152f6b5")
 		)
 		(pin "1"
-			(uuid "91f120d4-1ac0-4f6a-a7d7-f0c0f4915329")
+			(uuid "7fd0c162-ba0a-4235-ad98-755b46194f2a")
 		)
 		(instances
 			(project "primecamLNABiasPotVreg"
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/0f3d2a35-61e5-4457-80b4-6420fdb0d25b"
 					(reference "R20")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/127b4f37-4249-4636-9451-13f97e74a487"
+					(reference "R99")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/64c1193f-484d-4b2b-967e-0bece5fec1ac"
+					(reference "R129")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/6790a67e-7813-43f2-b494-f39ce93cdf59"
+					(reference "R160")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/851eaff3-1d9e-4c5f-ba83-6913f66c687a"
+					(reference "R130")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/c6f02b79-e1e3-4ccb-b6a6-6317bde05a0e"
+					(reference "R161")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/d2a5aef8-fc6d-4cdd-8944-f2314971ee1a"
+					(reference "R98")
 					(unit 1)
 				)
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
@@ -8745,12 +8000,36 @@
 			)
 		)
 		(pin "1"
-			(uuid "c20f87ab-16d9-4989-8783-ed5fb471e0b7")
+			(uuid "a4905461-c94e-45c6-92fc-e8afa97b7a35")
 		)
 		(instances
 			(project "primecamLNABiasPotVreg"
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/0f3d2a35-61e5-4457-80b4-6420fdb0d25b"
 					(reference "#PWR012")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/127b4f37-4249-4636-9451-13f97e74a487"
+					(reference "#PWR0102")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/64c1193f-484d-4b2b-967e-0bece5fec1ac"
+					(reference "#PWR0139")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/6790a67e-7813-43f2-b494-f39ce93cdf59"
+					(reference "#PWR0177")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/851eaff3-1d9e-4c5f-ba83-6913f66c687a"
+					(reference "#PWR0140")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/c6f02b79-e1e3-4ccb-b6a6-6317bde05a0e"
+					(reference "#PWR0178")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/d2a5aef8-fc6d-4cdd-8944-f2314971ee1a"
+					(reference "#PWR0101")
 					(unit 1)
 				)
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
@@ -8831,7 +8110,25 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "INA219BIDR"
+		(property "LCSC Part #" "C138706"
+			(at 181.61 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LTC_ADDR" ""
+			(at 181.61 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "INA219AIDR"
 			(at 181.61 139.7 0)
 			(effects
 				(font
@@ -8841,33 +8138,57 @@
 			)
 		)
 		(pin "1"
-			(uuid "388701d8-152e-472f-8a27-d5d56aa6b6a2")
+			(uuid "44a95410-7ac4-4333-a943-76293484b0de")
 		)
 		(pin "2"
-			(uuid "ee745f6d-e8ac-4433-94fa-51ad6547d4bf")
+			(uuid "a1c5fbb6-d905-4ff9-8028-e4a542d64e95")
 		)
 		(pin "3"
-			(uuid "9ee90685-b0dd-4d5f-882b-174e74bd4f99")
+			(uuid "8c1d65bb-4477-4ce5-a65e-0364818dc6fc")
 		)
 		(pin "4"
-			(uuid "e4eef1b7-9055-41c2-9085-baeed30ff474")
+			(uuid "7a834138-05ce-4b06-b972-2f8e4df377ed")
 		)
 		(pin "5"
-			(uuid "f38046ef-670f-46e6-91ea-2036b0d25bcc")
+			(uuid "0ec54e24-da24-41a4-b5fc-1e2d3f9fe038")
 		)
 		(pin "6"
-			(uuid "cf65cb86-40be-4669-99c9-9c34b522ba4c")
+			(uuid "3a4f288f-8c69-4af1-ab5e-278e2dcc0997")
 		)
 		(pin "7"
-			(uuid "0f30c996-0500-4d68-9fe4-09829bb33157")
+			(uuid "e0c49ae3-33c4-4c26-98e6-46186f148b08")
 		)
 		(pin "8"
-			(uuid "c6bef2f7-97ef-4f85-baf9-c0abc98bd54c")
+			(uuid "a19ef03a-3129-4b25-9390-d7beaafabd8a")
 		)
 		(instances
 			(project "primecamLNABiasPotVreg"
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/0f3d2a35-61e5-4457-80b4-6420fdb0d25b"
 					(reference "U6")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/127b4f37-4249-4636-9451-13f97e74a487"
+					(reference "U30")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/64c1193f-484d-4b2b-967e-0bece5fec1ac"
+					(reference "U41")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/6790a67e-7813-43f2-b494-f39ce93cdf59"
+					(reference "U51")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/851eaff3-1d9e-4c5f-ba83-6913f66c687a"
+					(reference "U40")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/c6f02b79-e1e3-4ccb-b6a6-6317bde05a0e"
+					(reference "U50")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/d2a5aef8-fc6d-4cdd-8944-f2314971ee1a"
+					(reference "U31")
 					(unit 1)
 				)
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
@@ -8932,7 +8253,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "f41247f3-382c-4c15-a9f0-e22fa826ecf8")
+			(uuid "6fd34cec-c071-43b9-aed6-50176beeec71")
 		)
 		(instances
 			(project "primecamLNABiasPotVreg"
@@ -8940,243 +8261,32 @@
 					(reference "#PWR018")
 					(unit 1)
 				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/127b4f37-4249-4636-9451-13f97e74a487"
+					(reference "#PWR0111")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/64c1193f-484d-4b2b-967e-0bece5fec1ac"
+					(reference "#PWR0150")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/6790a67e-7813-43f2-b494-f39ce93cdf59"
+					(reference "#PWR0188")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/851eaff3-1d9e-4c5f-ba83-6913f66c687a"
+					(reference "#PWR0149")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/c6f02b79-e1e3-4ccb-b6a6-6317bde05a0e"
+					(reference "#PWR0187")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/d2a5aef8-fc6d-4cdd-8944-f2314971ee1a"
+					(reference "#PWR0112")
+					(unit 1)
+				)
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
 					(reference "#PWR037")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "ALPACA:LTC4302-1")
-		(at 55.88 62.23 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "77cd6216-ccca-4dea-83f6-eb8cf1084e91")
-		(property "Reference" "U2"
-			(at 55.88 54.771 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "LTC4302-1"
-			(at 55.88 57.3079 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_SO:MSOP-10_3x3mm_P0.5mm"
-			(at 55.88 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.analog.com/media/en/technical-documentation/data-sheets/4302fs.pdf"
-			(at 55.88 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 55.88 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Link" "https://www.mouser.com/ProductDetail/Analog-Devices/LTC4302CMS-1PBF?qs=hVkxg5c3xu%252Bw9pR4r9Tpog%3D%3D"
-			(at 55.88 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Digikey" "505-LT3080IST#PBF-ND"
-			(at 58.42 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LTC_ADDR" "${LTC4302_ADDR}"
-			(at 48.514 72.644 0)
-			(show_name yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.254)
-					(bold yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "LCSC Part #" "LTC4302CMS-1#PBF"
-			(at 55.88 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "f3302ff1-8460-479b-8fe0-420d4f5eef9c")
-		)
-		(pin "10"
-			(uuid "737d5ccc-48b7-405a-9937-144db42d61d2")
-		)
-		(pin "2"
-			(uuid "664d4f91-dc9c-4e4a-9330-74dded87af8d")
-		)
-		(pin "3"
-			(uuid "d8fb1077-cf33-4f03-85bd-6f9e54e6aa15")
-		)
-		(pin "4"
-			(uuid "89d3805b-65dc-4946-b80e-0806af2a9c71")
-		)
-		(pin "5"
-			(uuid "07ab8045-1aa2-4121-8da9-4a440b837da4")
-		)
-		(pin "6"
-			(uuid "70fcf0ad-a1d4-403d-b5d7-6cc57307d286")
-		)
-		(pin "7"
-			(uuid "0d325a90-c6e9-458d-afb4-fba5cfb7bfdc")
-		)
-		(pin "8"
-			(uuid "54f055fd-6114-4acc-b473-7e034f971102")
-		)
-		(pin "9"
-			(uuid "c01724b7-5775-4991-841d-a964e91ce56e")
-		)
-		(instances
-			(project "primecamLNABiasPotVreg"
-				(path "/a3adb93a-354c-4909-a884-71d847640b50/0f3d2a35-61e5-4457-80b4-6420fdb0d25b"
-					(reference "U2")
-					(unit 1)
-				)
-				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
-					(reference "U7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "ALPACA:10k")
-		(at 24.13 58.42 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "7a7e423f-efe0-4406-972b-44f385e7c976")
-		(property "Reference" "R9"
-			(at 26.035 57.785 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "1370"
-			(at 20.32 60.452 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 22.352 58.42 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.com/ProductDetail/Panasonic/ERA-3ARB1371V?qs=sGAEpiMZZMtG0KNrPCHnjRHqCPPqDvAeOdeP2xLTfl0OQ26OWjQDUg%3D%3D"
-			(at 24.13 58.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Thin Film Resistors - SMD 0603 Thin film chip resistor"
-			(at 24.13 58.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Mouser" "667-ERA-3ARB1371V "
-			(at 24.13 58.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Link" ""
-			(at 24.13 58.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC Part #" "ERA-3ARB1371V"
-			(at 24.13 58.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b70bad03-bbc1-46de-ab20-4a1d15630ca9")
-		)
-		(pin "2"
-			(uuid "7709c773-4ddf-45e0-a764-39ccdf5654bc")
-		)
-		(instances
-			(project "primecamLNABiasPotVreg"
-				(path "/a3adb93a-354c-4909-a884-71d847640b50/0f3d2a35-61e5-4457-80b4-6420fdb0d25b"
-					(reference "R9")
-					(unit 1)
-				)
-				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
-					(reference "R24")
 					(unit 1)
 				)
 			)
@@ -9238,12 +8348,36 @@
 			)
 		)
 		(pin "1"
-			(uuid "d5e123e1-e71e-4443-86ae-32690a645d08")
+			(uuid "9cd38ae9-6e26-47e0-b4db-cb83c6a7ce4d")
 		)
 		(instances
 			(project "primecamLNABiasPotVreg"
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/0f3d2a35-61e5-4457-80b4-6420fdb0d25b"
 					(reference "#PWR020")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/127b4f37-4249-4636-9451-13f97e74a487"
+					(reference "#PWR0113")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/64c1193f-484d-4b2b-967e-0bece5fec1ac"
+					(reference "#PWR0152")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/6790a67e-7813-43f2-b494-f39ce93cdf59"
+					(reference "#PWR0190")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/851eaff3-1d9e-4c5f-ba83-6913f66c687a"
+					(reference "#PWR0151")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/c6f02b79-e1e3-4ccb-b6a6-6317bde05a0e"
+					(reference "#PWR0189")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/d2a5aef8-fc6d-4cdd-8944-f2314971ee1a"
+					(reference "#PWR0114")
 					(unit 1)
 				)
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
@@ -9317,7 +8451,25 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "5006"
+		(property "LCSC Part #" "C5199811"
+			(at 193.04 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LTC_ADDR" ""
+			(at 193.04 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "RH-5006"
 			(at 193.04 85.09 0)
 			(effects
 				(font
@@ -9327,7 +8479,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "bc4e5506-8a5e-4126-ae40-43cf925331b1")
+			(uuid "1518821f-6b52-48c4-b24c-6a8eef12de3a")
 		)
 		(instances
 			(project "primecamLNABiasPotVreg"
@@ -9335,242 +8487,32 @@
 					(reference "TP1")
 					(unit 1)
 				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/127b4f37-4249-4636-9451-13f97e74a487"
+					(reference "TP12")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/64c1193f-484d-4b2b-967e-0bece5fec1ac"
+					(reference "TP17")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/6790a67e-7813-43f2-b494-f39ce93cdf59"
+					(reference "TP21")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/851eaff3-1d9e-4c5f-ba83-6913f66c687a"
+					(reference "TP16")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/c6f02b79-e1e3-4ccb-b6a6-6317bde05a0e"
+					(reference "TP20")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/d2a5aef8-fc6d-4cdd-8944-f2314971ee1a"
+					(reference "TP13")
+					(unit 1)
+				)
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
 					(reference "TP3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 76.2 83.82 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "89198463-6dca-4f56-9364-ced18d809e78")
-		(property "Reference" "#PWR04"
-			(at 76.2 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 76.2 88.2634 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 76.2 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 76.2 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 76.2 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "df0236f4-5f8e-4bf3-be88-27ba908c2c4f")
-		)
-		(instances
-			(project "primecamLNABiasPotVreg"
-				(path "/a3adb93a-354c-4909-a884-71d847640b50/0f3d2a35-61e5-4457-80b4-6420fdb0d25b"
-					(reference "#PWR04")
-					(unit 1)
-				)
-				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
-					(reference "#PWR029")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "ALPACA:5.1k")
-		(at 73.66 49.53 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "8a2f7ed4-c833-42e5-b3dc-d29aa5ff6c39")
-		(property "Reference" "R14"
-			(at 71.755 51.435 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "5.1K"
-			(at 73.66 51.435 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 71.882 49.53 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.digikey.com/en/products/detail/panasonic-electronic-components/ERJ-3EKF5101V/1746427"
-			(at 73.66 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 73.66 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC Part #" "ERJ-3EKF5101V"
-			(at 73.66 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "7521327e-d248-4a95-a55c-13c2cbb5984b")
-		)
-		(pin "2"
-			(uuid "b859217a-8f62-4645-b3ce-7531795a33fa")
-		)
-		(instances
-			(project "primecamLNABiasPotVreg"
-				(path "/a3adb93a-354c-4909-a884-71d847640b50/0f3d2a35-61e5-4457-80b4-6420fdb0d25b"
-					(reference "R14")
-					(unit 1)
-				)
-				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
-					(reference "R29")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "ALPACA:10k")
-		(at 31.75 49.53 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp yes)
-		(uuid "8b0eb9a1-1d26-4e5b-8ed3-d852b890c9ce")
-		(property "Reference" "R11"
-			(at 29.21 50.8 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10K"
-			(at 31.75 52.07 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 29.972 49.53 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RNCF0603TKY10K0/2269698"
-			(at 31.75 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 31.75 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC Part #" "RNCF0603TKY10K0"
-			(at 31.75 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "9c8a04f8-f6f8-498e-8ad5-5dd74a0e0626")
-		)
-		(pin "2"
-			(uuid "9e4ff578-bfa1-4d06-a576-c96356ff0a66")
-		)
-		(instances
-			(project "primecamLNABiasPotVreg"
-				(path "/a3adb93a-354c-4909-a884-71d847640b50/0f3d2a35-61e5-4457-80b4-6420fdb0d25b"
-					(reference "R11")
-					(unit 1)
-				)
-				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
-					(reference "R26")
 					(unit 1)
 				)
 			)
@@ -9641,7 +8583,25 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "EMF105B7104KVHF"
+		(property "LCSC Part #" "C1525"
+			(at 165.1 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LTC_ADDR" ""
+			(at 165.1 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "CL05B104KO5NNNC"
 			(at 165.1 143.51 0)
 			(effects
 				(font
@@ -9651,10 +8611,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "4be6e626-825e-4170-83e3-a8c18c9f0032")
+			(uuid "958bd8e9-d78a-443d-b44a-6acf474a32e1")
 		)
 		(pin "2"
-			(uuid "798dfd73-5cff-4e78-b260-0f0334320cd6")
+			(uuid "40d17a36-12ca-4118-8cfd-7cd11b3abd63")
 		)
 		(instances
 			(project "primecamLNABiasPotVreg"
@@ -9662,162 +8622,32 @@
 					(reference "C13")
 					(unit 1)
 				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/127b4f37-4249-4636-9451-13f97e74a487"
+					(reference "C64")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/64c1193f-484d-4b2b-967e-0bece5fec1ac"
+					(reference "C87")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/6790a67e-7813-43f2-b494-f39ce93cdf59"
+					(reference "C109")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/851eaff3-1d9e-4c5f-ba83-6913f66c687a"
+					(reference "C86")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/c6f02b79-e1e3-4ccb-b6a6-6317bde05a0e"
+					(reference "C108")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/d2a5aef8-fc6d-4cdd-8944-f2314971ee1a"
+					(reference "C65")
+					(unit 1)
+				)
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
 					(reference "C22")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 185.42 153.67 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "8f77296e-009d-43cf-b29a-da1a921dae19")
-		(property "Reference" "#PWR021"
-			(at 185.42 160.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 185.293 158.0642 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 185.42 153.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 185.42 153.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 185.42 153.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "0b581361-5b80-49f9-bfe5-47a3b8c83aec")
-		)
-		(instances
-			(project "primecamLNABiasPotVreg"
-				(path "/a3adb93a-354c-4909-a884-71d847640b50/0f3d2a35-61e5-4457-80b4-6420fdb0d25b"
-					(reference "#PWR021")
-					(unit 1)
-				)
-				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
-					(reference "#PWR040")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "ALPACA:10k")
-		(at 39.37 49.53 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp yes)
-		(uuid "962b798c-3480-4804-9de2-e86f27c7787a")
-		(property "Reference" "R12"
-			(at 41.91 49.53 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10K"
-			(at 39.37 52.07 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 41.148 49.53 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RNCF0603TKY10K0/2269698"
-			(at 39.37 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 39.37 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC Part #" "RNCF0603TKY10K0"
-			(at 39.37 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "a6ad5f34-cf2e-4c29-b760-bf0e5c438bcc")
-		)
-		(pin "2"
-			(uuid "7198f67b-5a31-4ef7-b254-a1dad6f98606")
-		)
-		(instances
-			(project "primecamLNABiasPotVreg"
-				(path "/a3adb93a-354c-4909-a884-71d847640b50/0f3d2a35-61e5-4457-80b4-6420fdb0d25b"
-					(reference "R12")
-					(unit 1)
-				)
-				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
-					(reference "R27")
 					(unit 1)
 				)
 			)
@@ -9895,7 +8725,25 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "SDR03EZPD1202"
+		(property "LCSC Part #" "C8218"
+			(at 110.49 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LTC_ADDR" ""
+			(at 110.49 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "0603WAF2000T5E"
 			(at 110.49 105.41 0)
 			(effects
 				(font
@@ -9905,15 +8753,39 @@
 			)
 		)
 		(pin "1"
-			(uuid "6ace2cf7-51e5-4875-a908-5a04dd8b4f01")
+			(uuid "5cdef32a-a4e6-4fe2-aa13-09a504efe7ea")
 		)
 		(pin "2"
-			(uuid "7788932e-d999-4969-8228-cfa1af5137b1")
+			(uuid "2369618a-d762-4c62-99af-eb4fd9bac433")
 		)
 		(instances
 			(project "primecamLNABiasPotVreg"
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/0f3d2a35-61e5-4457-80b4-6420fdb0d25b"
 					(reference "R17")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/127b4f37-4249-4636-9451-13f97e74a487"
+					(reference "R92")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/64c1193f-484d-4b2b-967e-0bece5fec1ac"
+					(reference "R123")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/6790a67e-7813-43f2-b494-f39ce93cdf59"
+					(reference "R155")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/851eaff3-1d9e-4c5f-ba83-6913f66c687a"
+					(reference "R124")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/c6f02b79-e1e3-4ccb-b6a6-6317bde05a0e"
+					(reference "R154")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/d2a5aef8-fc6d-4cdd-8944-f2314971ee1a"
+					(reference "R93")
 					(unit 1)
 				)
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
@@ -9979,12 +8851,36 @@
 			)
 		)
 		(pin "1"
-			(uuid "f372861e-2ce1-44e3-9653-c1a8447a2bba")
+			(uuid "c387cd40-8638-4d8b-8f31-75660b0afc57")
 		)
 		(instances
 			(project "primecamLNABiasPotVreg"
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/0f3d2a35-61e5-4457-80b4-6420fdb0d25b"
 					(reference "#PWR07")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/127b4f37-4249-4636-9451-13f97e74a487"
+					(reference "#PWR091")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/64c1193f-484d-4b2b-967e-0bece5fec1ac"
+					(reference "#PWR0130")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/6790a67e-7813-43f2-b494-f39ce93cdf59"
+					(reference "#PWR0168")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/851eaff3-1d9e-4c5f-ba83-6913f66c687a"
+					(reference "#PWR0129")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/c6f02b79-e1e3-4ccb-b6a6-6317bde05a0e"
+					(reference "#PWR0167")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/d2a5aef8-fc6d-4cdd-8944-f2314971ee1a"
+					(reference "#PWR092")
 					(unit 1)
 				)
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
@@ -10049,7 +8945,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "4325d682-6d38-454c-b505-970988f44c89")
+			(uuid "2329f772-c27e-418c-98a0-b451a6316252")
 		)
 		(instances
 			(project "primecamLNABiasPotVreg"
@@ -10057,8 +8953,166 @@
 					(reference "#PWR023")
 					(unit 1)
 				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/127b4f37-4249-4636-9451-13f97e74a487"
+					(reference "#PWR0119")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/64c1193f-484d-4b2b-967e-0bece5fec1ac"
+					(reference "#PWR0158")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/6790a67e-7813-43f2-b494-f39ce93cdf59"
+					(reference "#PWR0196")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/851eaff3-1d9e-4c5f-ba83-6913f66c687a"
+					(reference "#PWR0157")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/c6f02b79-e1e3-4ccb-b6a6-6317bde05a0e"
+					(reference "#PWR0195")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/d2a5aef8-fc6d-4cdd-8944-f2314971ee1a"
+					(reference "#PWR0120")
+					(unit 1)
+				)
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
 					(reference "#PWR041")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 228.6 113.03 270)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a44ea764-5170-49fc-8708-14d72fbace02")
+		(property "Reference" "R41"
+			(at 229.8701 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1k"
+			(at 227.3301 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 228.6 114.808 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/ProductDetail/TE-Connectivity-Holsworthy/CPF0603F3K65C1?qs=sGAEpiMZZMtG0KNrPCHnjay8%2FFDDpf%252B%2Fl3clexLRP1o%3D"
+			(at 228.6 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 228.6 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "279-CPF0603F3K65C1 "
+			(at 228.6 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C21190"
+			(at 228.6 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LTC_ADDR" ""
+			(at 228.6 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "0603WAF1001T5E"
+			(at 228.6 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "05780623-42d9-47f1-863b-94de3113783f")
+		)
+		(pin "2"
+			(uuid "412eb4e2-e7f1-4cbc-af20-061d54c8bd0b")
+		)
+		(instances
+			(project "primecamLNABiasPotVreg"
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/0f3d2a35-61e5-4457-80b4-6420fdb0d25b"
+					(reference "R41")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/127b4f37-4249-4636-9451-13f97e74a487"
+					(reference "R45")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/64c1193f-484d-4b2b-967e-0bece5fec1ac"
+					(reference "R43")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/6790a67e-7813-43f2-b494-f39ce93cdf59"
+					(reference "R48")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/851eaff3-1d9e-4c5f-ba83-6913f66c687a"
+					(reference "R44")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/c6f02b79-e1e3-4ccb-b6a6-6317bde05a0e"
+					(reference "R47")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/d2a5aef8-fc6d-4cdd-8944-f2314971ee1a"
+					(reference "R46")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
+					(reference "R42")
 					(unit 1)
 				)
 			)
@@ -10120,12 +9174,36 @@
 			)
 		)
 		(pin "1"
-			(uuid "4ea60023-50ed-4345-9fca-3c465e86908b")
+			(uuid "9f04c012-d40e-4d35-9645-6482a3c37bba")
 		)
 		(instances
 			(project "primecamLNABiasPotVreg"
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/0f3d2a35-61e5-4457-80b4-6420fdb0d25b"
 					(reference "#PWR016")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/127b4f37-4249-4636-9451-13f97e74a487"
+					(reference "#PWR0107")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/64c1193f-484d-4b2b-967e-0bece5fec1ac"
+					(reference "#PWR0146")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/6790a67e-7813-43f2-b494-f39ce93cdf59"
+					(reference "#PWR0184")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/851eaff3-1d9e-4c5f-ba83-6913f66c687a"
+					(reference "#PWR0145")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/c6f02b79-e1e3-4ccb-b6a6-6317bde05a0e"
+					(reference "#PWR0183")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/d2a5aef8-fc6d-4cdd-8944-f2314971ee1a"
+					(reference "#PWR0108")
 					(unit 1)
 				)
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
@@ -10208,7 +9286,25 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" " 0603YD106MAT2A"
+		(property "LCSC Part #" "C19702"
+			(at 107.95 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LTC_ADDR" ""
+			(at 107.95 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "CL10A106KP8NNNC"
 			(at 107.95 148.59 0)
 			(effects
 				(font
@@ -10218,15 +9314,39 @@
 			)
 		)
 		(pin "1"
-			(uuid "0ea46d82-b4df-4be4-bd5b-d41ad576bdae")
+			(uuid "52e53146-2be7-4ff8-93be-57c775fa4561")
 		)
 		(pin "2"
-			(uuid "0752154b-9d07-4cf5-86a1-25aefaf7089a")
+			(uuid "563aeb24-8521-4cfa-8bba-27578ced8675")
 		)
 		(instances
 			(project "primecamLNABiasPotVreg"
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/0f3d2a35-61e5-4457-80b4-6420fdb0d25b"
 					(reference "C9")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/127b4f37-4249-4636-9451-13f97e74a487"
+					(reference "C58")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/64c1193f-484d-4b2b-967e-0bece5fec1ac"
+					(reference "C81")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/6790a67e-7813-43f2-b494-f39ce93cdf59"
+					(reference "C103")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/851eaff3-1d9e-4c5f-ba83-6913f66c687a"
+					(reference "C80")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/c6f02b79-e1e3-4ccb-b6a6-6317bde05a0e"
+					(reference "C102")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/d2a5aef8-fc6d-4cdd-8944-f2314971ee1a"
+					(reference "C59")
 					(unit 1)
 				)
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
@@ -10300,7 +9420,25 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C0402C475K8PACTU"
+		(property "LCSC Part #" "C23733"
+			(at 87.63 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LTC_ADDR" ""
+			(at 87.63 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "CL05A475MP5NRNC"
 			(at 87.63 124.46 0)
 			(effects
 				(font
@@ -10310,15 +9448,39 @@
 			)
 		)
 		(pin "1"
-			(uuid "49d6c41d-3dba-451c-a356-851f52b5f560")
+			(uuid "e64d0d84-7ed1-4242-ab44-fa29d9a8e216")
 		)
 		(pin "2"
-			(uuid "5b668822-9481-40b6-90b0-63b65dcec7e6")
+			(uuid "38fd6b03-dd61-42af-8920-48cb2bb18a43")
 		)
 		(instances
 			(project "primecamLNABiasPotVreg"
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/0f3d2a35-61e5-4457-80b4-6420fdb0d25b"
 					(reference "C5")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/127b4f37-4249-4636-9451-13f97e74a487"
+					(reference "C52")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/64c1193f-484d-4b2b-967e-0bece5fec1ac"
+					(reference "C75")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/6790a67e-7813-43f2-b494-f39ce93cdf59"
+					(reference "C97")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/851eaff3-1d9e-4c5f-ba83-6913f66c687a"
+					(reference "C74")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/c6f02b79-e1e3-4ccb-b6a6-6317bde05a0e"
+					(reference "C96")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/d2a5aef8-fc6d-4cdd-8944-f2314971ee1a"
+					(reference "C53")
 					(unit 1)
 				)
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
@@ -10347,7 +9509,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "3k65"
+		(property "Value" "1k"
 			(at 142.24 124.4599 0)
 			(effects
 				(font
@@ -10392,7 +9554,25 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "CPF0603F3K65C1"
+		(property "LCSC Part #" "C21190"
+			(at 144.78 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LTC_ADDR" ""
+			(at 144.78 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "0603WAF1001T5E"
 			(at 144.78 123.19 0)
 			(effects
 				(font
@@ -10402,15 +9582,39 @@
 			)
 		)
 		(pin "1"
-			(uuid "439128ef-f9fb-4d51-9b2a-286075eb2289")
+			(uuid "bf01de68-1df5-4abe-8a2a-d8b9bb98255f")
 		)
 		(pin "2"
-			(uuid "14bfdd49-78c8-4fa7-907a-048b7c76a49f")
+			(uuid "48ead3f1-f383-4f2a-b0a0-87fc6a9acae6")
 		)
 		(instances
 			(project "primecamLNABiasPotVreg"
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/0f3d2a35-61e5-4457-80b4-6420fdb0d25b"
 					(reference "R18")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/127b4f37-4249-4636-9451-13f97e74a487"
+					(reference "R94")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/64c1193f-484d-4b2b-967e-0bece5fec1ac"
+					(reference "R126")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/6790a67e-7813-43f2-b494-f39ce93cdf59"
+					(reference "R157")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/851eaff3-1d9e-4c5f-ba83-6913f66c687a"
+					(reference "R125")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/c6f02b79-e1e3-4ccb-b6a6-6317bde05a0e"
+					(reference "R156")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/d2a5aef8-fc6d-4cdd-8944-f2314971ee1a"
+					(reference "R95")
 					(unit 1)
 				)
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
@@ -10421,34 +9625,54 @@
 		)
 	)
 	(symbol
-		(lib_id "ALPACA:10k")
-		(at 78.74 49.53 0)
+		(lib_id "LNA_Bias:CPC1002NTR")
+		(at 217.17 115.57 0)
+		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "be0e4aec-7a35-4b8c-9a64-1a1e91ef118a")
-		(property "Reference" "R15"
-			(at 80.01 48.26 0)
+		(uuid "bc0c5f2f-b5e8-4a5c-8e66-01df2a6757f0")
+		(property "Reference" "U2"
+			(at 217.17 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "CPC1002NTR"
+			(at 217.17 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:SOP-4_3.8x4.1mm_P2.54mm"
+			(at 267.462 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8558970500208238592"
+			(at 281.432 90.932 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
-		(property "Value" "10K"
-			(at 78.74 52.07 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 76.962 49.53 90)
+		(property "Description" "Solid State Relays - PCB Mount 1-Form-A 60V 700mA Solid State Relay"
+			(at 259.08 89.916 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10456,8 +9680,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RNCF0603TKY10K0/2269698"
-			(at 78.74 49.53 0)
+		(property "Link" "https://www.mouser.com/ProductDetail/IXYS-Integrated-Circuits/CPC1002NTR?qs=h2iAtNzNjMR5L7Rp412KMg%3D%3D"
+			(at 239.268 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10465,8 +9689,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 78.74 49.53 0)
+		(property "Part Number" "CPC1002NTR"
+			(at 266.954 91.694 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10474,8 +9698,17 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "RNCF0603TKY10K0"
-			(at 78.74 49.53 0)
+		(property "Mouser Part Number" "849-CPC1002NTR "
+			(at 269.494 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C5359028"
+			(at 259.334 90.424 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10484,19 +9717,393 @@
 			)
 		)
 		(pin "1"
-			(uuid "a29ce254-71d7-425a-a008-f51d4863ad45")
+			(uuid "f672c0cc-8130-4a93-86f9-af66c74cc2e2")
 		)
 		(pin "2"
-			(uuid "d83f7e0b-0822-4361-bfed-f29b3f7f2c71")
+			(uuid "4464a160-3b93-4754-9627-ea269ef5f6a0")
+		)
+		(pin "3"
+			(uuid "e32a69c8-bbc6-4dd9-94c9-6d66faa93193")
+		)
+		(pin "4"
+			(uuid "a9760aa9-b67c-4128-9454-2996ff251e05")
+		)
+		(instances
+			(project ""
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/0f3d2a35-61e5-4457-80b4-6420fdb0d25b"
+					(reference "U2")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/127b4f37-4249-4636-9451-13f97e74a487"
+					(reference "U15")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/64c1193f-484d-4b2b-967e-0bece5fec1ac"
+					(reference "U13")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/6790a67e-7813-43f2-b494-f39ce93cdf59"
+					(reference "U18")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/851eaff3-1d9e-4c5f-ba83-6913f66c687a"
+					(reference "U14")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/c6f02b79-e1e3-4ccb-b6a6-6317bde05a0e"
+					(reference "U17")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/d2a5aef8-fc6d-4cdd-8944-f2314971ee1a"
+					(reference "U16")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
+					(reference "U7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 209.55 139.7 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c0713398-654d-421a-9e68-25f51914acfe")
+		(property "Reference" "#PWR024"
+			(at 209.55 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 209.423 144.0942 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 209.55 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 209.55 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 209.55 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "83c8ddcb-fec7-4982-a0fc-c4428d84ccc4")
 		)
 		(instances
 			(project "primecamLNABiasPotVreg"
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/0f3d2a35-61e5-4457-80b4-6420fdb0d25b"
-					(reference "R15")
+					(reference "#PWR024")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/127b4f37-4249-4636-9451-13f97e74a487"
+					(reference "#PWR053")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/64c1193f-484d-4b2b-967e-0bece5fec1ac"
+					(reference "#PWR051")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/6790a67e-7813-43f2-b494-f39ce93cdf59"
+					(reference "#PWR056")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/851eaff3-1d9e-4c5f-ba83-6913f66c687a"
+					(reference "#PWR052")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/c6f02b79-e1e3-4ccb-b6a6-6317bde05a0e"
+					(reference "#PWR055")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/d2a5aef8-fc6d-4cdd-8944-f2314971ee1a"
+					(reference "#PWR054")
 					(unit 1)
 				)
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
-					(reference "R30")
+					(reference "#PWR050")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 67.31 121.92 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c0d158da-666d-4ec2-82eb-72a0fe569c52")
+		(property "Reference" "R166"
+			(at 69.85 120.6499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0"
+			(at 69.85 123.1899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 65.532 121.92 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 67.31 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 67.31 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LTC_ADDR" ""
+			(at 67.31 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C17168"
+			(at 67.31 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "0402WGF0000TCE"
+			(at 67.31 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "9d5e27c2-96dc-4e89-99cd-4cad64bbd8ee")
+		)
+		(pin "1"
+			(uuid "05a3f2da-20ff-4563-a9ce-4ae213ef2b21")
+		)
+		(instances
+			(project "primecamLNABiasPotVreg"
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/0f3d2a35-61e5-4457-80b4-6420fdb0d25b"
+					(reference "R166")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/127b4f37-4249-4636-9451-13f97e74a487"
+					(reference "R170")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/64c1193f-484d-4b2b-967e-0bece5fec1ac"
+					(reference "R168")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/6790a67e-7813-43f2-b494-f39ce93cdf59"
+					(reference "R173")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/851eaff3-1d9e-4c5f-ba83-6913f66c687a"
+					(reference "R169")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/c6f02b79-e1e3-4ccb-b6a6-6317bde05a0e"
+					(reference "R172")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/d2a5aef8-fc6d-4cdd-8944-f2314971ee1a"
+					(reference "R171")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
+					(reference "R40")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 209.55 130.81 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c2bfc666-be88-4300-ad71-aa32e57a3aff")
+		(property "Reference" "R49"
+			(at 212.09 129.5399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "43"
+			(at 212.09 132.0799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
+			(at 207.772 130.81 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 209.55 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor 43 Ohm"
+			(at 209.55 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C154629"
+			(at 209.55 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.mouser.com/ProductDetail/KOA-Speer/SG73P2BTTD43R0F?qs=sGAEpiMZZMtlubZbdhIBIDpxrO%2FtJElWcHYtKJvTa8I%3D"
+			(at 209.55 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "2019-SG73P2BTTD43R0FCT-ND"
+			(at 209.55 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2f03e860-4bdb-45c0-80ba-fbf451a72d70")
+		)
+		(pin "2"
+			(uuid "043dc138-9cdc-47e5-a900-19b4df39e17b")
+		)
+		(instances
+			(project ""
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/0f3d2a35-61e5-4457-80b4-6420fdb0d25b"
+					(reference "R49")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/127b4f37-4249-4636-9451-13f97e74a487"
+					(reference "R53")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/64c1193f-484d-4b2b-967e-0bece5fec1ac"
+					(reference "R51")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/6790a67e-7813-43f2-b494-f39ce93cdf59"
+					(reference "R56")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/851eaff3-1d9e-4c5f-ba83-6913f66c687a"
+					(reference "R52")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/c6f02b79-e1e3-4ccb-b6a6-6317bde05a0e"
+					(reference "R55")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/d2a5aef8-fc6d-4cdd-8944-f2314971ee1a"
+					(reference "R54")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
+					(reference "R50")
 					(unit 1)
 				)
 			)
@@ -10558,12 +10165,36 @@
 			)
 		)
 		(pin "1"
-			(uuid "652dd3e6-b4ab-4c42-a607-75ff31608700")
+			(uuid "918ce1f8-67a3-421c-9aa3-3b40547f4346")
 		)
 		(instances
 			(project "primecamLNABiasPotVreg"
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/0f3d2a35-61e5-4457-80b4-6420fdb0d25b"
 					(reference "#PWR08")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/127b4f37-4249-4636-9451-13f97e74a487"
+					(reference "#PWR093")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/64c1193f-484d-4b2b-967e-0bece5fec1ac"
+					(reference "#PWR0132")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/6790a67e-7813-43f2-b494-f39ce93cdf59"
+					(reference "#PWR0170")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/851eaff3-1d9e-4c5f-ba83-6913f66c687a"
+					(reference "#PWR0131")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/c6f02b79-e1e3-4ccb-b6a6-6317bde05a0e"
+					(reference "#PWR0169")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/d2a5aef8-fc6d-4cdd-8944-f2314971ee1a"
+					(reference "#PWR094")
 					(unit 1)
 				)
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
@@ -10629,12 +10260,36 @@
 			)
 		)
 		(pin "1"
-			(uuid "b82d6bb6-95c1-4216-a454-d6e8fc400169")
+			(uuid "8854f87d-102f-4039-ae11-73b7e27b5a1b")
 		)
 		(instances
 			(project "primecamLNABiasPotVreg"
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/0f3d2a35-61e5-4457-80b4-6420fdb0d25b"
 					(reference "#PWR010")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/127b4f37-4249-4636-9451-13f97e74a487"
+					(reference "#PWR0100")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/64c1193f-484d-4b2b-967e-0bece5fec1ac"
+					(reference "#PWR0137")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/6790a67e-7813-43f2-b494-f39ce93cdf59"
+					(reference "#PWR0175")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/851eaff3-1d9e-4c5f-ba83-6913f66c687a"
+					(reference "#PWR0138")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/c6f02b79-e1e3-4ccb-b6a6-6317bde05a0e"
+					(reference "#PWR0176")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/d2a5aef8-fc6d-4cdd-8944-f2314971ee1a"
+					(reference "#PWR099")
 					(unit 1)
 				)
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
@@ -10717,7 +10372,25 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" " KAM05ACG1H100JH"
+		(property "LCSC Part #" "C32949"
+			(at 102.87 193.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LTC_ADDR" ""
+			(at 102.87 193.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "CL05C100JB5NNNC"
 			(at 102.87 193.04 0)
 			(effects
 				(font
@@ -10727,15 +10400,39 @@
 			)
 		)
 		(pin "1"
-			(uuid "6f2c2aaf-3bd9-4425-acf3-a0537fd622db")
+			(uuid "37af8098-d920-4e95-aad9-4840fea345f3")
 		)
 		(pin "2"
-			(uuid "9e4e0edd-40c8-443d-9afc-02b123266f36")
+			(uuid "c898b84e-4c74-4223-b347-dbc830ae059e")
 		)
 		(instances
 			(project "primecamLNABiasPotVreg"
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/0f3d2a35-61e5-4457-80b4-6420fdb0d25b"
 					(reference "C8")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/127b4f37-4249-4636-9451-13f97e74a487"
+					(reference "C57")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/64c1193f-484d-4b2b-967e-0bece5fec1ac"
+					(reference "C78")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/6790a67e-7813-43f2-b494-f39ce93cdf59"
+					(reference "C100")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/851eaff3-1d9e-4c5f-ba83-6913f66c687a"
+					(reference "C79")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/c6f02b79-e1e3-4ccb-b6a6-6317bde05a0e"
+					(reference "C101")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/d2a5aef8-fc6d-4cdd-8944-f2314971ee1a"
+					(reference "C56")
 					(unit 1)
 				)
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
@@ -10780,7 +10477,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.com/ProductDetail/YAGEO/RT1206BRD071RL?qs=d0WKAl%252BL4KajlmTEGgzKog%3D%3D"
+		(property "Datasheet" "https://jlcpcb.com/parts/componentSearch?searchTxt=TNPW12061R00DEEA"
 			(at 182.88 101.6 0)
 			(effects
 				(font
@@ -10807,7 +10504,7 @@
 				(hide yes)
 			)
 		)
-		(property "Link" "https://www.mouser.com/ProductDetail/YAGEO/RT1206BRD071RL?qs=d0WKAl%252BL4KajlmTEGgzKog%3D%3D"
+		(property "Link" "https://jlcpcb.com/parts/componentSearch?searchTxt=TNPW12061R00DEEA"
 			(at 182.88 101.6 90)
 			(effects
 				(font
@@ -10825,7 +10522,25 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "RT1206BRD071RL"
+		(property "LCSC Part #" "C1857715"
+			(at 182.88 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LTC_ADDR" ""
+			(at 182.88 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "TNPW12061R00DEEA"
 			(at 182.88 101.6 0)
 			(effects
 				(font
@@ -10835,15 +10550,39 @@
 			)
 		)
 		(pin "2"
-			(uuid "305ea312-301b-4b39-abb2-3bea710c2ca1")
+			(uuid "354ec311-53d9-45b0-a413-da0ae5d911af")
 		)
 		(pin "1"
-			(uuid "62e8c21a-ffbf-44bc-8ed2-84c3aa6c62ce")
+			(uuid "d4b45153-cb0d-47af-93d1-4e39c80bcfd0")
 		)
 		(instances
 			(project "primecamLNABiasPotVreg"
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/0f3d2a35-61e5-4457-80b4-6420fdb0d25b"
 					(reference "R23")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/127b4f37-4249-4636-9451-13f97e74a487"
+					(reference "R101")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/64c1193f-484d-4b2b-967e-0bece5fec1ac"
+					(reference "R131")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/6790a67e-7813-43f2-b494-f39ce93cdf59"
+					(reference "R162")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/851eaff3-1d9e-4c5f-ba83-6913f66c687a"
+					(reference "R132")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/c6f02b79-e1e3-4ccb-b6a6-6317bde05a0e"
+					(reference "R163")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/d2a5aef8-fc6d-4cdd-8944-f2314971ee1a"
+					(reference "R100")
 					(unit 1)
 				)
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
@@ -10908,12 +10647,36 @@
 			)
 		)
 		(pin "1"
-			(uuid "8c6f6c5e-3c1c-404e-aad5-ad817d8bf95e")
+			(uuid "5d49bb15-1810-4a36-b87c-392fda4c02ab")
 		)
 		(instances
 			(project "primecamLNABiasPotVreg"
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/0f3d2a35-61e5-4457-80b4-6420fdb0d25b"
 					(reference "#PWR013")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/127b4f37-4249-4636-9451-13f97e74a487"
+					(reference "#PWR0104")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/64c1193f-484d-4b2b-967e-0bece5fec1ac"
+					(reference "#PWR0141")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/6790a67e-7813-43f2-b494-f39ce93cdf59"
+					(reference "#PWR0179")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/851eaff3-1d9e-4c5f-ba83-6913f66c687a"
+					(reference "#PWR0142")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/c6f02b79-e1e3-4ccb-b6a6-6317bde05a0e"
+					(reference "#PWR0180")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/d2a5aef8-fc6d-4cdd-8944-f2314971ee1a"
+					(reference "#PWR0103")
 					(unit 1)
 				)
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
@@ -10986,7 +10749,25 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "TNPW060310R0BETA "
+		(property "LCSC Part #" "C22859"
+			(at 186.69 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LTC_ADDR" ""
+			(at 186.69 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "0603WAF100JT5E"
 			(at 186.69 116.84 0)
 			(effects
 				(font
@@ -10996,15 +10777,39 @@
 			)
 		)
 		(pin "2"
-			(uuid "41b5c473-d2e1-4d8a-b4a5-6157b3a1d410")
+			(uuid "90c8e042-235b-498d-9032-e3f2eb8d5e5d")
 		)
 		(pin "1"
-			(uuid "d2cfe363-a920-4267-b005-28c4eea6f766")
+			(uuid "3e4651f7-c959-4759-ba2f-44904ca9e614")
 		)
 		(instances
 			(project "primecamLNABiasPotVreg"
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/0f3d2a35-61e5-4457-80b4-6420fdb0d25b"
 					(reference "R22")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/127b4f37-4249-4636-9451-13f97e74a487"
+					(reference "R103")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/64c1193f-484d-4b2b-967e-0bece5fec1ac"
+					(reference "R133")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/6790a67e-7813-43f2-b494-f39ce93cdf59"
+					(reference "R164")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/851eaff3-1d9e-4c5f-ba83-6913f66c687a"
+					(reference "R134")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/c6f02b79-e1e3-4ccb-b6a6-6317bde05a0e"
+					(reference "R165")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/d2a5aef8-fc6d-4cdd-8944-f2314971ee1a"
+					(reference "R102")
 					(unit 1)
 				)
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
@@ -11069,12 +10874,36 @@
 			)
 		)
 		(pin "1"
-			(uuid "dc454800-da5f-4c39-bc7a-26aa2938e59a")
+			(uuid "94458c1a-76db-4d3f-abf0-9e435dcc40ad")
 		)
 		(instances
 			(project "primecamLNABiasPotVreg"
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/0f3d2a35-61e5-4457-80b4-6420fdb0d25b"
 					(reference "#PWR015")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/127b4f37-4249-4636-9451-13f97e74a487"
+					(reference "#PWR0105")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/64c1193f-484d-4b2b-967e-0bece5fec1ac"
+					(reference "#PWR0144")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/6790a67e-7813-43f2-b494-f39ce93cdf59"
+					(reference "#PWR0182")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/851eaff3-1d9e-4c5f-ba83-6913f66c687a"
+					(reference "#PWR0143")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/c6f02b79-e1e3-4ccb-b6a6-6317bde05a0e"
+					(reference "#PWR0181")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/d2a5aef8-fc6d-4cdd-8944-f2314971ee1a"
+					(reference "#PWR0106")
 					(unit 1)
 				)
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
@@ -11148,7 +10977,25 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" ""
+		(property "LCSC Part #" "C21190"
+			(at 163.83 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LTC_ADDR" ""
+			(at 163.83 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "0603WAF1001T5E"
 			(at 163.83 113.03 0)
 			(effects
 				(font
@@ -11158,10 +11005,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "7a9e7934-07d0-4435-a593-02d96eea993d")
+			(uuid "933dede1-700e-40a5-82e6-651d2d4727f2")
 		)
 		(pin "2"
-			(uuid "1dc6a1c4-99d9-434d-bc35-8f99f870e374")
+			(uuid "0484d451-2933-4f90-95c3-a662ca9b33d2")
 		)
 		(instances
 			(project "primecamLNABiasPotVreg"
@@ -11169,90 +11016,32 @@
 					(reference "R19")
 					(unit 1)
 				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/127b4f37-4249-4636-9451-13f97e74a487"
+					(reference "R96")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/64c1193f-484d-4b2b-967e-0bece5fec1ac"
+					(reference "R128")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/6790a67e-7813-43f2-b494-f39ce93cdf59"
+					(reference "R159")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/851eaff3-1d9e-4c5f-ba83-6913f66c687a"
+					(reference "R127")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/c6f02b79-e1e3-4ccb-b6a6-6317bde05a0e"
+					(reference "R158")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/d2a5aef8-fc6d-4cdd-8944-f2314971ee1a"
+					(reference "R97")
+					(unit 1)
+				)
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
 					(reference "R35")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "ALPACA:10k")
-		(at 85.09 49.53 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "e8a40971-ded1-49c4-abb8-f1d19f332415")
-		(property "Reference" "R16"
-			(at 86.36 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10K"
-			(at 85.09 52.07 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 83.312 49.53 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RNCF0603TKY10K0/2269698"
-			(at 85.09 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 85.09 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC Part #" "RNCF0603TKY10K0"
-			(at 85.09 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "990039bf-2c11-44bc-bead-25c17c9f8041")
-		)
-		(pin "2"
-			(uuid "41c97b06-b59c-41b6-88cf-3b9d6bb7ebd0")
-		)
-		(instances
-			(project "primecamLNABiasPotVreg"
-				(path "/a3adb93a-354c-4909-a884-71d847640b50/0f3d2a35-61e5-4457-80b4-6420fdb0d25b"
-					(reference "R16")
-					(unit 1)
-				)
-				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
-					(reference "R31")
 					(unit 1)
 				)
 			)
@@ -11313,12 +11102,36 @@
 			)
 		)
 		(pin "1"
-			(uuid "8b78a341-f7b3-41d5-af4b-f161d951d39d")
+			(uuid "146c0323-ef66-45cf-8d79-2f730e551c70")
 		)
 		(instances
 			(project "primecamLNABiasPotVreg"
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/0f3d2a35-61e5-4457-80b4-6420fdb0d25b"
 					(reference "#PWR05")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/127b4f37-4249-4636-9451-13f97e74a487"
+					(reference "#PWR087")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/64c1193f-484d-4b2b-967e-0bece5fec1ac"
+					(reference "#PWR0125")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/6790a67e-7813-43f2-b494-f39ce93cdf59"
+					(reference "#PWR0164")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/851eaff3-1d9e-4c5f-ba83-6913f66c687a"
+					(reference "#PWR0126")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/c6f02b79-e1e3-4ccb-b6a6-6317bde05a0e"
+					(reference "#PWR0163")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/d2a5aef8-fc6d-4cdd-8944-f2314971ee1a"
+					(reference "#PWR088")
 					(unit 1)
 				)
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
@@ -11392,7 +11205,25 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "EMF105B7104KVHF"
+		(property "LCSC Part #" "C1525"
+			(at 55.88 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LTC_ADDR" ""
+			(at 55.88 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "CL05B104KO5NNNC"
 			(at 55.88 107.95 0)
 			(effects
 				(font
@@ -11402,10 +11233,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "348826b0-ae90-47a1-b5dd-867f6f329b6c")
+			(uuid "6ea752b1-c7ec-44f1-a8fc-6eeecb8c0eb8")
 		)
 		(pin "2"
-			(uuid "497e7d5e-34c1-4dbf-93f2-9b05525b44d1")
+			(uuid "970b06f0-6493-466c-969e-41ae16b4e909")
 		)
 		(instances
 			(project "primecamLNABiasPotVreg"
@@ -11413,108 +11244,32 @@
 					(reference "C4")
 					(unit 1)
 				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/127b4f37-4249-4636-9451-13f97e74a487"
+					(reference "C48")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/64c1193f-484d-4b2b-967e-0bece5fec1ac"
+					(reference "C71")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/6790a67e-7813-43f2-b494-f39ce93cdf59"
+					(reference "C93")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/851eaff3-1d9e-4c5f-ba83-6913f66c687a"
+					(reference "C70")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/c6f02b79-e1e3-4ccb-b6a6-6317bde05a0e"
+					(reference "C92")
+					(unit 1)
+				)
+				(path "/a3adb93a-354c-4909-a884-71d847640b50/d2a5aef8-fc6d-4cdd-8944-f2314971ee1a"
+					(reference "C49")
+					(unit 1)
+				)
 				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
 					(reference "C10")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "ALPACA:10k")
-		(at 24.13 71.12 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "f2c74e73-8653-4b5a-bfb3-a13c3567be1b")
-		(property "Reference" "R10"
-			(at 26.035 70.485 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "2150"
-			(at 20.32 73.66 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 22.352 71.12 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.com/ProductDetail/TE-Connectivity-Holsworthy/RQ73C1J2K15BTD?qs=sGAEpiMZZMtG0KNrPCHnjW0BEZmmc%252BDpPo30UzfLbdkjkTp46OLaRw%3D%3D"
-			(at 24.13 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Thin Film Resistors - SMD RQ 0603 2K15 0.1% 10PPM 5K RL"
-			(at 24.13 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Mouser" ""
-			(at 24.13 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Link" ""
-			(at 24.13 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC Part #" " RQ73C1J2K15BTD"
-			(at 24.13 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "3876464f-5cc9-4dcf-8557-5844bfae5e00")
-		)
-		(pin "2"
-			(uuid "fd902354-63f5-4be2-baed-abd22b84fc64")
-		)
-		(instances
-			(project "primecamLNABiasPotVreg"
-				(path "/a3adb93a-354c-4909-a884-71d847640b50/0f3d2a35-61e5-4457-80b4-6420fdb0d25b"
-					(reference "R10")
-					(unit 1)
-				)
-				(path "/a3adb93a-354c-4909-a884-71d847640b50/f91d9140-be5e-40db-9d84-52e3da401d8d"
-					(reference "R25")
 					(unit 1)
 				)
 			)

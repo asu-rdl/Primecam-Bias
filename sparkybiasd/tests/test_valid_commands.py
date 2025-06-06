@@ -75,7 +75,7 @@ def test_enable_output(redisFixt):
     response = json.loads(message['data'].decode())
     assert response['status'] == 'success', "Expected success status in response"
 
-def test_command_seekVoltage(redisFixt):
+def test_command_seek_voltage(redisFixt):
     """Test that we can seek a voltage."""
     redis_client, pubsub = redisFixt
     command = {
@@ -117,6 +117,144 @@ def test_command_disable_output(redisFixt):
             "channel": 1,
         }
     }
+    redis_client.publish('sparkommand', json.dumps(command))
+    message = pubsub.get_message(True, timeout=None)
+    response = json.loads(message['data'].decode())
+    assert response['status'] == 'success', "Expected success status in response"
+
+def test_command_enable_testload(redisFixt):
+    """Test that we can enable a testload."""
+    redis_client, pubsub = redisFixt
+    command = {
+        "command": "enableTestload",
+        "args": {
+            "card": 10,
+            "channel": 5,
+        }
+    }
+    redis_client.publish('sparkommand', json.dumps(command))
+    message = pubsub.get_message(True, timeout=None)
+    response = json.loads(message['data'].decode())
+    assert response['status'] == 'success', "Expected success status in response"
+
+def test_command_disable_testload(redisFixt):
+    """Test that we can enable a testload."""
+    redis_client, pubsub = redisFixt
+    command = {
+        "command": "disableTestload",
+        "args": {
+            "card": 10,
+            "channel": 5,
+        }
+    }
+    redis_client.publish('sparkommand', json.dumps(command))
+    message = pubsub.get_message(True, timeout=None)
+    response = json.loads(message['data'].decode())
+    assert response['status'] == 'success', "Expected success status in response"
+
+def test_command_test_set_channel(redisFixt):
+    """
+    This is not an automated test, but a manual one.
+    A channel is enabled, then a testload is enabled,
+    then the channel is set to a voltage, and then the testload
+    is disabled. The channel should be at 0V after this. The voltage change should be ovservable
+    in the application logs.
+    """
+    redis_client, pubsub = redisFixt
+    command = {
+        "command": "enableOutput",
+        "args": {
+            "card": 1,
+            "channel": 1,
+        }
+    }
+    redis_client.publish('sparkommand', json.dumps(command))
+    message = pubsub.get_message(True, timeout=None)
+    response = json.loads(message['data'].decode())
+    assert response['status'] == 'success', "Expected success status in response"
+
+    command["command"] = "enableTestload"
+    redis_client.publish('sparkommand', json.dumps(command))
+    message = pubsub.get_message(True, timeout=None)
+    response = json.loads(message['data'].decode())
+    assert response['status'] == 'success', "Expected success status in response"
+
+    command["command"] = "seekVoltage"
+    command["args"]["voltage"] = 2.0
+    redis_client.publish('sparkommand', json.dumps(command))
+    message = pubsub.get_message(True, timeout=None)
+    response = json.loads(message['data'].decode())
+    assert response['status'] == 'success', "Expected success status in response"
+
+    command["command"] = "disableTestload"
+    redis_client.publish('sparkommand', json.dumps(command))
+    message = pubsub.get_message(True, timeout=None)
+    response = json.loads(message['data'].decode())
+    assert response['status'] == 'success', "Expected success status in response"
+
+    command["command"] = "disableOutput"
+    redis_client.publish('sparkommand', json.dumps(command))
+    message = pubsub.get_message(True, timeout=None)
+    response = json.loads(message['data'].decode())
+    assert response['status'] == 'success', "Expected success status in response"
+
+
+def test_command_seek_current(redisFixt):
+    """Test that we can seek a voltage."""
+
+    # Enable the output first
+    redis_client, pubsub = redisFixt
+    command = {
+        "command": "enableOutput",
+        "args": {
+            "card": 10,
+            "channel": 3,
+        }
+    }
+    redis_client.publish('sparkommand', json.dumps(command))
+    message = pubsub.get_message(True, timeout=None)
+    response = json.loads(message['data'].decode())
+    assert response['status'] == 'success', "Expected success status in response"
+
+    # Enable the testload
+    command = {
+        "command": "enableTestload",
+        "args": {
+            "card": 10,
+            "channel": 3,
+        }
+    }
+    redis_client.publish('sparkommand', json.dumps(command))
+    message = pubsub.get_message(True, timeout=None)
+    response = json.loads(message['data'].decode())
+    assert response['status'] == 'success', "Expected success status in response"
+
+
+    # Now seek a current
+    command = {
+        "command": "seekCurrent",
+        "args": {
+            "card": 10,
+            "channel": 3,
+            "current": 10
+        }
+    }
+
+    redis_client.publish('sparkommand', json.dumps(command))
+    message = pubsub.get_message(True, timeout=None)
+    response = json.loads(message['data'].decode())
+    assert response['status'] == 'success', "Expected success status in response"
+    assert response['card'] == 10, "Expected card 1 in response"
+    assert response['channel'] == 3, "Expected channel 1 in response"
+    assert round(response['current']) == 10, "Expected current 10mA in response"
+    
+    # Disable the testload and output
+    command["command"] = "disableTestload"
+    redis_client.publish('sparkommand', json.dumps(command))
+    message = pubsub.get_message(True, timeout=None)
+    response = json.loads(message['data'].decode())
+    assert response['status'] == 'success', "Expected success status in response"
+    command["command"] = "disableOutput"
     redis_client.publish('sparkommand', json.dumps(command))
     message = pubsub.get_message(True, timeout=None)
     response = json.loads(message['data'].decode())

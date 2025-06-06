@@ -174,16 +174,45 @@ def seek_voltage(crate:BiasCrate, args:dict)->str:
         time.sleep(0.1)  # Allow time for the voltage to settle
         r.vbus, r.vshunt, r.current, r.outputEnabled, r.wiper = crate.get_status(card, channel)
         r.status = "success"
-        return r.success_str()
     except Exception as e:
         logger.exception(e)
         r.status = "error"
         r.code = -100 #TODO: Define error codes
         r.errormessage = str(e)
         return r.error_str()
-    return ""
-def seek_current(*args)->str:
-    return ""
+    return r.success_str()
+
+def seek_current(crate:BiasCrate, args:dict)->str:
+    r = reply()
+    card = args['card']
+    channel = args['channel']
+    if not card>0 or not card <= 18:
+        r.status = "error"
+        r.code = -104334 #TODO: Define error codes
+        r.errormessage = f"Invalid card number {card}. Must be between 1 and 18."
+        return r.error_str()
+    if not channel>0 or not channel <= 8:
+        r.status = "error"
+        r.code = -10335 #TODO: Define error codes
+        r.errormessage = f"Invalid channel number {channel}. Must be between 1 and 8."
+        return r.error_str()
+    r.card = card
+    r.channel = channel
+    try:
+        current = args['current']
+        crate.seek_current(card, channel, current)
+        time.sleep(0.1)  # Allow time for the current to settle
+        r.vbus, r.vshunt, r.current, r.outputEnabled, r.wiper = crate.get_status(card, channel)
+        r.status = "success"
+    except Exception as e:
+        logger.exception(e)
+        r.status = "error"
+        r.code = -33100 #TODO: Define error codes
+        r.errormessage = str(e)
+        return r.error_str()
+    return r.success_str()
+
+
 def enable_output(crate: BiasCrate, args:dict)->str:
     r = reply()
     card = args['card']
@@ -240,7 +269,67 @@ def disable_output(crate: BiasCrate, args:dict)->str:
         r.code = -107 #TODO: Define error codes
         r.errormessage = str(e)
         return r.error_str() 
+    return r.success_str() 
+
+
+
+def enable_testload(crate: BiasCrate, args:dict)->str:
+    r = reply()
+    card = args['card']
+    channel = args['channel']
+    if not card>0 or not card <= 18:
+        r.status = "error"
+        r.code = -1044 #TODO: Define error codes
+        r.errormessage = f"Invalid card number {card}. Must be between 1 and 18."
+        return r.error_str()
+    if not channel>0 or not channel <= 8:
+        r.status = "error"
+        r.code = -105
+        r.errormessage = f"Invalid channel number {channel}. Must be between 1 and 8."
+        return r.error_str()
+    r.card = card
+    r.channel = channel
+    try:
+        crate.enable_testload(card, channel)
+        time.sleep(0.1)  # Allow time for the output to settle
+        r.vbus, r.vshunt, r.current, r.outputEnabled, r.wiper = crate.get_status(card, channel)
+        r.status = "success"
+    except Exception as e:
+        logger.exception(e)
+        r.status = "error"
+        r.code = -100 #TODO: Define error codes
+        r.errormessage = str(e)
+        return r.error_str() 
     return r.success_str()  
+
+def disable_testload(crate: BiasCrate, args:dict)->str:
+    r = reply()
+    card = args['card']
+    channel = args['channel']
+    if not card>0 or not card <= 18:
+        r.status = "error"
+        r.code = -10445 #TODO: Define error codes
+        r.errormessage = f"Invalid card number {card}. Must be between 1 and 18."
+        return r.error_str()
+    if not channel>0 or not channel <= 8:
+        r.status = "error"
+        r.code = -1046
+        r.errormessage = f"Invalid channel number {channel}. Must be between 1 and 8."
+        return r.error_str()
+    r.card = card
+    r.channel = channel
+    try:
+        crate.disable_testload(card, channel)
+        time.sleep(0.1)  # Allow time for the output to settle
+        r.vbus, r.vshunt, r.current, r.outputEnabled, r.wiper = crate.get_status(card, channel)
+        r.status = "success"
+    except Exception as e:
+        logger.exception(e)
+        r.status = "error"
+        r.code = -1047 #TODO: Define error codes
+        r.errormessage = str(e)
+        return r.error_str() 
+    return r.success_str() 
 
 
 # The command table maps command names to their corresponding functions and arguments.
@@ -265,5 +354,14 @@ COMMAND_TABLE = {
     "disableOutput": {
         "function": disable_output,
         "args": ["card", "channel"]
+    },
+    "enableTestload": {
+        "function": enable_testload,
+        "args": ["card", "channel"]
+    },
+    "disableTestload": {
+        "function": disable_testload,
+        "args": ["card", "channel"]
     }
+
 }

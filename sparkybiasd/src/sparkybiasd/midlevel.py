@@ -3,7 +3,8 @@ import numpy as np
 from omegaconf import OmegaConf
 from . import dconf
 import time
-
+import logging
+logger = logging.getLogger(__name__)
 # TODO: Warn user if setting wiper when output is disabled.....
 
 # TODO: save settings to yaml file
@@ -22,6 +23,7 @@ def grab_board(func):
     """
 
     def wrapper(self, card: int, *args, **kwargs):
+        assert card in self.cards, f"Card {card} not found in BiasCrate"
         board = self.cards[card]
         board.open()
         res = func(self, board, *args, **kwargs)
@@ -52,9 +54,11 @@ class BiasCrate:
         """set channel to specified voltage (in TBD Units)"""
         assert voltage >= 0, "Can't generate negative voltages"
         assert voltage <= 5, "Voltage spec out of range"
-
+        assert channel > 0 and channel <= 8, "Expected Channel 1 through 8"
+        assert increment > 0, "Increment must be a positive integer"
+        logger.info(f"Seeking voltage {voltage} on channel {channel}. This may take a while.")
         wiper = board.wiper_states[channel - 1]
-        print(board.wiper_states)
+        logger.debug(f"Current wiper states: {board.wiper_states}")
         cv = np.round(board.get_bus(channel), 6)
         limit = 2048
         while limit > 0:
@@ -62,7 +66,7 @@ class BiasCrate:
             time.sleep(0.06)  # Allow bus to reach proper voltage
             cv = np.round(board.get_bus(channel), 6)
             delta = np.round(abs(voltage - cv), 6)
-            print(f"wiper = {wiper}; cv = {cv}; delta= {delta} ")
+            logger.debug(f"wiper = {wiper}; cv = {cv}; delta= {delta} ")
             if delta < 0.01:
                 break
 
@@ -83,9 +87,11 @@ class BiasCrate:
         """set channel to specified current (in mA Units)"""
         assert current >= 0, "Can't generate negative voltages"
         assert current <= 200, "Voltage spec out of range"
-
+        assert channel > 0 and channel <= 8, "Expected Channel 1 through 8"
+        assert increment > 0, "Increment must be a positive integer"
+        logger.info(f"Seeking current {current} on channel {channel}. This may take a while...")
         wiper = board.wiper_states[channel - 1]
-        print(board.wiper_states)
+        logger.debug(f"Current wiper states: {board.wiper_states}")
         ci = np.round(board.get_bus(channel), 6)
         limit = 2048
         while limit > 0:
@@ -93,7 +99,7 @@ class BiasCrate:
             time.sleep(0.06)  # Allow bus to reach proper current
             ci = np.round(board.get_current(channel), 6)
             delta = np.round(abs(current - ci), 6)
-            print(f"wiper = {wiper}; ci = {ci}; delta= {delta} ")
+            logger.debug(f"wiper = {wiper}; ci = {ci}; delta= {delta} ")
             if delta < 0.01:
                 break
 
@@ -120,6 +126,18 @@ class BiasCrate:
         """Enable output of a card+channel"""
         assert channel > 0 and channel <= 8, "Expected Channel 1 through 8"
         board.enable_chan(channel)
+
+    @grab_board
+    def disable_testload(self, board: BiasCard, channel: int):
+        """Disable test-load of a card+channel"""
+        assert channel > 0 and channel <= 8, "Expected Channel 1 through 8"
+        board.enable_testload(channel, False)
+
+    @grab_board
+    def enable_testload(self, board: BiasCard, channel: int):
+        """Enable testload of a card+channel"""
+        assert channel > 0 and channel <= 8, "Expected Channel 1 through 8"
+        board.enable_testload(channel)
 
     @grab_board
     def get_status(self, board:BiasCard, channel: int) -> tuple:
