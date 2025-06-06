@@ -1,2 +1,3 @@
 - [ ] Missing commands to enable a testload
 - [ ] Wiper is not being correctly set during seek_voltage command.
+- [ ] Implement seek_current 
