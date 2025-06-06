@@ -55,11 +55,29 @@ class reply:
             "status": self.status, "code": self.code, "msg": self.errormessage
         })
 
+
+def validate_command(command_data) -> bool:
+    """Valudate the command data against the expected structure."""
+    if not isinstance(command_data, dict):
+        return False
+    if 'command' not in command_data or 'args' not in command_data:
+        return False
+    if not isinstance(command_data['args'], dict):
+        return False
+    command = command_data['command']
+    if command not in COMMAND_TABLE:
+        return False
+    expected_args = COMMAND_TABLE[command]['args']
+    for arg in expected_args:
+        if arg not in command_data['args']:
+            return False
+    return True
+
+
 def main():
     """Main function to run the daemon."""
     logger.info("Starting Bias Crate Daemon")
     crate = BiasCrate()
-    crate.open_all_cards()
     logger.info("Bias Crate Daemon started successfully")
 
     r = redis.Redis(host=conf.redis.ip, port=conf.redis.port, db=0)
@@ -70,22 +88,37 @@ def main():
         for message in pubsub.listen():
             if message['type'] == 'message':
                 command = json.loads(message['data'].decode())
-                cmd_name = command.get('command')
-                args = command.get('args', {})
-                if cmd_name in COMMAND_DICT:
-                    response = COMMAND_DICT[cmd_name](crate, args)
+                logger.info(f"Received command: {command}")
+                if validate_command(command):
+                    command_name = command['command']
+                    args = command['args']
+                    func = COMMAND_TABLE[command_name]['function']
+                    try:
+                        response = func(crate, args)
+                        logger.info(f"Command {command_name} executed successfully")
+                    except Exception as e:
+                        logger.exception(f"Error executing command {command_name}: {e}")
+                        response = reply()
+                        response.status = "error"
+                        response.code = -1
+                        response.errormessage = str(e)
                     r.publish(conf.redis.replyChannel, response)
+
                 else:
-                    r.publish(conf.redis.replyChannel, json.dumps({
-                        "status": "error",
-                        "code": -1,
-                        "msg": f"Unknown command: {cmd_name}"
-                    }))
+                    logger.error("Invalid command structure or command not found")
+                    response = reply()
+                    response.status = "error"
+                    response.code = -2
+                    response.errormessage = "Invalid command"
+                    r.publish(conf.redis.replyChannel, response.error_str())
+
+                
+
+
     except redis.exceptions.ConnectionError as e:
         logger.error(f"Redis connection error: {e}")
     finally:
         pubsub.unsubscribe()
-        crate.close_all_cards()
 # This is a stub for the command functions. They should be implemented to interact with the BiasCrate.
 # They will return a string that is then published to the redis reply channel.
 def get_status(crate:BiasCrate, args:dict)->str:
@@ -114,10 +147,28 @@ def disable_output(*args)->str:
     return ""
 
 
-COMMAND_DICT = {
-    "seekVoltage" : seek_voltage,
-    "seekCurrent": seek_current,
-    "getStatus": get_status,
-    "enableOutput": enable_output,
-    "disableOutput": disable_output
+
+# The command table maps command names to their corresponding functions and arguments.
+# This allows for dynamic command execution based on the received command.
+COMMAND_TABLE = {
+    "seekVoltage" : {
+        "function": seek_voltage,
+        "args": ["card", "channel", "voltage"]
+    },
+    "seekCurrent":{
+        "function": seek_current,
+        "args": ["card", "channel", "current"]
+    },
+    "getStatus": {
+        "function": get_status,
+        "args": ["card", "channel"]
+    }, 
+    "enableOutput": {
+        "function": enable_output,
+        "args": ["card", "channel"]
+    },
+    "disableOutput": {
+        "function": disable_output,
+        "args": ["card", "channel"]
+    }
 }
