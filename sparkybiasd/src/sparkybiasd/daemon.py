@@ -14,6 +14,7 @@ import os
 from .midlevel import BiasCrate
 from .dconf import conf
 import json
+import time
 USERHOME = os.environ.get("HOME", "")
 
 APPDATA_PATH = USERHOME+"/daemon/"
@@ -95,13 +96,15 @@ def main():
                     func = COMMAND_TABLE[command_name]['function']
                     try:
                         response = func(crate, args)
-                        logger.info(f"Command {command_name} executed successfully")
+                        logger.info(f"Command {command_name} completed.")
                     except Exception as e:
                         logger.exception(f"Error executing command {command_name}: {e}")
                         response = reply()
                         response.status = "error"
                         response.code = -1
                         response.errormessage = str(e)
+
+                    logger.debug(f"Response: {response}")
                     r.publish(conf.redis.replyChannel, response)
 
                 else:
@@ -125,11 +128,22 @@ def get_status(crate:BiasCrate, args:dict)->str:
     r = reply()
     card = args['card']
     channel = args['channel']
+    if not card>0 or not card <= 18:
+        r.status = "error"
+        r.code = -102 #TODO: Define error codes
+        r.errormessage = f"Invalid card number {card}. Must be between 1 and 18."
+        return r.error_str()
+    if not channel>0 or not channel <= 8:
+        r.status = "error"
+        r.code = -101 #TODO: Define error codes
+        r.errormessage = f"Invalid channel number {channel}. Must be between 1 and 8."
+        return r.error_str()
     r.card = card
     r.channel = channel
+    
     try:
-        r.status = "success"
         r.vbus, r.vshunt, r.current, r.outputEnabled, r.wiper = crate.get_status(card, channel)
+        r.status = "success"
         return r.success_str()
     except Exception as e:
         logger.exception(e)
@@ -137,15 +151,96 @@ def get_status(crate:BiasCrate, args:dict)->str:
         r.code = -99
         r.errormessage = str(e)
         return r.error_str()
-def seek_voltage(*args)->str:
+    
+def seek_voltage(crate:BiasCrate, args:dict)->str:
+    r = reply()
+    card = args['card']
+    channel = args['channel']
+    if not card>0 or not card <= 18:
+        r.status = "error"
+        r.code = -1044 #TODO: Define error codes
+        r.errormessage = f"Invalid card number {card}. Must be between 1 and 18."
+        return r.error_str()
+    if not channel>0 or not channel <= 8:
+        r.status = "error"
+        r.code = -105 #TODO: Define error codes
+        r.errormessage = f"Invalid channel number {channel}. Must be between 1 and 8."
+        return r.error_str()
+    r.card = card
+    r.channel = channel
+    try:
+        voltage = args['voltage']
+        crate.seek_voltage(card, channel, voltage)
+        time.sleep(0.1)  # Allow time for the voltage to settle
+        r.vbus, r.vshunt, r.current, r.outputEnabled, r.wiper = crate.get_status(card, channel)
+        r.status = "success"
+        return r.success_str()
+    except Exception as e:
+        logger.exception(e)
+        r.status = "error"
+        r.code = -100 #TODO: Define error codes
+        r.errormessage = str(e)
+        return r.error_str()
     return ""
 def seek_current(*args)->str:
     return ""
-def enable_output(*args)->str:
-    return ""
-def disable_output(*args)->str:
-    return ""
+def enable_output(crate: BiasCrate, args:dict)->str:
+    r = reply()
+    card = args['card']
+    channel = args['channel']
+    if not card>0 or not card <= 18:
+        r.status = "error"
+        r.code = -1044 #TODO: Define error codes
+        r.errormessage = f"Invalid card number {card}. Must be between 1 and 18."
+        return r.error_str()
+    if not channel>0 or not channel <= 8:
+        r.status = "error"
+        r.code = -105
+        r.errormessage = f"Invalid channel number {channel}. Must be between 1 and 8."
+        return r.error_str()
+    r.card = card
+    r.channel = channel
+    try:
+        crate.enable_output(card, channel)
+        time.sleep(0.1)  # Allow time for the output to settle
+        r.vbus, r.vshunt, r.current, r.outputEnabled, r.wiper = crate.get_status(card, channel)
+        r.status = "success"
+    except Exception as e:
+        logger.exception(e)
+        r.status = "error"
+        r.code = -100 #TODO: Define error codes
+        r.errormessage = str(e)
+        return r.error_str() 
+    return r.success_str()  
 
+def disable_output(crate: BiasCrate, args:dict)->str:
+    r = reply()
+    card = args['card']
+    channel = args['channel']
+    if not card>0 or not card <= 18:
+        r.status = "error"
+        r.code = -1045 #TODO: Define error codes
+        r.errormessage = f"Invalid card number {card}. Must be between 1 and 18."
+        return r.error_str()
+    if not channel>0 or not channel <= 8:
+        r.status = "error"
+        r.code = -106
+        r.errormessage = f"Invalid channel number {channel}. Must be between 1 and 8."
+        return r.error_str()
+    r.card = card
+    r.channel = channel
+    try:
+        crate.disable_output(card, channel)
+        time.sleep(0.1)  # Allow time for the output to settle
+        r.vbus, r.vshunt, r.current, r.outputEnabled, r.wiper = crate.get_status(card, channel)
+        r.status = "success"
+    except Exception as e:
+        logger.exception(e)
+        r.status = "error"
+        r.code = -107 #TODO: Define error codes
+        r.errormessage = str(e)
+        return r.error_str() 
+    return r.success_str()  
 
 
 # The command table maps command names to their corresponding functions and arguments.
