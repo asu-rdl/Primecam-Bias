@@ -1,0 +1,90 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.1, pytest-8.3.5, pluggy-1.5.0
+rootdir: /home/carobers/workspace/Primecam-Bias/sparkybiasd
+configfile: pyproject.toml
+collected 5 items
+
+test_commanding.py ..F.F                                                 [100%]
+
+=================================== FAILURES ===================================
+____________________________ test_command_Nonsense _____________________________
+
+redis_client = <redis.client.Redis(<redis.connection.ConnectionPool(<redis.connection.Connection(host=10.206.160.58,port=6379,db=0)>)>)>
+
+    def test_command_Nonsense(redis_client):
+        command = "Aperture Science, we do what we must because we \ncan for the good of all of us. Except the ones who are dead."
+        pubsub = redis_client.pubsub()
+        pubsub.subscribe('sparkreply')
+        pubsub.get_message()
+    
+        redis_client.publish('sparkommand', json.dumps(command))
+        message = pubsub.get_message(True, timeout=None)
+    
+        pubsub.unsubscribe('sparkreply')
+        pubsub.get_message()  # Clear any remaining messages
+>       assert message is not None, "No response received from Redis"
+E       AssertionError: No response received from Redis
+E       assert None is not None
+
+test_commanding.py:64: AssertionError
+_______________________ test_command_get_status_badargs ________________________
+
+redis_client = <redis.client.Redis(<redis.connection.ConnectionPool(<redis.connection.Connection(host=10.206.160.58,port=6379,db=0)>)>)>
+
+    def test_command_get_status_badargs(redis_client):
+        """Test the get_status command."""
+        pubsub = redis_client.pubsub()
+        pubsub.subscribe('sparkreply')
+        pubsub.get_message()
+        def dothing(myCommand):
+    
+            redis_client.publish('sparkommand', json.dumps(myCommand))
+            time.sleep(2)
+    
+            message = pubsub.get_message(True, timeout=None)
+            assert message is not None, "No response received from Redis"
+            return json.loads(message['data'].decode())
+    
+        command = {
+            "command": "getStatus",
+            "args": {
+                "card": 100,  # Invalid card number
+                "channel": 1
+            }
+        }
+        command_two = {
+            "command": "getStatus",
+            "args": {
+                "card": 6,  # Valid Card Number
+                "channel": 100  # Invalid channel number
+            }
+        }
+        command_three = {
+            "command": "getStatus",
+        }
+        command_four = {
+            "command": "getStatus",
+            "args": {}
+        }
+>       response = dothing(command)
+
+test_commanding.py:123: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+myCommand = {'args': {'card': 100, 'channel': 1}, 'command': 'getStatus'}
+
+    def dothing(myCommand):
+    
+        redis_client.publish('sparkommand', json.dumps(myCommand))
+        time.sleep(2)
+    
+        message = pubsub.get_message(True, timeout=None)
+>       assert message is not None, "No response received from Redis"
+E       AssertionError: No response received from Redis
+E       assert None is not None
+
+test_commanding.py:99: AssertionError
+=========================== short test summary info ============================
+FAILED test_commanding.py::test_command_Nonsense - AssertionError: No respons...
+FAILED test_commanding.py::test_command_get_status_badargs - AssertionError: ...
+========================= 2 failed, 3 passed in 7.18s ==========================

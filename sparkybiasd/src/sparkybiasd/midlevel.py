@@ -79,12 +79,11 @@ class BiasCrate:
                 continue
 
     @grab_board
-    def seek_current(self, card: int, channel: int, current: float, increment=1):
+    def seek_current(self, board: BiasCard, channel: int, current: float, increment=1):
         """set channel to specified current (in mA Units)"""
         assert current >= 0, "Can't generate negative voltages"
         assert current <= 200, "Voltage spec out of range"
 
-        board = self.cards[card]
         wiper = board.wiper_states[channel - 1]
         print(board.wiper_states)
         ci = np.round(board.get_bus(channel), 6)

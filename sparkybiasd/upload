@@ -1,0 +1,10 @@
+#! /bin/bash
+# Build python package, deploy it, and test on the PI.
+# Uses pre-configured .ssh/config; script expected to fail outside of dev env
+#
+PROJDIR=$HOME/workspace/Primecam-Bias/sparkybiasd
+
+ssh pi "/bin/bash -c 'rm -r /home/asu/sparkybiasd'"
+scp -r "$PROJDIR" pi:~/
+ssh pi "/bin/bash -c 'rm -r /home/asu/tests'"
+scp -r ./tests pi:~/

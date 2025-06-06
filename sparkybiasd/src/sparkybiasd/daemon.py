@@ -2,9 +2,6 @@
 Daemon process. Initializes the boards and waits for commands from the end user. 
 These commands arrive redis's pub-sub pipeline as json formatted strings documented
 in https://asu-rdl.github.io/Primecam-Bias/software.html.
-These strings are converted into 
-
-Those strings are then converted 
 
 
 
@@ -59,58 +56,36 @@ class reply:
         })
 
 def main():
-    logger.debug("Starting the Bias Crate daemon...")
-
+    """Main function to run the daemon."""
+    logger.info("Starting Bias Crate Daemon")
     crate = BiasCrate()
-    crate.disable_all_outputs(True)  # Safety First!
+    crate.open_all_cards()
+    logger.info("Bias Crate Daemon started successfully")
 
-    rinst = redis.Redis(host=conf.redis.ip, port=conf.redis.port)
+    r = redis.Redis(host=conf.redis.ip, port=conf.redis.port, db=0)
+    pubsub = r.pubsub()
+    pubsub.subscribe(conf.redis.commandChannel)
+
     try:
-        rinst.ping()
-    except redis.exceptions.ConnectionError:
-        logger.exception("Failed to connect to the redis server")
-        exit(-1)
-
-    rpubsub = rinst.pubsub()
-    rpubsub.subscribe(conf.redis.commandChannel)  # Is command
-
-    for msg in rpubsub.listen():
-        if msg["type"] == "subscribe":
-            continue
-        elif msg["type"] == "unsubscribe":
-            continue
-        elif msg["type"] == "message":
-            logger.debug(f"Received message: {msg}")
-            # suppose we need to parse this?
-            data = msg["data"].decode()
-            try:
-                cmd = json.loads(data)
-            except json.JSONDecodeError as e:
-                logger.exception(e)
-                r = reply(); r.status = "error"; r.code = -1; r.errormessage = "A JSON Parse exception occurred."
-                rinst.publish(conf.redis.replyChannel, r.error_str())
-                continue
-            
-            cmdstr = cmd["command"]
-            if cmdstr in COMMAND_DICT:
-                func = COMMAND_DICT[cmdstr]
-            else:
-                r = reply(); r.status = "error"; r.code = -2; r.errormessage = "Received bad command"
-                logger.error(f"Received bad command: {cmdstr}")
-                rinst.publish(conf.redis.replyChannel, r.error_str())
-                continue
-    
-            assert func is not None, logger.error("Expected valid function but got none. Thar be weirdness in these waters.")
-
-            results = func(crate, cmd["args"])
-            logger.debug(f"results from executed function is {results}")
-            rinst.publish(conf.redis.replyChannel, results)
-   
-
-        else:
-            # suppose we need to get the state of the hardware
-            pass
-
+        for message in pubsub.listen():
+            if message['type'] == 'message':
+                command = json.loads(message['data'].decode())
+                cmd_name = command.get('command')
+                args = command.get('args', {})
+                if cmd_name in COMMAND_DICT:
+                    response = COMMAND_DICT[cmd_name](crate, args)
+                    r.publish(conf.redis.replyChannel, response)
+                else:
+                    r.publish(conf.redis.replyChannel, json.dumps({
+                        "status": "error",
+                        "code": -1,
+                        "msg": f"Unknown command: {cmd_name}"
+                    }))
+    except redis.exceptions.ConnectionError as e:
+        logger.error(f"Redis connection error: {e}")
+    finally:
+        pubsub.unsubscribe()
+        crate.close_all_cards()
 # This is a stub for the command functions. They should be implemented to interact with the BiasCrate.
 # They will return a string that is then published to the redis reply channel.
 def get_status(crate:BiasCrate, args:dict)->str:
@@ -126,7 +101,7 @@ def get_status(crate:BiasCrate, args:dict)->str:
     except Exception as e:
         logger.exception(e)
         r.status = "error"
-        r.code = -3
+        r.code = -99
         r.errormessage = str(e)
         return r.error_str()
 def seek_voltage(*args)->str:
