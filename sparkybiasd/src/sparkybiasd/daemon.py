@@ -58,25 +58,56 @@ class reply:
 
 
 def validate_command(command_data) -> bool:
-    """Valudate the command data against the expected structure."""
+    """Valudate the command data against the expected structure, and parameters."""
+    reply = reply()
+
     if not isinstance(command_data, dict):
-        return False
+        reply.status = "error"
+        reply.code = -3
+        reply.errormessage = "Command data must be a dictionary"
+        return False, reply
     if 'command' not in command_data or 'args' not in command_data:
-        return False
+        reply.status = "error"
+        reply.code = -4
+        reply.errormessage = "Command data must contain 'command' and 'args' keys"
+        return False, reply
     if not isinstance(command_data['args'], dict):
-        return False
+        reply.status = "error"
+        reply.code = -5
+        reply.errormessage = "'args' must be a dictionary"
+        return False, reply
     command = command_data['command']
     if command not in COMMAND_TABLE:
-        return False
+        reply.status = "error"
+        reply.code = -6
+        reply.errormessage = f"Command '{command}' not recognized"
+        return False, reply
     expected_args = COMMAND_TABLE[command]['args']
+    
     for arg in expected_args:
         if arg not in command_data['args']:
-            return False
-    return True
+            reply.status = "error"
+            reply.code = -7
+            reply.errormessage = f"Missing argument '{arg}' for command '{command}'"
+            return False, reply
+        
+    if 'card' in expected_args and 'card' in command_data['args']:
+        if command_data['args']['card'] < 1 or command_data['args']['card'] > 18:
+            reply.status = "error"
+            reply.code = -8
+            reply.errormessage = "Card number must be between 1 and 18"
+            return False, reply
+    if 'channel' in expected_args and 'channel' in command_data['args']:
+        if command_data['args']['channel'] < 1 or command_data['args']['channel'] > 8:
+            reply.status = "error"
+            reply.code = -9
+            reply.errormessage = "Channel number must be between 1 and 8"
+            return False, reply
+    return True, reply
 
 
 def main():
-    """Main function to run the daemon."""
+    """Main run loop for the Bias Crate Daemon."""
     logger.info("Starting Bias Crate Daemon")
     crate = BiasCrate()
     logger.info("Bias Crate Daemon started successfully")
@@ -90,7 +121,9 @@ def main():
             if message['type'] == 'message':
                 command = json.loads(message['data'].decode())
                 logger.info(f"Received command: {command}")
-                if validate_command(command):
+                # Validate the command structure and content
+                command_is_valid, response = validate_command(command)
+                if command_is_valid:
                     command_name = command['command']
                     args = command['args']
                     func = COMMAND_TABLE[command_name]['function']
@@ -103,41 +136,29 @@ def main():
                         response.status = "error"
                         response.code = -1
                         response.errormessage = str(e)
+                        response = response.error_str()
 
                     logger.debug(f"Response: {response}")
                     r.publish(conf.redis.replyChannel, response)
 
                 else:
-                    logger.error("Invalid command structure or command not found")
-                    response = reply()
-                    response.status = "error"
-                    response.code = -2
-                    response.errormessage = "Invalid command"
+                    logger.error(response.errormessage)
                     r.publish(conf.redis.replyChannel, response.error_str())
-
-                
-
 
     except redis.exceptions.ConnectionError as e:
         logger.error(f"Redis connection error: {e}")
     finally:
         pubsub.unsubscribe()
+
+
+
 # This is a stub for the command functions. They should be implemented to interact with the BiasCrate.
 # They will return a string that is then published to the redis reply channel.
 def get_status(crate:BiasCrate, args:dict)->str:
     r = reply()
     card = args['card']
     channel = args['channel']
-    if not card>0 or not card <= 18:
-        r.status = "error"
-        r.code = -102 #TODO: Define error codes
-        r.errormessage = f"Invalid card number {card}. Must be between 1 and 18."
-        return r.error_str()
-    if not channel>0 or not channel <= 8:
-        r.status = "error"
-        r.code = -101 #TODO: Define error codes
-        r.errormessage = f"Invalid channel number {channel}. Must be between 1 and 8."
-        return r.error_str()
+
     r.card = card
     r.channel = channel
     
@@ -156,16 +177,7 @@ def seek_voltage(crate:BiasCrate, args:dict)->str:
     r = reply()
     card = args['card']
     channel = args['channel']
-    if not card>0 or not card <= 18:
-        r.status = "error"
-        r.code = -1044 #TODO: Define error codes
-        r.errormessage = f"Invalid card number {card}. Must be between 1 and 18."
-        return r.error_str()
-    if not channel>0 or not channel <= 8:
-        r.status = "error"
-        r.code = -105 #TODO: Define error codes
-        r.errormessage = f"Invalid channel number {channel}. Must be between 1 and 8."
-        return r.error_str()
+
     r.card = card
     r.channel = channel
     try:
@@ -186,16 +198,7 @@ def seek_current(crate:BiasCrate, args:dict)->str:
     r = reply()
     card = args['card']
     channel = args['channel']
-    if not card>0 or not card <= 18:
-        r.status = "error"
-        r.code = -104334 #TODO: Define error codes
-        r.errormessage = f"Invalid card number {card}. Must be between 1 and 18."
-        return r.error_str()
-    if not channel>0 or not channel <= 8:
-        r.status = "error"
-        r.code = -10335 #TODO: Define error codes
-        r.errormessage = f"Invalid channel number {channel}. Must be between 1 and 8."
-        return r.error_str()
+   
     r.card = card
     r.channel = channel
     try:
@@ -217,16 +220,7 @@ def enable_output(crate: BiasCrate, args:dict)->str:
     r = reply()
     card = args['card']
     channel = args['channel']
-    if not card>0 or not card <= 18:
-        r.status = "error"
-        r.code = -1044 #TODO: Define error codes
-        r.errormessage = f"Invalid card number {card}. Must be between 1 and 18."
-        return r.error_str()
-    if not channel>0 or not channel <= 8:
-        r.status = "error"
-        r.code = -105
-        r.errormessage = f"Invalid channel number {channel}. Must be between 1 and 8."
-        return r.error_str()
+    
     r.card = card
     r.channel = channel
     try:
@@ -242,20 +236,12 @@ def enable_output(crate: BiasCrate, args:dict)->str:
         return r.error_str() 
     return r.success_str()  
 
+
 def disable_output(crate: BiasCrate, args:dict)->str:
     r = reply()
     card = args['card']
     channel = args['channel']
-    if not card>0 or not card <= 18:
-        r.status = "error"
-        r.code = -1045 #TODO: Define error codes
-        r.errormessage = f"Invalid card number {card}. Must be between 1 and 18."
-        return r.error_str()
-    if not channel>0 or not channel <= 8:
-        r.status = "error"
-        r.code = -106
-        r.errormessage = f"Invalid channel number {channel}. Must be between 1 and 8."
-        return r.error_str()
+   
     r.card = card
     r.channel = channel
     try:
@@ -272,21 +258,11 @@ def disable_output(crate: BiasCrate, args:dict)->str:
     return r.success_str() 
 
 
-
 def enable_testload(crate: BiasCrate, args:dict)->str:
     r = reply()
     card = args['card']
     channel = args['channel']
-    if not card>0 or not card <= 18:
-        r.status = "error"
-        r.code = -1044 #TODO: Define error codes
-        r.errormessage = f"Invalid card number {card}. Must be between 1 and 18."
-        return r.error_str()
-    if not channel>0 or not channel <= 8:
-        r.status = "error"
-        r.code = -105
-        r.errormessage = f"Invalid channel number {channel}. Must be between 1 and 8."
-        return r.error_str()
+    
     r.card = card
     r.channel = channel
     try:
@@ -302,20 +278,12 @@ def enable_testload(crate: BiasCrate, args:dict)->str:
         return r.error_str() 
     return r.success_str()  
 
+
 def disable_testload(crate: BiasCrate, args:dict)->str:
     r = reply()
     card = args['card']
     channel = args['channel']
-    if not card>0 or not card <= 18:
-        r.status = "error"
-        r.code = -10445 #TODO: Define error codes
-        r.errormessage = f"Invalid card number {card}. Must be between 1 and 18."
-        return r.error_str()
-    if not channel>0 or not channel <= 8:
-        r.status = "error"
-        r.code = -1046
-        r.errormessage = f"Invalid channel number {channel}. Must be between 1 and 8."
-        return r.error_str()
+   
     r.card = card
     r.channel = channel
     try:
@@ -365,3 +333,7 @@ COMMAND_TABLE = {
     }
 
 }
+
+
+if __name__ == "__main__":
+    main()

@@ -23,7 +23,8 @@ def grab_board(func):
     """
 
     def wrapper(self, card: int, *args, **kwargs):
-        assert card in self.cards, f"Card {card} not found in BiasCrate"
+        if card not in self.cards:
+            raise Exception(f"Card {card} not found in BiasCrate")
         board = self.cards[card]
         board.open()
         res = func(self, board, *args, **kwargs)
