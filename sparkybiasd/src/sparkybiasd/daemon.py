@@ -339,10 +339,11 @@ def get_available_cards(crate: BiasCrate, args:dict)->str:
         r["cards"] = crate.get_avail_cards()
     except Exception as e:
         logger.exception(e)
-        r["status"] = "error"
-        r["code"] = -100 #TODO: Define error codes
-        r["msg"] = str(e)
-        return json.dumps(r)
+        r = reply()
+        r.status = "error"
+        r.code = -100 #TODO: Define error codes
+        r.errormessage = str(e)
+        return r.error_str()
     return json.dumps(r)
 
 def load_config(crate: BiasCrate, args:dict):

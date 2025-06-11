@@ -262,7 +262,7 @@ class BiasCard:
         BiasCard.iicBus.write_byte_data(
             AD5144ADDRTABLE[channel], 0b00010011, (x >> 24) & 0xFF
         )
-        self.wiper_states[channel - 1] = 1024
+        self.wiper_states[channel - 1] = 1023
 
     def set_wiper_min(self, channel):
         x = 0
