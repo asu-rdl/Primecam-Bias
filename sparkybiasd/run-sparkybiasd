@@ -1,0 +1,8 @@
+#! /bin/bash
+# Used by systemd to execute the Daemon
+#
+PROJDIR=$HOME
+
+source "$PROJDIR/.venv/bin/activate"
+
+$PROJDIR/.venv/bin/python -c "import sparkybiasd; sparkybiasd.main()"

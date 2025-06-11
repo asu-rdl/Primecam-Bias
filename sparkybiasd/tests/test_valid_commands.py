@@ -273,3 +273,4 @@ def test_command_get_cards(redisFixt):
     message = pubsub.get_message(True, timeout=None)
     response = json.loads(message['data'].decode())
     assert response['status'] == 'success', "Expected success status in response"
+    assert response['cards'] == [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "Expected cards 1-10 in response; big uh oh if this fails"

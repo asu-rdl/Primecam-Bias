@@ -1,0 +1,16 @@
+[Unit]
+Description=Sparky Bias Daemon
+After=network.target
+
+[Service]
+Type=simple
+User=asu  
+ExecStart=/bin/bash -c '/home/asu/run-sparkybiasd'
+Restart=on-failure
+RestartSec=5
+WorkingDirectory=/home/asu
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
