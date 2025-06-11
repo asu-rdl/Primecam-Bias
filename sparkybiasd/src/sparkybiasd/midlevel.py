@@ -214,8 +214,26 @@ class BiasCrate:
     def get_avail_cards(self):
         """List connected cards"""
 
-        #TODO: Should actually refresh the list of cards then return what we already have. 
-        # It's possible that a card was removed or added since the BiasCrate was initialized.
+        # Check on all of the cards that could (or should) be present in the system.
+        for i in range(1, 18 + 1):
+            # If the card isn't already known, try to create it and see if it exists.
+            if i not in self.cards:
+                try:
+                    card = BiasCard(i)
+                    self.cards[i] = card
+                    logger.warning(f"Card {i} was not previously known, but has been found in the system.")
+                except OSError:
+                    logger.debug(f"Card {i} not found in system")
+                    continue
+            else:
+                # Otherwise test that the card is still available and responding.
+                try:
+                    self.cards[i].open()
+                    self.cards[i].close()
+                except OSError:
+                    logger.error(f"Card {i} no longer found in systemm, what happened?")
+                    raise Exception(f"Card {i} no longer found in system, what happened?")
+
         available_cards = []
         for c in self.cards:
             available_cards.append(c)

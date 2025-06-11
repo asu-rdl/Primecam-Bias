@@ -226,7 +226,7 @@ def test_command_seek_current(redisFixt):
 
 
 
-def test_command_get_cards(redisFixt):
+def test_command_get_available_cards(redisFixt):
     """Test that we can get the list of cards connected to the bias crate."""
     command = {
         "command": "getAvailableCards",
@@ -298,7 +298,7 @@ def test_command_load_configuration(redisFixt):
     
 
 def test_command_load_configuration_disable_outputs(redisFixt):
-    """Test that we can load the current configuration."""
+    """Test that we can load the current configuration with outputs disabled."""
     
     # First well disable all of the outputs.
 
@@ -318,7 +318,7 @@ def test_command_load_configuration_disable_outputs(redisFixt):
     response = txrx_command(redisFixt, command)
     assert response['status'] == 'success', "Expected success status in response"
 
-    # Check that all outputs are enabled
+    # Check that all outputs remain disabled
 
     for i in range(1, 10+1):
         command = {

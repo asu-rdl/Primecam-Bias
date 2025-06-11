@@ -144,7 +144,7 @@ def main():
                     func = COMMAND_TABLE[command_name]['function']
                     try:
                         response = func(crate, args)
-                        logger.info(f"Command {command_name} completed.")
+                        logger.info(f"Execution of {command_name} completed.")
                     except Exception as e:
                         logger.exception(f"Error executing command {command_name}: {e}")
                         response = reply()
@@ -354,20 +354,29 @@ def load_config(crate: BiasCrate, args:dict):
     This can be dangerous if the configuration file is not correct, as it may
     set incorrect voltages or currents on the Bias Crate channels. 
     """
-
+    r = reply()
     enable_outputs = args.get("enableOutputs", False)
     create_new_config = args.get("createNewConfig", False)
+    if not isinstance(enable_outputs, bool):
+        r.status = "error"
+        r.code = -202
+        r.errormessage = "enableOutputs must be a boolean value."
+        return r.error_str()
+    if not isinstance(create_new_config, bool):
+        r.status = "error"
+        r.code = -203
+        r.errormessage = "createNewConfig must be a boolean value."
+        return r.error_str()
     if create_new_config:
+        logger.debug("Creating new configuration file.")
         OmegaConf.save(conf, CONFIGPATH+"config.yaml")
     else:
+        logger.debug("Will not create a new config file, attempting to load existing one.")
         if not os.path.exists(CONFIGPATH):
             r.status = "error"
             r.code = -101
             r.errormessage = f"Configuration file {CONFIGPATH} does not exist."
             return r.error_str()
-
-    r = reply()
-    enable_outputs = args.get("enableOutputs", False)
 
     try:
         crate.load_config(enable_outputs)

@@ -255,3 +255,14 @@ def test_seek_current_invalid_card(redisFixt):
     command["command"] = "disableOutput"
     response = txrx_command(redisFixt, command)
     assert response['status'] == 'error', "Expected error status in response"
+
+def test_loadconfig_bad_args(redisFixt):
+    """Test that a loadconfig command with bad arguments returns an error."""
+    # Now load the config
+    command = {
+        "command": "loadConfig",
+        "args": {"enableOutputs": 'False', 
+                 "createNewConfig": 'FakeNews'}  # This should enable all outputs that were saved
+    }
+    response = txrx_command(redisFixt, command)
+    assert response['status'] == 'error', "Expected error status in response for bad arguments in loadConfig"
