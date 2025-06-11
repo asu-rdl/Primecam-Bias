@@ -1,10 +1,14 @@
 from .hardware import BiasCard
 import numpy as np
 from omegaconf import OmegaConf
-from . import dconf
+from  .dconf import conf
+from .dconf import CONFIGPATH
 import time
 import logging
+
 logger = logging.getLogger(__name__)
+
+logger.debug(f"module {__name__} loaded")
 # TODO: Warn user if setting wiper when output is disabled.....
 
 # TODO: save settings to yaml file
@@ -25,9 +29,13 @@ def grab_board(func):
         if card not in self.cards:
             raise Exception(f"Card {card} not found in BiasCrate")
         board = self.cards[card]
-        board.open()
-        res = func(self, board, *args, **kwargs)
-        board.close()
+        try:
+            board.open()
+            res = func(self, board, *args, **kwargs)
+            board.close()
+        except Exception as e:
+            board.close()
+            raise e
         return res
 
     return wrapper
@@ -116,10 +124,13 @@ class BiasCrate:
                 continue
 
     @grab_board
-    def disable_output(self, board: BiasCard, channel: int):
+    def disable_output(self, board: BiasCard, channel: int, zero_wiper: bool = False):
         """Disable output of a card+channel"""
         assert channel > 0 and channel <= 8, "Expected Channel 1 through 8"
         board.enable_chan(channel, False)
+        if zero_wiper:
+            logger.debug(f"Zeroing wiper for card {board.address}, channel {channel}")
+            board.set_wiper_min(channel)
 
     @grab_board
     def enable_output(self, board: BiasCard, channel: int):
@@ -211,8 +222,78 @@ class BiasCrate:
         logger.debug(f"Available cards: {available_cards}")
         return available_cards
 
-    def save(self):
-        raise Exception("config save option not implemented")
+    def save_config(self, config_path: str = CONFIGPATH+"config.yaml"):
+        """
+        Save the current configuration to the yaml file. Defaults
+        to `$HOME/daemon/config.yaml`. This will save the current state of the BiasCards
+        to the configuration file. All paths specified will be relative to `$HOME/daemon/`
+        """
 
-    def load(self):
-        raise Exception("config save option not implemented")
+        try:
+            # Iterate through all configured cards
+            # There are 18 possible cards, but some may not be present in the system.
+        
+            for i in range(1, 18 + 1):
+                if i not in self.cards:
+                    logger.info(f"Card {i} not found in system, skipping configuration.")
+                    continue
+                card = f"card{i}"
+                for j in range(1, 8 + 1):
+                    chan = f"chan{j}"
+                    conf.biasCards[card][chan] = {
+                        "output": self.cards[i].is_chan_enabled(j),
+                        "wiper": self.cards[i].wiper_states[j - 1]
+                    }
+            OmegaConf.save(conf, config_path)
+
+
+        except Exception as e:
+            logger.error(f"Error loading config: {e}")
+            raise e
+
+    def load_config(self, enable_outputs: bool = True):
+        """Load config from yaml file, apply settings to the cards.
+        There is a flag called enable_outputs that will enable the outputs
+        of the channels if set to True in config. If set to False, the outputs will be disabled regardless
+        of the configuration in the YAML file. 
+        The wipers however, will always be set to the configured value in the YAML file.
+
+        """
+        logger.info("Loading configuration from YAML file...")
+        conf = OmegaConf.load(CONFIGPATH+"config.yaml")
+
+        try:
+            # Iterate through all configured cards
+            # If the cards is present in the conf, but not the system, skip it
+            # TODO: Need config validation. 
+        
+            for i in range(1, 18 + 1):
+                if i not in self.cards:
+                    logger.debug(f"Card {i} not found in system, skipping configuration.")
+                    continue
+                card = f"card{i}"
+                logger.debug(f"Open card {i} for configuration")
+
+                self.cards[i].open()
+                for j in range(1, 8 + 1):
+                    chan = f"chan{j}"
+
+                    chan_setting = conf.biasCards[card][chan]
+                    output = chan_setting.get("output", False)
+                    wiper = chan_setting.get("wiper", 0)
+                    if output and enable_outputs:
+                        logger.debug(f"Enabling output for card {i}, channel {j} with wiper {wiper}")
+                        self.cards[i].enable_chan(j)
+                    else:
+                        logger.debug(f"Disabling output for card {i}, channel {j}")
+                        self.cards[i].enable_chan(j, False)
+                    logger.debug(f"Setting wiper for card {i}, channel {j} to {wiper}")
+
+                    
+                    self.cards[i].set_wiper(j, wiper)
+                self.cards[i].close()
+
+                    
+        except Exception as e:
+            logger.error(f"Error loading config: {e}")
+            raise e

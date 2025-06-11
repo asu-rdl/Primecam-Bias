@@ -21,31 +21,33 @@ fairly straightforward to replace redis with some other pub-sub system or perhap
 """
 
 from dataclasses import dataclass
-import redis
-import redis.exceptions
-import os
-from .midlevel import BiasCrate
-from .dconf import conf
-import json
-import time
-USERHOME = os.environ.get("HOME", "")
 
-APPDATA_PATH = USERHOME+"/daemon/"
-LOGPATH = USERHOME+"/daemon/logs/"
-os.makedirs(APPDATA_PATH, exist_ok=True)
-os.makedirs(LOGPATH, exist_ok=True)
-
+from .dconf import conf, CONFIGPATH, LOGPATH
 import logging
 from logging.handlers import RotatingFileHandler
 
 logger = logging.getLogger(__name__)
-LOGFORMAT = "%(asctime)s|%(levelname)s|%(funcName)s|%(message)s"
+
+LOGFORMAT = "%(asctime)s|%(levelname)s|%(module)s|%(funcName)s|%(message)s"
 logging.basicConfig(format=LOGFORMAT, level=conf.loglevel)
 log_handler = RotatingFileHandler(LOGPATH + "applog.txt", "a", 4_194_304, 5)# Logs written out to 4 Megabytes
 log_formatter = logging.Formatter(LOGFORMAT)
 log_handler.setFormatter(log_formatter)
 
 logger.addHandler(log_handler)
+logger.getChild("dconf").addHandler(log_handler)
+logger.getChild("midlevel").addHandler(log_handler)
+
+
+import redis
+import redis.exceptions
+import os
+from .midlevel import BiasCrate
+
+from omegaconf import OmegaConf
+import json
+import time
+
 
 @dataclass
 class reply:
@@ -195,8 +197,15 @@ def seek_voltage(crate:BiasCrate, args:dict)->str:
     r.channel = channel
     try:
         voltage = args['voltage']
-        crate.seek_voltage(card, channel, voltage)
-        time.sleep(0.1)  # Allow time for the voltage to settle
+        r.vbus, r.vshunt, r.current, r.outputEnabled, r.wiper = crate.get_status(card, channel)
+        if r.outputEnabled:
+            crate.seek_voltage(card, channel, voltage)
+        else:
+            r.status = "error"
+            r.code = -32000
+            r.errormessage = "Output is disabled, cannot seek voltage."
+            return r.error_str()
+        time.sleep(0.2)  # Allow time for the voltage to settle
         r.vbus, r.vshunt, r.current, r.outputEnabled, r.wiper = crate.get_status(card, channel)
         r.status = "success"
     except Exception as e:
@@ -216,8 +225,15 @@ def seek_current(crate:BiasCrate, args:dict)->str:
     r.channel = channel
     try:
         current = args['current']
-        crate.seek_current(card, channel, current)
-        time.sleep(0.1)  # Allow time for the current to settle
+        r.vbus, r.vshunt, r.current, r.outputEnabled, r.wiper = crate.get_status(card, channel)
+        if r.outputEnabled:
+            crate.seek_current(card, channel, current)
+        else:
+            r.status = "error"
+            r.code = -33000
+            r.errormessage = "Output is disabled, cannot seek current."
+            return r.error_str()
+        time.sleep(0.2)  # Allow time for the current to settle
         r.vbus, r.vshunt, r.current, r.outputEnabled, r.wiper = crate.get_status(card, channel)
         r.status = "success"
     except Exception as e:
@@ -329,6 +345,82 @@ def get_available_cards(crate: BiasCrate, args:dict)->str:
         return json.dumps(r)
     return json.dumps(r)
 
+def load_config(crate: BiasCrate, args:dict):
+    """
+    Load the configuration from the configuration file into the Bias Crate.
+    This will overwrite the current configuration in the Bias Crate with the values
+    from the configuration file.
+
+    This can be dangerous if the configuration file is not correct, as it may
+    set incorrect voltages or currents on the Bias Crate channels. 
+    """
+
+    enable_outputs = args.get("enableOutputs", False)
+    create_new_config = args.get("createNewConfig", False)
+    if create_new_config:
+        OmegaConf.save(conf, CONFIGPATH+"config.yaml")
+    else:
+        if not os.path.exists(CONFIGPATH):
+            r.status = "error"
+            r.code = -101
+            r.errormessage = f"Configuration file {CONFIGPATH} does not exist."
+            return r.error_str()
+
+    r = reply()
+    enable_outputs = args.get("enableOutputs", False)
+
+    try:
+        crate.load_config(enable_outputs)
+        r.status = "success"
+        return r.success_str()
+    except Exception as e:
+        logger.exception(e)
+        r.status = "error"
+        r.code = -100
+        r.errormessage = str(e)
+
+def save_config(crate: BiasCrate, args:dict):
+    """
+    Save the current configuration of the Bias Crate to the configuration file.
+
+    TBD: configPath argument may be dangerous as it may be used to write to an arbitrary location.
+        Remove the ability to specify a full path, only a filename should be allowed. Not very important, impl later.
+    """
+    r = reply()
+        
+    try:
+        # if 'configPath' in args:
+        #     config_path = args['configPath']
+        #     if not os.path.exists(os.path.dirname(config_path)):
+        #         os.makedirs(os.path.dirname(config_path), exist_ok=True)
+
+        crate.save_config()
+        r.status = "success"
+    except Exception as e:
+        logger.exception(e)
+        r.status = "error"
+        r.code = -100
+        r.errormessage = str(e)
+        return r.error_str()
+    return r.success_str()
+
+def disable_all_outputs(crate: BiasCrate, args:dict):
+    """
+    Disable all outputs on the Bias Crate. 
+    This also sets the output voltages and currents to zero.
+    """
+    r = reply()
+    try:
+        crate.disable_all_outputs(True)
+        r.status = "success"
+    except Exception as e:
+        logger.exception(e)
+        r.status = "error"
+        r.code = -10000
+        r.errormessage = str(e)
+        return r.error_str()
+    return r.success_str()
+
 
 # The command table maps command names to their corresponding functions and arguments.
 # This allows for dynamic command execution based on the received command.
@@ -363,6 +455,18 @@ COMMAND_TABLE = {
     },
     "getAvailableCards": {
         "function": get_available_cards,
+        "args": []
+    },
+    "loadConfig": {
+        "function": load_config,
+        "args": ["enableOutputs", "createNewConfig"]
+    },
+    "saveConfig": {
+        "function": save_config,
+        "args": []
+    },
+    "disableAllOutputs": {
+        "function": disable_all_outputs,
         "args": []
     }
 
