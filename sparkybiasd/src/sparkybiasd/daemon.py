@@ -1,9 +1,22 @@
 """
-Daemon process. Initializes the boards and waits for commands from the end user. 
-These commands arrive redis's pub-sub pipeline as json formatted strings documented
-in https://asu-rdl.github.io/Primecam-Bias/software.html.
 
+Implements a Bias Crate Daemon that listens to a redis pub-sub channel for commands
+and executes them. 
+Functions defined in midlevel.py handle the actual execution of system-wide commands such as seeking voltages, 
+enabling outputs, etc. 
 
+hardware.py implements the low-level hardware interaction with the individual cards within the bias crate.
+
+All commands are expected to be in the form of a json formatted string, which is
+parsed and validated before execution. The results of the command execution are then
+published back to a redis reply channel as a json formatted string.
+See the documentation for the available commands and their expected arguments
+in https://asu-rdl.github.io/Primecam-Bias/software.html or Primecam-Bias/docs/software.md
+
+This has been setup to run as a systemd service, and will automatically start on boot.
+
+Redis is simply used to broker the communication between a client and the daemon. In theory, it should be 
+fairly straightforward to replace redis with some other pub-sub system or perhaps even a direct socket connection.
 
 """
 
@@ -59,51 +72,51 @@ class reply:
 
 def validate_command(command_data) -> bool:
     """Valudate the command data against the expected structure, and parameters."""
-    reply = reply()
+    rep = reply()
 
     if not isinstance(command_data, dict):
-        reply.status = "error"
-        reply.code = -3
-        reply.errormessage = "Command data must be a dictionary"
-        return False, reply
+        rep.status = "error"
+        rep.code = -3
+        rep.errormessage = "Command data must be a dictionary"
+        return False, rep
     if 'command' not in command_data or 'args' not in command_data:
-        reply.status = "error"
-        reply.code = -4
-        reply.errormessage = "Command data must contain 'command' and 'args' keys"
-        return False, reply
+        rep.status = "error"
+        rep.code = -4
+        rep.errormessage = "Command data must contain 'command' and 'args' keys"
+        return False, rep
     if not isinstance(command_data['args'], dict):
-        reply.status = "error"
-        reply.code = -5
-        reply.errormessage = "'args' must be a dictionary"
-        return False, reply
+        rep.status = "error"
+        rep.code = -5
+        rep.errormessage = "'args' must be a dictionary"
+        return False, rep
     command = command_data['command']
     if command not in COMMAND_TABLE:
-        reply.status = "error"
-        reply.code = -6
-        reply.errormessage = f"Command '{command}' not recognized"
-        return False, reply
+        rep.status = "error"
+        rep.code = -6
+        rep.errormessage = f"Command '{command}' not recognized"
+        return False, rep
     expected_args = COMMAND_TABLE[command]['args']
     
     for arg in expected_args:
         if arg not in command_data['args']:
-            reply.status = "error"
-            reply.code = -7
-            reply.errormessage = f"Missing argument '{arg}' for command '{command}'"
-            return False, reply
+            rep.status = "error"
+            rep.code = -7
+            rep.errormessage = f"Missing argument '{arg}' for command '{command}'"
+            return False, rep
         
     if 'card' in expected_args and 'card' in command_data['args']:
         if command_data['args']['card'] < 1 or command_data['args']['card'] > 18:
-            reply.status = "error"
-            reply.code = -8
-            reply.errormessage = "Card number must be between 1 and 18"
-            return False, reply
+            rep.status = "error"
+            rep.code = -8
+            rep.errormessage = "Card number must be between 1 and 18"
+            return False, rep
     if 'channel' in expected_args and 'channel' in command_data['args']:
         if command_data['args']['channel'] < 1 or command_data['args']['channel'] > 8:
-            reply.status = "error"
-            reply.code = -9
-            reply.errormessage = "Channel number must be between 1 and 8"
-            return False, reply
-    return True, reply
+            rep.status = "error"
+            rep.code = -9
+            rep.errormessage = "Channel number must be between 1 and 8"
+            return False, rep
+    return True, rep
 
 
 def main():
@@ -299,6 +312,23 @@ def disable_testload(crate: BiasCrate, args:dict)->str:
         return r.error_str() 
     return r.success_str() 
 
+def get_available_cards(crate: BiasCrate, args:dict)->str:
+    """Get a list of available cards."""
+    r = {
+        "status": "success",
+        "cards": [],
+    }
+    try:
+        r["status"] = "success"
+        r["cards"] = crate.get_avail_cards()
+    except Exception as e:
+        logger.exception(e)
+        r["status"] = "error"
+        r["code"] = -100 #TODO: Define error codes
+        r["msg"] = str(e)
+        return json.dumps(r)
+    return json.dumps(r)
+
 
 # The command table maps command names to their corresponding functions and arguments.
 # This allows for dynamic command execution based on the received command.
@@ -330,6 +360,10 @@ COMMAND_TABLE = {
     "disableTestload": {
         "function": disable_testload,
         "args": ["card", "channel"]
+    },
+    "getAvailableCards": {
+        "function": get_available_cards,
+        "args": []
     }
 
 }

@@ -96,3 +96,17 @@ def test_command_has_bad_args_channel(redisFixt):
     response = json.loads(message['data'].decode())
     assert response['status'] == 'error', "Expected error status in response for invalid card"
 
+def test_command_getStatus_on_valid_but_missing_card(redisFixt):
+    """Test that a getStatus command on a valid but missing card returns an error."""
+    redis_client, pubsub = redisFixt
+    command = {
+        "command": "getStatus",
+        "args": {
+            "card": 15,  # Valid Card Number
+            "channel": 1
+        }
+    }
+    redis_client.publish('sparkommand', json.dumps(command))
+    message = pubsub.get_message(True, timeout=None)
+    response = json.loads(message['data'].decode())
+    assert response['status'] == 'error', "Expected error status in response for valid but missing card"

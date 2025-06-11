@@ -9,7 +9,6 @@ logger = logging.getLogger(__name__)
 
 # TODO: save settings to yaml file
 
-# TODO: Deployment script and test suite
 
 
 def grab_board(func):
@@ -51,7 +50,7 @@ class BiasCrate:
                 continue
 
     @grab_board
-    def seek_voltage(self, board, channel: int, voltage: float, increment=1):
+    def seek_voltage(self, board: BiasCard, channel: int, voltage: float, increment=1):
         """set channel to specified voltage (in TBD Units)"""
         assert voltage >= 0, "Can't generate negative voltages"
         assert voltage <= 5, "Voltage spec out of range"
@@ -117,13 +116,13 @@ class BiasCrate:
                 continue
 
     @grab_board
-    def disable_output(self, board, channel: int):
+    def disable_output(self, board: BiasCard, channel: int):
         """Disable output of a card+channel"""
         assert channel > 0 and channel <= 8, "Expected Channel 1 through 8"
         board.enable_chan(channel, False)
 
     @grab_board
-    def enable_output(self, board, channel: int):
+    def enable_output(self, board: BiasCard, channel: int):
         """Enable output of a card+channel"""
         assert channel > 0 and channel <= 8, "Expected Channel 1 through 8"
         board.enable_chan(channel)
@@ -201,9 +200,16 @@ class BiasCrate:
             self.cards[c].disable_all_testloads()
             self.cards[c].close()
 
-    def get_availCards(self):
+    def get_avail_cards(self):
         """List connected cards"""
-        return self.cards.keys()
+
+        #TODO: Should actually refresh the list of cards then return what we already have. 
+        # It's possible that a card was removed or added since the BiasCrate was initialized.
+        available_cards = []
+        for c in self.cards:
+            available_cards.append(c)
+        logger.debug(f"Available cards: {available_cards}")
+        return available_cards
 
     def save(self):
         raise Exception("config save option not implemented")

@@ -259,3 +259,17 @@ def test_command_seek_current(redisFixt):
     message = pubsub.get_message(True, timeout=None)
     response = json.loads(message['data'].decode())
     assert response['status'] == 'success', "Expected success status in response"
+
+
+
+def test_command_get_cards(redisFixt):
+    """Test that we can get the list of cards connected to the bias crate."""
+    redis_client, pubsub = redisFixt
+    command = {
+        "command": "getAvailableCards",
+        "args": {}
+    }
+    redis_client.publish('sparkommand', json.dumps(command))
+    message = pubsub.get_message(True, timeout=None)
+    response = json.loads(message['data'].decode())
+    assert response['status'] == 'success', "Expected success status in response"
