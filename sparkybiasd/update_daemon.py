@@ -3,10 +3,10 @@ import os
 from importlib import metadata
 def get_current_version():
     try:
-        version = metadata.version('sparkybiasd')
+        version = 'v'+metadata.version('sparkybiasd')
     except metadata.PackageNotFoundError:
         version = 'v0.0.0'  # Default version if package is not found
-    return 'v'+version
+    return version
 
 
 def update():
