@@ -125,12 +125,15 @@ def main():
     """Main run loop for the Bias Crate Daemon."""
     logger.info("Starting Bias Crate Daemon")
     crate = BiasCrate()
-    logger.info("Bias Crate Daemon started successfully")
-
     r = redis.Redis(host=conf.redis.ip, port=conf.redis.port, db=0)
+    try:
+        r.ping()
+    except redis.exceptions.ConnectionError as e:
+        logger.error(f"Could not connect to Redis server at {conf.redis.ip}:{conf.redis.port}. Is the server running?")
+        raise e
     pubsub = r.pubsub()
     pubsub.subscribe(conf.redis.commandChannel)
-
+    logger.info("Bias Crate Daemon started successfully")
     try:
         for message in pubsub.listen():
             if message['type'] == 'message':
