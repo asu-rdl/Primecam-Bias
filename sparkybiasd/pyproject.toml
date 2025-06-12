@@ -1,6 +1,6 @@
 [project]
 name = "sparkybiasd"
-version = "0.2.2"
+version = "0.2.3"
 description = ""
 authors = [
     {name = "Cody Roberson",email = "carobers@asu.edu"}
@@ -13,7 +13,8 @@ dependencies = [
     "omegaconf (>=2.3.0,<3.0.0)",
     "numpy (>=2.2.5,<3.0.0)",
     "pytest (>=8.3.5,<9.0.0)",
-    "redis (>=6.0.0,<7.0.0)"
+    "redis (>=6.0.0,<7.0.0)",
+    "requests (>=2.32.4,<3.0.0)"
 ]
 
 [tool.poetry]
