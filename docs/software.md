@@ -16,6 +16,10 @@ layout: default
         1. [Disable Output](#CommandDisableOutput)
         1. [Enable Testload](#CommandEnableTestLoad)
         1. [Disable Testload](#CommandDisableTestLoad)
+        1. [Get Available Cards](#CommandGetAvailableCards)
+        1. [Load Config](#CommandLoadConfig)
+        1. [Save Config](#CommandSaveConfig)
+
     1. [Configuration](#Configuration)
     1. [Logs](#Logs)
 
@@ -58,15 +62,17 @@ BiasCrate inits a number of these BiasCard objects.
 
 <a name="Commanding"></a>
 ## Commanding
-Commands are communicated as json strings passed around via Redis. Below are the available commands
-and an example of their expected format. 
+Commands are communicated to the bias supply as json objects converted to strings. Those strings are 
+passed around via Redis. Although redis is being used as a message carrier in this case, it can easily be modified 
+and replaced with a simple raw socket or a message broker like RabbitMQ. You would more or less replace the: connection, get message, and send message
+portion of daemon.main(). main() is the only place in the code where a message is transmitted or received.
+Below are the available commands and an example of their expected format. 
 
 <a name="CommandSeekVoltage"></a>
 ### Command - Seek Voltage.
 Seeks a voltage for a given card, channel. An acceptable range is between 0 and 4.5.
 You should expect to see vbus at or around the desired setting. 
-**It's important to note that this function requires that the output be enabled.**
-
+**It's important to note that this function requires that the output be enabled. Otherwise, you will read zero when you aren't expecting to.**
 ```json
 {
     "command": "seekVoltage",
@@ -83,7 +89,7 @@ You should expect to see vbus at or around the desired setting.
 Seeks a current for a given card, channel. An acceptable range is between 0 and TBD.
 You should see that current is at or around the desired setting.
 
-**It's important to note that this function requires that the output be enabled.**
+**It's important to note that this function requires that the output be enabled. Otherwise, you will read zero when you aren't expecting to.**
 ```json
 {
     "command": "seekCurrent",
@@ -139,7 +145,8 @@ Disables a card's output
 ```
 <a name="CommandEnableTestLoad"></a>
 ### Command - Enable Testload 
-Enable a card's test load.
+Enable a card's test load. Every channel of every BiasCard has a self test, 51 ohm, dummy load that can be enabled to verify that
+the card/channel is operating correctly. **It's important to note that this function requires that the output be enabled. Otherwise, you will read zero when you aren't expecting to.**
 
 ```json
 {
@@ -191,7 +198,7 @@ the the outputs are set to what was configured. The config file loaded is `/home
 ```
 
 <a name="CommandSaveConfig"></a>
-### Command - Load Config
+### Command - Save Config
 Saves the state of the BiasCrate. This would be the state of the regulators as well as which outputs are enabled.
 The config file loaded is `/home/asu/daemon/config.yaml`
 ```json
