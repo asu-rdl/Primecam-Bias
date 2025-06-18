@@ -181,6 +181,15 @@ Enumerates the BiasCards in the system that can be commanded. If a card is found
     "args": {}
 }
 ```
+This one has a bit of a special reply which should look like the following:
+
+```json
+{
+    "status": "success",
+    "cards": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+}
+```
+
 
 <a name="CommandLoadConfig"></a>
 ### Command - Load Config
@@ -223,7 +232,7 @@ The config file loaded is `/home/asu/daemon/config.yaml`
 ## Reply On Command Success
 ```json
 {
-    "status": "ok",
+    "status": "success",
     "card": 1,
     "channel": 1,
     "vbus": 2.334,
@@ -237,6 +246,7 @@ The config file loaded is `/home/asu/daemon/config.yaml`
 
 
 ## Reply on Error
+Currently, the error codes are TBD and shouldn't be used. They will be filled in with a later update.
 ```json
 {
     "status": "error",

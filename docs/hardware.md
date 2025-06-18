@@ -4,18 +4,20 @@ layout: default
 
 # Hardware Documentation
 
-## DC Characteristics
+The Bias Boards were designed using KiCAD 9.0.2. The project [can be found on github](https://github.com/asu-rdl/Primecam-Bias/tree/main/board).
 
-## Schematic
+[Here is a link to the schematics in PDF form](./primecamLNABiasPotVreg.pdf)
 
-### System
+And this is a screenshot of the layout as well as pdf links to the layout. Viewing the layout on KiCAD is the best choice.
 
-### Channel
+<img src="layout.png"/>
 
-## Layout
+## Here are PDF's of the layout:
 
-## Crate
+[Front Copper](./primecamLNABiasPotVreg-F_Cu.pdf)
 
+[Inner Layer 1 Copper](./primecamLNABiasPotVreg-In1_Cu.pdf)
 
+[Inner Layer 1 Copper](./primecamLNABiasPotVreg-In2_Cu.pdf)
 
-
+[Back Copper](./primecamLNABiasPotVreg-B_Cu.pdf)
