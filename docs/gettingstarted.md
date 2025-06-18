@@ -96,8 +96,14 @@ print(f"{response['vbus']}, {response['vshunt']}, {response['current']}, {respon
 
 **For a full list of commands and their formats see [Software](software.html).**
 
+<a name="Updates"></a>
+# Updates
+In the case that the bias crate has access to the internet, then updating the software should the need arise is straight forward.
+One would ssh into the crate. They would then run `./update_daemon.sh` and enter the sudo/root password when prompted.
+This stops the sparkybiasd service, pulls the latest release from github, installs it, and restarts the service. 
 
+If the crate has no access to the internet, one would have to download the .whl file from github along with any dependencies and install it
+manually. 
 
-<a name=""></a>
 
 
