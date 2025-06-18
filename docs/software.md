@@ -14,6 +14,8 @@ layout: default
         1. [Get Status](#CommandGetStatus)
         1. [Enable Output](#CommandEnableOutput)
         1. [Disable Output](#CommandDisableOutput)
+        1. [Enable Testload](#CommandEnableTestLoad)
+        1. [Disable Testload](#CommandDisableTestLoad)
     1. [Configuration](#Configuration)
     1. [Logs](#Logs)
 
@@ -30,7 +32,6 @@ layout: default
 - The software shall generate a log file when running as a system service.
 - The software should be easy for the end user to update. 
     - We will generate a python package so it can be installed and updated with pip.
-
 -  A tool called [poetry](https://python-poetry.org/docs/) is used for package dependency management and package generation.
 
 
@@ -39,11 +40,21 @@ layout: default
 ---
 <a name="Structure"></a>
 ## Structure
-The software was written in layers. The lowest being the python class `BiasCard` within `hardware.py`.
+The software is essentially a python library with a main() function. The library can be imported and custom code can be written on top if the end user
+wishes to do so. Otherwise, a systemd service defined in `/etc/systemd/system/sparkybiasd.service` is used run a script `/etc/run-sparkybiasd`. This 
+which in turn, spawns a python interpreter that runs the aforementioned main() function. The interpreter uses a python virtual environment located at `/home/asu/.venv/bin/`.
+The top most layer of the library is `daemon.py`. This has a few tasks. It sets up the redis connection and grabs messages from redis pubsub.
+It then validates the overall structure of the command and if possible, executes the provided command. It then encapsulates the results of the command
+in a reply message. 
+
+`midlevel.py` implements the high level seek functions as well as crate wide output enables and disables. This unit handles all of the connected
+cards in the system. This functionality is housed under the class `BiasCrate`
+
+`hardware.py` implements the low level operations of a bias card. This handles communication, setting registers, and keeping track of certain states.
+The functionality here is housed under the class `BiasCard`
+BiasCrate inits a number of these BiasCard objects. 
 
 <img src="swdiagram.png">
-
-
 
 <a name="Commanding"></a>
 ## Commanding
@@ -52,8 +63,10 @@ and an example of their expected format.
 
 <a name="CommandSeekVoltage"></a>
 ### Command - Seek Voltage.
-Seeks a voltage for a given card, channel. An acceptable range is between 0 and TBD.
-You should expect to see vbus at or around the desired setting.
+Seeks a voltage for a given card, channel. An acceptable range is between 0 and 4.5.
+You should expect to see vbus at or around the desired setting. 
+**It's important to note that this function requires that the output be enabled.**
+
 ```json
 {
     "command": "seekVoltage",
@@ -69,6 +82,8 @@ You should expect to see vbus at or around the desired setting.
 ### Command - Seek Current.
 Seeks a current for a given card, channel. An acceptable range is between 0 and TBD.
 You should see that current is at or around the desired setting.
+
+**It's important to note that this function requires that the output be enabled.**
 ```json
 {
     "command": "seekCurrent",
@@ -122,6 +137,80 @@ Disables a card's output
     }
 }
 ```
+<a name="CommandEnableTestLoad"></a>
+### Command - Enable Testload 
+Enable a card's test load.
+
+```json
+{
+    "command": "enableTestload",
+    "args": {
+        "card": 1,
+        "channel": 1,
+    }
+}
+```
+
+<a name="CommandDisableTestLoad"></a>
+### Command - Disable Test Load 
+Disables a card's test load
+
+```json
+{
+    "command": "disableTestload",
+    "args": {
+        "card": 1,
+        "channel": 1,
+    }
+}
+```
+
+<a name="CommandGetAvailableCards"></a>
+### Command - Get Available Cards
+Enumerates the BiasCards in the system that can be commanded. If a card is found, it's added to a list of commandable cards.
+```json
+{
+    "command": "getAvailableCards",
+    "args": {}
+}
+```
+
+<a name="CommandLoadConfig"></a>
+### Command - Load Config
+Loads the saved state of the BiasCrate. This would be the state of the regulators as well as which outputs are enabled.
+If `enableOutputs` is set to false, then the state of the outputs is ignored and they are disabled. If it's set to true,
+the the outputs are set to what was configured. The config file loaded is `/home/asu/daemon/config.yaml`
+```json
+{
+    "command": "loadConfig",
+    "args": {
+        "enableOutputs": true,
+        "createNewConfig": false,
+    }
+}
+```
+
+<a name="CommandSaveConfig"></a>
+### Command - Load Config
+Saves the state of the BiasCrate. This would be the state of the regulators as well as which outputs are enabled.
+The config file loaded is `/home/asu/daemon/config.yaml`
+```json
+{
+    "command": "loadConfig",
+    "args": {}
+}
+```
+
+
+<a name="CommandDisableAllOutputs"></a>
+### Command - Disable All Outputs
+```json
+{
+    "command": "disableAllOutputs",
+    "args": {}
+}
+```
+
 
 
 ## Reply On Command Success
