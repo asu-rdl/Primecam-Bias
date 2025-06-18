@@ -5,7 +5,7 @@ layout: default
 # Intro
 The CCAT observatory's instrument "Prime-Cam" requires a power supply for a large array of low-noise amplifiers. 
 They want to have easy to use, programmable control over the power supply (also referred to as 'bias supply').
-We (ASU) aim to deliver on that need. These docs contain the Hardware and Software design as well as a userguide.
+We (ASU) aim to deliver on that need. Within these docs, you can find 
 
 
 # Table Of Contents
